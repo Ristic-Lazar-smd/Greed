@@ -1,0 +1,1564 @@
+fileFormatVersion: 2
+guid: a61b9d0fd5a93564a85e464bc9c16b72
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: the_glutton(walk)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c472bcd614a4f24c8ca9c44ae9571ee
+      internalID: 896909006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acff68dc543561f48b3d9c67b8af1753
+      internalID: -1584032500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf839fde7fc5504d87bef895605d172
+      internalID: -1158755109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b122d1fe14c07f345845358e57fc689e
+      internalID: 1855842386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d15e2ca28b1b445be329681ed76ba0
+      internalID: -1334188614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e42dd49d1955c4b9a0077ca9caf68a
+      internalID: 373835495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_6
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dc3bd89cf8faa4b85d941cc7acf4ed
+      internalID: 1479881661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85757b1ecaa07f84286d3381162df0a1
+      internalID: 1161705967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63038255aa8b9d943943924490925ecb
+      internalID: -358947550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75490fcc29786e469ba6c8ba4c2741d
+      internalID: 1433222810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762429b6d5f59304197af7399cd8b81f
+      internalID: -214540422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_11
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef79fe788b5a44abe0a2ad19be1af3
+      internalID: -1826215697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e925922af7986146acaf9fb6ce08225
+      internalID: 597553077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_13
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d6e9eca7eec154bada6402da401060
+      internalID: -691785945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64993bda32da60441b89db10cabe1a18
+      internalID: 1421478708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_15
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10e92364440f1e4e8e40a51b0bbe9a4
+      internalID: -969479739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d8fe70cbec4754a96d65695651af50
+      internalID: -277100811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47a71bbd4745ee4baf2a062cafb5b3f
+      internalID: -608642072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124a1a9a1153b6445a2e4d64f2b6880e
+      internalID: 1397173306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_19
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd48f6ddb3189d4faa1bc4f8bd3ed32
+      internalID: 1623381534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bd6e7cc75b7dc42a4d02cd2d5b5fee
+      internalID: -1389653929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_21
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b252eb16dc7764c95d019dc361c064
+      internalID: -1025826873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_22
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c18831c87a8c4149aaf6e37b061a15a
+      internalID: 1716424267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_23
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5120d8e684f1b2549abc4b3b6cffb046
+      internalID: -723416582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b734e102eeb8cb041b317fb8d1527670
+      internalID: -241229535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a643a35ff92f941b2b1246fbe14888
+      internalID: 2015839065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d095052970a8b41919940b4dbd1f50
+      internalID: 732779371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c17950fa3e8a24996a699b644cf68c
+      internalID: 1371928049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_28
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64e90dc61483b746a3e1d8585af6ca3
+      internalID: -1079958602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_29
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a9426f5e9800b4594c5c117016ef57
+      internalID: 734401151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_30
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e0c3b9f3121e34a8d65c707356436b
+      internalID: -601860050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_31
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da25ade48d589324d84193f150671b34
+      internalID: -195594987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a99870a5afb7044bbe09cdeffed112
+      internalID: -1866099062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_33
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af369686f1416c40a7b271fbd34c130
+      internalID: 1561365783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_34
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df9900e8776bb144840aecb411151d4
+      internalID: -2109789572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_35
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd183bab975b8041b199bfc0f5dfa59
+      internalID: -22272212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ae99f38facb7640875b6deb3de11b1
+      internalID: -1005032152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_37
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722e669471547894daa56052d0d60078
+      internalID: 896496912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_38
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e7802bc3d049749b2856867f6828e0
+      internalID: -136153318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_39
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6de754e8f4bf1648a101de77b8d79ba
+      internalID: 74620805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1487ce3c8a9aaf4b937356f38c7ae68
+      internalID: 641569377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_41
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03dd3a3cf4b8e24fbf667b1af2e8b18
+      internalID: -501166167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_42
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cca68fb0ac7394b80c1a03bcdfe28d
+      internalID: -1796378721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_43
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06badc4ff0b70c54fb65c8e840d2fe0a
+      internalID: -1289143704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_44
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206164e959c404946990355ac9274f72
+      internalID: 310465613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_45
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a660eb9ab33555c449fc24ac978627c0
+      internalID: -1765212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_46
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257b43e38cc4dad41b6b421bf5b56199
+      internalID: -295512176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_47
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d4da5c3360e7e4f904f13f9a4731c6
+      internalID: 164950395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060e8c0f93c6a7f4d8362b3774074c62
+      internalID: -1241412817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_49
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7626e4b2adcbd4b92300a47ee2231b
+      internalID: -1165008909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_50
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a341dccb0515d29419a35e3454ae4fcd
+      internalID: -199313302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_51
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd193d07b57a9b9439d76f1e03e4ed37
+      internalID: -771094776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_52
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3599bd00dfd4a9a499a212ac4bcb87f4
+      internalID: 1917223339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_53
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead8fc3a1877f314d89b3a1833e7796e
+      internalID: -365724131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_54
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef59936159bf9e54d9a2f4b8637776a8
+      internalID: 801119604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_55
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d4991804a85bc469388394afe8b6e3
+      internalID: 1372411052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41f5f31e5b37974282eeaea1a8ac0d9
+      internalID: -732156125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_57
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c91f7d6ef56554ba7dcceb967d6364
+      internalID: -1510186380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_58
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b032c7a240452a418ccc61ca5b6a183
+      internalID: 1082448051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_59
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89077c3925962fd458097988e3f3c17e
+      internalID: 1954827397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_60
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4e94782cf74504f92c794fc0f7e20e
+      internalID: 405681219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_61
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8138c88b01f01bb4da6e0764c5dc4a63
+      internalID: -288773187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_62
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0245473cb841245b68ec7569b1381f
+      internalID: 121355834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(walk)_63
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8b1689195addd4fa39f41f4d01300a
+      internalID: -1178145722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      the_glutton(walk)_33: 1561365783
+      the_glutton(walk)_42: -1796378721
+      the_glutton(walk)_12: 597553077
+      the_glutton(walk)_10: -214540422
+      the_glutton(walk)_9: 1433222810
+      the_glutton(walk)_59: 1954827397
+      the_glutton(walk)_61: -288773187
+      the_glutton(walk)_30: -601860050
+      the_glutton(walk)_66: 194819146
+      the_glutton(walk)_18: 1397173306
+      the_glutton(walk)_57: -1510186380
+      the_glutton(walk)_58: 1082448051
+      the_glutton(walk)_15: -969479739
+      the_glutton(walk)_16: -277100811
+      the_glutton(walk)_19: 1623381534
+      the_glutton(walk)_43: -1289143704
+      the_glutton(walk)_54: 801119604
+      the_glutton(walk)_48: -1241412817
+      the_glutton(walk)_68: -243874642
+      the_glutton(walk)_5: 373835495
+      the_glutton(walk)_29: 734401151
+      the_glutton(walk)_36: -1005032152
+      the_glutton(walk)_34: -2109789572
+      the_glutton(walk)_21: -1025826873
+      the_glutton(walk)_27: 1371928049
+      the_glutton(walk)_31: -195594987
+      the_glutton(walk)_71: -624205368
+      the_glutton(walk)_8: -358947550
+      the_glutton(walk)_7: 1161705967
+      the_glutton(walk)_0: 896909006
+      the_glutton(walk)_25: 2015839065
+      the_glutton(walk)_55: 1372411052
+      the_glutton(walk)_35: -22272212
+      the_glutton(walk)_24: -241229535
+      the_glutton(walk)_53: -365724131
+      the_glutton(walk)_65: 1811951776
+      the_glutton(walk)_40: 641569377
+      the_glutton(walk)_56: -732156125
+      the_glutton(walk)_11: -1826215697
+      the_glutton(walk)_4: -1334188614
+      the_glutton(walk)_69: -1540098156
+      the_glutton(walk)_39: 74620805
+      the_glutton(walk)_37: 896496912
+      the_glutton(walk)_70: 313550495
+      the_glutton(walk)_28: -1079958602
+      the_glutton(walk)_14: 1421478708
+      the_glutton(walk)_23: -723416582
+      the_glutton(walk)_46: -295512176
+      the_glutton(walk)_41: -501166167
+      the_glutton(walk)_67: 1856102542
+      the_glutton(walk)_38: -136153318
+      the_glutton(walk)_50: -199313302
+      the_glutton(walk)_64: -410524843
+      the_glutton(walk)_13: -691785945
+      the_glutton(walk)_1: -1584032500
+      the_glutton(walk)_17: -608642072
+      the_glutton(walk)_20: -1389653929
+      the_glutton(walk)_3: 1855842386
+      the_glutton(walk)_52: 1917223339
+      the_glutton(walk)_2: -1158755109
+      the_glutton(walk)_26: 732779371
+      the_glutton(walk)_45: -1765212
+      the_glutton(walk)_22: 1716424267
+      the_glutton(walk)_44: 310465613
+      the_glutton(walk)_32: -1866099062
+      the_glutton(walk)_49: -1165008909
+      the_glutton(walk)_62: 121355834
+      the_glutton(walk)_47: 164950395
+      the_glutton(walk)_60: 405681219
+      the_glutton(walk)_6: 1479881661
+      the_glutton(walk)_51: -771094776
+      the_glutton(walk)_63: -1178145722
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
