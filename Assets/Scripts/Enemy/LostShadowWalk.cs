@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class LostShadowWalk : MonoBehaviour
 {
+    private Collider2D[] collidersToIgnore;
     public Reference reference;
-
     private Rigidbody2D rb;
     private Animator animator;
-
     private Vector2 chargeDirection;
 
     public float shadowSpeed = 3f;
@@ -25,6 +24,14 @@ public class LostShadowWalk : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start(){
+        /*Lost Shadow ignores walls that are in "allColliders"*/
+        collidersToIgnore = ArenaWalls.arenaWallsInstance.allColliders;
+        for(int i = 0; i< collidersToIgnore.Length;i++){
+        Physics2D.IgnoreCollision(collidersToIgnore[i], GetComponent<Collider2D>());
+        }
     }
 
     // Update is called once per frame
@@ -72,11 +79,8 @@ public class LostShadowWalk : MonoBehaviour
         canwalk=true;
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+      
+    }
 }

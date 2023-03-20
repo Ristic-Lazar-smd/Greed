@@ -2685,6 +2685,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2758,6 +2759,26 @@ Transform:
   m_Father: {fileID: 779755978}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
+  m_UpscaleRT: 0
+  m_PixelSnapping: 1
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &580622743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,8 +2873,8 @@ MonoBehaviour:
   - {fileID: 923440787912342300, guid: 57ade24d198ca984089eb2860b9b6519, type: 3}
   spawnInterval:
   - 1
-  - 5
-  - 10
+  - 2
+  - 4
   stopEnumRotation: 0
   noSpawnZoneAroundPlayer: 4.5
 --- !u!114 &672599355
@@ -3159,7 +3180,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.002287507}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1205468371}
   - {fileID: 519420032}
@@ -3237,7 +3258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: {fileID: 2009260076832972991, guid: 4a933ea673c84ec44b16c903a2f825ab, type: 3}
-  cooldown: 0.5
+  cooldown: 0.1
   canShoot: 1
 --- !u!114 &779755986
 MonoBehaviour:
@@ -4844,7 +4865,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205468370}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d3de59500e38e4b99ec120f607ef3c, type: 3}
   m_Name: 
@@ -5779,6 +5800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1901345261}
+  - component: {fileID: 1901345262}
   m_Layer: 0
   m_Name: arena collision
   m_TagString: Wall
@@ -5805,6 +5827,19 @@ Transform:
   m_Father: {fileID: 331326769}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1901345262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901345260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9971b2b02fb184bb60b739f1544fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allColliders: []
 --- !u!1 &1935100381
 GameObject:
   m_ObjectHideFlags: 0

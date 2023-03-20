@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public static GameManager instance;
 
+    [SerializeField] bool stopSpawn = true;
     public bool gameIsPaused = false;
     [HideInInspector]public bool canBeUnPaused = true;
     public int targetFrameRate = 60;
@@ -15,7 +16,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        SpawnEnemy();
+        Physics2D.IgnoreLayerCollision(6, 6, true); //Enemy ignores Enemy
+        
+        if (!stopSpawn)
+        {
+            SpawnEnemy();
+        }
         if (instance == null)
         {
             instance = this;

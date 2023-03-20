@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 923440787912342288}
   - component: {fileID: 923440787912342289}
-  - component: {fileID: 923440787912342302}
   - component: {fileID: 923440787912342303}
+  - component: {fileID: 923440787912342302}
   - component: {fileID: 6295626347878908556}
   - component: {fileID: -319268750037127341}
   - component: {fileID: 923440787912342291}
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 923440787912342300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.49428523, y: 0.2011686, z: 0}
-  m_LocalScale: {x: 1.6800001, y: 1.588154, z: 1.2278907}
+  m_LocalScale: {x: 1.6000001, y: 1.5125276, z: 1.1694198}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,22 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &923440787912342302
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923440787912342300}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: e22cd1fe4be0fb24495c74db37938006, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.031701453}
-  serializedVersion: 2
-  m_Radius: 0.17876454
 --- !u!50 &923440787912342303
 Rigidbody2D:
   serializedVersion: 4
@@ -129,6 +113,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &923440787912342302
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923440787912342300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e22cd1fe4be0fb24495c74db37938006, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.031701453}
+  serializedVersion: 2
+  m_Radius: 0.17876454
 --- !u!95 &6295626347878908556
 Animator:
   serializedVersion: 4
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisBody: {fileID: 923440787912342303}
   animator: {fileID: 6295626347878908556}
-  brzina: 200
+  brzina: 5
 --- !u!114 &1239844176145119618
 MonoBehaviour:
   m_ObjectHideFlags: 0

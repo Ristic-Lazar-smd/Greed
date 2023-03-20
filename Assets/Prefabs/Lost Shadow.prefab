@@ -193,9 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reference: {fileID: -4418369536128247561}
-  shadowSpeed: 3
-  attackRange: 4
-  attackSpeed: 8
+  shadowSpeed: 4
+  attackRange: 5
+  attackSpeed: 9
   delayAfterAttack: 0.5
 --- !u!114 &7833313422135389118
 MonoBehaviour:
