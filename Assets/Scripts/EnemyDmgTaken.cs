@@ -25,5 +25,18 @@ public class EnemyDmgTaken : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.gameObject.tag == "Sword")
+        {
+            if(flash)flash.FlashOnce(Color.white);
+            enemyHP = enemyHP - collision.gameObject.GetComponent<Sword>().swordDmg;
+            if(enemyHP <=0)
+            {
+                this.GetComponent<XpDrop>().Drop();
+                UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);
+                Destroy(gameObject);
+            }
+            
+
+        }
     }
 }

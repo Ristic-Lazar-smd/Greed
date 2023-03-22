@@ -233,4 +233,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d596f8a7838f0d34d95bc0ce9090f509, type: 2}
-  duration: 1.5
+  duration: 0.5

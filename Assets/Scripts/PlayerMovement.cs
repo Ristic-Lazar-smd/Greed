@@ -44,10 +44,10 @@ public class PlayerMovement : MonoBehaviour
         if (bodyVelocityXNormalized<0){
             sr.flipX = true;
         }
-        else if (bodyVelocityXNormalized>0 || Input.GetButtonDown("Fire1")){
+        else if (bodyVelocityXNormalized>0 /*|| Input.GetButtonDown("Fire1")*/){
             sr.flipX = false;
         }
-        
+
         // temp solution for mouse poss, redudent, check ManualShoot script //
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
         animator.SetFloat("MouseX", trueMousePos.x);
         animator.SetFloat("MouseY", trueMousePos.y);
+
     }
 
     private void FixedUpdate()
@@ -70,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && gameObject.tag!="Sword")
         {
             damageableCharacter.OnPlayerHit(collision.gameObject.GetComponent<Damage>().damage);
         }

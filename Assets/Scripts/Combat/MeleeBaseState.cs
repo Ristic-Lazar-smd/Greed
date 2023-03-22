@@ -47,10 +47,10 @@ public class MeleeBaseState : State
 
         if (Input.GetMouseButtonDown(0))
         {
-            AttackPressedTimer = 0.1f;
+            AttackPressedTimer = 0.01f;
         }
 
-        if (animator.GetFloat("AttackWindow.Open") > 0f && AttackPressedTimer > 0)
+        if (/*Input.GetMouseButton(0) &&*/ animator.GetFloat("AttackWindow.Open") > 0f && AttackPressedTimer > 0)
         {
             shouldCombo = true;
         }
