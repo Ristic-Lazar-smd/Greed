@@ -39,20 +39,33 @@ public class PlayerMovement : MonoBehaviour
         //Animation
         animator.SetFloat("dirX", bodyVelocityXNormalized);
         animator.SetFloat("dirY", bodyVelocityYNormalized);
+        
         //Flip sprite
         if (bodyVelocityXNormalized<0){
             sr.flipX = true;
         }
-        else if (bodyVelocityXNormalized>0){
+        else if (bodyVelocityXNormalized>0 || Input.GetButtonDown("Fire1")){
             sr.flipX = false;
         }
         
+        // temp solution for mouse poss, redudent, check ManualShoot script //
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
+        animator.SetFloat("MouseX", trueMousePos.x);
+        animator.SetFloat("MouseY", trueMousePos.y);
     }
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
-
+        if (animator.GetFloat("AnimationLock")!=0){
+            body.velocity = Vector2.zero;
+            sr.flipX = false;
+        }
+        else{
+            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
+            }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
