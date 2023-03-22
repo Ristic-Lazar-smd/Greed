@@ -29,6 +29,7 @@ public class GroundEntryState : MeleeBaseState
             else
             {
                 stateMachine.SetNextStateToMain();
+                shouldCombo = false;
             }
         }
     }
