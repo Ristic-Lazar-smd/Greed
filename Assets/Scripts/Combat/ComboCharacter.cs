@@ -23,6 +23,7 @@ public class ComboCharacter : MonoBehaviour
         meleeStateMachine.CurrentState.GetType() == 
         typeof(IdleCombatState))
         {
+            
             meleeStateMachine.SetNextState(new GroundEntryState());
         }
     }

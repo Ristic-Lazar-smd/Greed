@@ -5,18 +5,24 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public static PlayerMovement playerInstance;
     DamageableCharacter damageableCharacter;
     Rigidbody2D body;
     Animator animator;
     SpriteRenderer sr;
 
+    public Vector3 trueMousePos;
+    public float runSpeed = 20.0f;
+    [SerializeField]float stepSpeed;
     float horizontal;
     float vertical;
-    public float runSpeed = 20.0f;
     float bodyVelocityXNormalized;
     float bodyVelocityYNormalized;
+    [HideInInspector]public bool attackStep;
+
 
     void Awake(){
+        playerInstance = this;
         body = GetComponent<Rigidbody2D>();
         damageableCharacter = GetComponent<DamageableCharacter>();
         animator = GetComponent<Animator>();
@@ -48,14 +54,28 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = false;
         }
 
-        // temp solution for mouse poss, redudent, check ManualShoot script //
+        //saljem animatoru ovo na klik kako bi znao kada da flipujem anim//
+        if (Input.GetMouseButton(0)){
+        animator.SetFloat("MouseX", MouseRelToPlayer().x);
+        animator.SetFloat("MouseY", MouseRelToPlayer().y);
+        }
+
+        //Move player on melee attacks, attackStep is controlled by animations
+        if (attackStep){
+            //body.velocity = trueMousePos*2f;
+            transform.position = Vector2.MoveTowards(transform.position, transform.position + MouseRelToPlayer(), stepSpeed * Time.deltaTime);
+        }
+
+        
+
+    }
+
+    // temp solution for mouse poss, redudent, check ManualShoot script //
+    public Vector3 MouseRelToPlayer(){
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-        Vector3 trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
-        animator.SetFloat("MouseX", trueMousePos.x);
-        animator.SetFloat("MouseY", trueMousePos.y);
-
+        return trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
     }
 
     private void FixedUpdate()
@@ -66,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else{
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
-            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

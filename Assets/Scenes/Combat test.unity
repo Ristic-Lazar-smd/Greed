@@ -3172,7 +3172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fdfcc72dc421549b466fc8a35b5489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
+  stepSpeed: 7
+  attackStep: 0
 --- !u!4 &779755978
 Transform:
   m_ObjectHideFlags: 0

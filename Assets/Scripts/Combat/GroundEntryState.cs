@@ -13,6 +13,7 @@ public class GroundEntryState : MeleeBaseState
         duration = 0.5f;
         animator.SetTrigger("Attack" + attackIndex);
         Debug.Log("Player Attack " + attackIndex + " Fired!");
+        shouldCombo = false;
     }
 
     public override void OnUpdate()
@@ -23,13 +24,13 @@ public class GroundEntryState : MeleeBaseState
         {
             if (shouldCombo)
             {
-                stateMachine.SetNextState(new GroundComboState());
                 shouldCombo = false;
+                stateMachine.SetNextState(new GroundComboState());
             }
             else
             {
-                stateMachine.SetNextStateToMain();
                 shouldCombo = false;
+                stateMachine.SetNextStateToMain();
             }
         }
     }
