@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// sve sto ima //aleksa iznad je novo za dash
+
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -10,15 +13,17 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D body;
     Animator animator;
     SpriteRenderer sr;
+    PlayerDash playerDash;
 
-    public Vector3 trueMousePos;
+
+    [HideInInspector] public Vector3 trueMousePos;
     public float runSpeed = 20.0f;
     [SerializeField]float stepSpeed;
     float horizontal;
     float vertical;
-    float bodyVelocityXNormalized;
-    float bodyVelocityYNormalized;
-    [HideInInspector]public bool attackStep;
+    [HideInInspector] public float bodyVelocityXNormalized;
+    [HideInInspector] public float bodyVelocityYNormalized;
+    [HideInInspector] public bool attackStep;
 
 
     void Awake(){
@@ -27,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         damageableCharacter = GetComponent<DamageableCharacter>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        playerDash = GetComponent<PlayerDash>();
     }
 
     void Update()
@@ -65,9 +71,6 @@ public class PlayerMovement : MonoBehaviour
             //body.velocity = trueMousePos*2f;
             transform.position = Vector2.MoveTowards(transform.position, transform.position + MouseRelToPlayer(), stepSpeed * Time.deltaTime);
         }
-
-        
-
     }
 
     // temp solution for mouse poss, redudent, check ManualShoot script //
@@ -86,7 +89,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else{
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
+
+            //aleksa
+            playerDash.CheckDash();
         }
+
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

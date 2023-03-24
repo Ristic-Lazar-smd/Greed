@@ -442,6 +442,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &286913574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286913576}
+  - component: {fileID: 286913575}
+  m_Layer: 0
+  m_Name: PlayerAfterImagePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &286913575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286913574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e4d286badb5a74aa968432e98a3f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  afterImagePrefab: {fileID: 8953230278622818348, guid: 38588dedbf00bc8449d9a0866633bd08, type: 3}
+--- !u!4 &286913576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286913574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331326767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 779755974}
+  stopSpawn: 1
   gameIsPaused: 0
   canBeUnPaused: 1
   targetFrameRate: 144
@@ -3077,6 +3123,7 @@ GameObject:
   - component: {fileID: 779755981}
   - component: {fileID: 779755985}
   - component: {fileID: 779755987}
+  - component: {fileID: 779755988}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3169,7 +3216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fdfcc72dc421549b466fc8a35b5489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
+  stepSpeed: 0
+  bodyVelocityXNormalized: 0
+  bodyVelocityYNormalized: 0
+  attackStep: 0
 --- !u!4 &779755978
 Transform:
   m_ObjectHideFlags: 0
@@ -3292,6 +3344,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d596f8a7838f0d34d95bc0ce9090f509, type: 2}
   duration: 1.5
+--- !u!114 &779755988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779755974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab93159a0145061479971eacff593332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashTime: 0.1
+  dashSpeed: 3
+  distanceBetweenImages: 0.2
+  dashCooldown: 0.5
 --- !u!1 &848377617
 GameObject:
   m_ObjectHideFlags: 0
