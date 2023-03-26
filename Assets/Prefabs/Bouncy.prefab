@@ -220,3 +220,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 10
+  canBeKnockedBack: 1
+  knockBackSpeed: 25

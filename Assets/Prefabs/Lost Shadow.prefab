@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 20
+  canBeKnockedBack: 1
+  knockBackSpeed: 25
 --- !u!114 &-5990849065696913511
 MonoBehaviour:
   m_ObjectHideFlags: 0

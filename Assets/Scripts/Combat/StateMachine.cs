@@ -16,7 +16,6 @@ public class StateMachine : MonoBehaviour
         {
             SetState(nextState);
         }
-
         if (CurrentState != null)
             CurrentState.OnUpdate();
     }
@@ -37,6 +36,8 @@ public class StateMachine : MonoBehaviour
         if (_newState != null)
         {
             nextState = _newState;
+            //ovo zaustavlja dash nakog sto napad canceluje dash//
+            GetComponent<PlayerDash>().isDashing=false;
         }
     }
 
@@ -59,13 +60,6 @@ public class StateMachine : MonoBehaviour
 
     private void Awake()
     {
-        SetNextStateToMain();
-
-    }
-
-
-    private void OnValidate()
-    {
         if (mainStateType == null)
         {
             if (customName == "Combat")
@@ -73,5 +67,22 @@ public class StateMachine : MonoBehaviour
                 mainStateType = new IdleCombatState();
             }
         }
+
+
+
+        SetNextStateToMain();
+
     }
+
+
+    //private void OnValidate()
+    //{
+    //    if (mainStateType == null)
+    //    {
+    //        if (customName == "Combat")
+    //        {
+    //            mainStateType = new IdleCombatState();
+    //        }
+    //    }
+    //}
 }

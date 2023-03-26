@@ -6,8 +6,9 @@ public class PlayerDash : MonoBehaviour
 {
     Rigidbody2D body;
     Animator anim;
+    private StateMachine meleeStateMachine;
 
-    private bool isDashing;
+    public bool isDashing;
     public float dashTime;
     public float dashSpeed;
     public float distanceBetweenImages;
@@ -20,6 +21,7 @@ public class PlayerDash : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        meleeStateMachine = GetComponent<StateMachine>();
     }
 
     void Update()
@@ -35,12 +37,25 @@ public class PlayerDash : MonoBehaviour
                 AttemptToDash();
             }
         }
+
+
+        //ovo omogucava animation cancel iz dasha u bilo koj napad//
+        if(isDashing && Input.GetMouseButtonDown(0)){
+            switch(meleeStateMachine.CurrentState.ToString()){
+                case"IdleCombatState":{meleeStateMachine.SetNextState(new GroundEntryState());}
+                return;
+                case"GroundEntryState":{meleeStateMachine.SetNextState(new GroundComboState());}
+                return;
+                case"GroundComboState":{meleeStateMachine.SetNextState(new GroundFinisherState());}
+                return;
+            }
+        }
     }
 
     private void AttemptToDash()
     {
         isDashing = true;
-        //this.gameObject.GetComponent<DamageableCharacter>().Invincible = true;
+        this.gameObject.GetComponent<DamageableCharacter>().Invincible = true;
         dashTimeLeft = dashTime;
         lastDash = Time.time;
 
@@ -51,13 +66,6 @@ public class PlayerDash : MonoBehaviour
     public void CheckDash()
     {
         if(isDashing){
-            //anim.SetBool("AnimationLock",false);
-            //anim.enabled=false;
-            //anim.enabled=true;
-            //anim.CrossFade("test",0,0);
-            //anim.Play("test", -1, 0f);
-            //anim.SetFloat("Dash",1);
-
             if (dashTimeLeft > 0){
                 body.velocity = new Vector2(body.velocity.x * dashSpeed, body.velocity.y * dashSpeed);
                 dashTimeLeft -= Time.deltaTime;
@@ -69,7 +77,6 @@ public class PlayerDash : MonoBehaviour
                 }
             }
             if (dashTimeLeft <= 0){
-                //this.gameObject.GetComponent<DamageableCharacter>().Invincible = false;
                 isDashing = false;
             }
         }

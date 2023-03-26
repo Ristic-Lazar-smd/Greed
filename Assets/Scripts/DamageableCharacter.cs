@@ -61,7 +61,6 @@ public class DamageableCharacter : MonoBehaviour
             if (_invincible)
             {
                 invincibleTimeElapsed = 0f;
-                
                 flash.duration = invincibilityTime;
                 flash.FlashMultiple(Color.white);         
             }

@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
 
         //Move player on melee attacks, attackStep is controlled by animations
         if (attackStep){
-            //body.velocity = trueMousePos*2f;
             transform.position = Vector2.MoveTowards(transform.position, transform.position + MouseRelToPlayer(), stepSpeed * Time.deltaTime);
         }
     }
