@@ -3086,6 +3086,7 @@ GameObject:
   - component: {fileID: 779755975}
   - component: {fileID: 779755979}
   - component: {fileID: 779755982}
+  - component: {fileID: 779755991}
   - component: {fileID: 779755986}
   - component: {fileID: 779755977}
   - component: {fileID: 779755981}
@@ -3281,7 +3282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: {fileID: 2009260076832972991, guid: 4a933ea673c84ec44b16c903a2f825ab, type: 3}
-  cooldown: 0.1
+  timeBetweenShots: 0.5
   canShoot: 1
 --- !u!114 &779755986
 MonoBehaviour:
@@ -3298,6 +3299,7 @@ MonoBehaviour:
   gameManager: {fileID: 672599355}
   lvlUpUi: {fileID: 90043245}
   xpBar: {fileID: 416033315}
+  xpMultiplier: 1
   XP: 0
   xpThresholds: 19000000320000004b00000064000000fa010000f702000073040000ac060000020a0000040f000086160000c9210000ad320000044c00000672000009ab00008e000100d58001003f410200de610300
   lvl: 0
@@ -3354,10 +3356,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDashing: 0
-  dashTime: 0.25
-  dashSpeed: 4
-  distanceBetweenImages: 0.5
+  dashDuration: 0
+  dashSpeed: 3
   dashCooldown: 0.5
+  distanceBetweenImages: 0.5
+--- !u!114 &779755991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779755974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c19f0e9bb2f5ea468093b076c84e4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &848377617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,7 +5190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d895e4dcddf58fc4391ea5bd561988c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expandRadius: 25
+  echoExpandRadius: 10
   echoDelay: 0.001
 --- !u!58 &1205468373
 CircleCollider2D:
@@ -5207,7 +5221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfBullet: {fileID: 2009260076832972991, guid: 4a933ea673c84ec44b16c903a2f825ab, type: 3}
-  cooldown: 1
+  timeBetweenAutoShots: 0.5
   canShoot: 1
 --- !u!1 &1227242373
 GameObject:
@@ -6709,7 +6723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080719626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3927, y: 0.1177, z: 0.002287507}
+  m_LocalPosition: {x: 0.3927, y: 0.11770001, z: 0.002287507}
   m_LocalScale: {x: 0.2948447, y: 0.7166208, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

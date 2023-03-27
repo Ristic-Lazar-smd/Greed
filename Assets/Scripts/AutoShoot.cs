@@ -7,12 +7,12 @@ public class AutoShoot : MonoBehaviour
     public Transform pfBullet;
 
     float countdown = 0;
-    public float cooldown = 0.5f;
+    public float timeBetweenAutoShots = 0.5f;
     public bool canShoot = true;
 
     private void Start()
     {
-        countdown = cooldown;
+        countdown = timeBetweenAutoShots;
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class AutoShoot : MonoBehaviour
             countdown -= Time.deltaTime;
             if (countdown <= 0)
             {
-                countdown = cooldown;
+                countdown = timeBetweenAutoShots;
                 canShoot = true;
             }
         }

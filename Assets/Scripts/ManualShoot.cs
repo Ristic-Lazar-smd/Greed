@@ -8,7 +8,9 @@ public class ManualShoot : MonoBehaviour
     public Transform bulletType;
 
     float countdown = 0;
-    public float cooldown = 0.5f;
+
+    [Tooltip("Time between shots, aka rate of fire")]
+    public float timeBetweenShots = 0.5f;
     public bool canShoot = true;
 
     int[] eW = new int[] { 0 };
@@ -34,7 +36,7 @@ public class ManualShoot : MonoBehaviour
             countdown -= Time.deltaTime;
             if (countdown <= 0)
             {
-                countdown = cooldown;
+                countdown = timeBetweenShots;
                 canShoot = true;
             }
         }

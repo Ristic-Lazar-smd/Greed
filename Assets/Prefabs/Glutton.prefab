@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4725932970830599278}
   - component: {fileID: -2173914926835120054}
   - component: {fileID: -2272824389476224337}
+  - component: {fileID: -3217340359523032043}
   m_Layer: 6
   m_Name: Glutton
   m_TagString: Enemy
@@ -236,3 +237,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d596f8a7838f0d34d95bc0ce9090f509, type: 2}
   duration: 0.5
+--- !u!114 &-3217340359523032043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131130026856854404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0238ffb48978cdf438186655b8575de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpGain: 1
+  reference: {fileID: 3088750274453218056}
+  chanceToDrop: 5
+  hpOrb: {fileID: 4675683358287158679, guid: 5e47e4527a6cc294baa38dd498d8eba2, type: 3}
+  hpOrbSprite: {fileID: 21300000, guid: fe3852467ea5e4b488f8c7e0006c970b, type: 3}

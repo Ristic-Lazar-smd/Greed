@@ -8,7 +8,7 @@ public class EchoSearch : MonoBehaviour
     CircleCollider2D cc;
     internal Vector3 shootDir;
     internal bool detected = false;
-    public int expandRadius = 10;
+    public int echoExpandRadius = 10;
     public float echoDelay = 0.001f;
 
     bool canShoot = true;
@@ -34,7 +34,7 @@ public class EchoSearch : MonoBehaviour
         cc.radius = 0.5f;
         if (canShoot)
         {
-            while (cc.radius <= (0.1 * expandRadius))
+            while (cc.radius <= (0.1 * echoExpandRadius))
             {
                 cc.radius += 0.1f;
                 if (!detected) { break; }

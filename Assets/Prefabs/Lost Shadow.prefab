@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2356145531490407272}
   - component: {fileID: -3038095536429304336}
   - component: {fileID: -5990849065696913511}
+  - component: {fileID: 716446273882013508}
   m_Layer: 6
   m_Name: Lost Shadow
   m_TagString: Enemy
@@ -256,3 +257,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d596f8a7838f0d34d95bc0ce9090f509, type: 2}
   duration: 0.3
+--- !u!114 &716446273882013508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643543339553044535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0238ffb48978cdf438186655b8575de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpGain: 1
+  reference: {fileID: -4418369536128247561}
+  chanceToDrop: 50
+  hpOrb: {fileID: 4675683358287158679, guid: 5e47e4527a6cc294baa38dd498d8eba2, type: 3}
+  hpOrbSprite: {fileID: 21300000, guid: fe3852467ea5e4b488f8c7e0006c970b, type: 3}

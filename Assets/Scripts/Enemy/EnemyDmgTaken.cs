@@ -30,6 +30,7 @@ public class EnemyDmgTaken : MonoBehaviour
             if(enemyHP <=0)
             {
                 this.GetComponent<XpDrop>().Drop();
+                this.GetComponent<EnemyHpOrbDrop>().Drop();
                 UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);
                 Destroy(gameObject);
             }
@@ -43,6 +44,7 @@ public class EnemyDmgTaken : MonoBehaviour
             if(enemyHP <=0)
             {
                 this.GetComponent<XpDrop>().Drop();
+                this.GetComponent<EnemyHpOrbDrop>().Drop();
                 UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);
                 Destroy(gameObject);
             }
