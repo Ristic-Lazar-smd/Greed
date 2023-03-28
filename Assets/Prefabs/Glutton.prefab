@@ -251,6 +251,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpGain: 1
   reference: {fileID: 3088750274453218056}
-  chanceToDrop: 5
+  chanceToDrop: 2
   hpOrb: {fileID: 4675683358287158679, guid: 5e47e4527a6cc294baa38dd498d8eba2, type: 3}
-  hpOrbSprite: {fileID: 21300000, guid: fe3852467ea5e4b488f8c7e0006c970b, type: 3}
+  hpOrbSprite: {fileID: 1340084498, guid: 0217b70528994d14ba8b5c67282ef8e5, type: 3}

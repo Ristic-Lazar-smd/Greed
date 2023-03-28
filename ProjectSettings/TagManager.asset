@@ -10,6 +10,7 @@ TagManager:
   - Undefined
   - Sword
   - Bullet
+  - HpOrb
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ui
+    uniqueID: 3209535597
     locked: 0
   - name: Player
     uniqueID: 2928567079

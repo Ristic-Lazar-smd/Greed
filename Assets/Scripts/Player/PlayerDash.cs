@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     Rigidbody2D body;
-    Animator anim;
-    private StateMachine meleeStateMachine;
+    Animator playerAnimator;
+    StateMachine meleeStateMachine;
     DamageableCharacter damageableCharacter;
 
     public bool isDashing;
@@ -21,7 +21,7 @@ public class PlayerDash : MonoBehaviour
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        playerAnimator = GetComponent<Animator>();
         meleeStateMachine = GetComponent<StateMachine>();
         damageableCharacter = GetComponent<DamageableCharacter>();
     }
@@ -33,7 +33,8 @@ public class PlayerDash : MonoBehaviour
         //aleksa
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            anim.CrossFade("test",0,0);
+            playerAnimator.CrossFade("test",0,0);
+
             if (Time.time >= (lastDash + dashCooldown))
             {
                 AttemptToDash();
