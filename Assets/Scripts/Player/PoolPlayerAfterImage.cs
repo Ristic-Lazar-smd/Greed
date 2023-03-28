@@ -15,6 +15,10 @@ public class PoolPlayerAfterImage : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        
+    }
+
+    void Start(){
         GrowPool();
     }
 

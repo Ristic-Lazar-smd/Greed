@@ -7,6 +7,7 @@ public class PlayerDash : MonoBehaviour
     Rigidbody2D body;
     Animator anim;
     private StateMachine meleeStateMachine;
+    DamageableCharacter damageableCharacter;
 
     public bool isDashing;
     public float dashDuration;
@@ -22,11 +23,12 @@ public class PlayerDash : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         meleeStateMachine = GetComponent<StateMachine>();
+        damageableCharacter = GetComponent<DamageableCharacter>();
     }
 
     void Update()
     {
-        body = GetComponent<Rigidbody2D>();
+        //body = GetComponent<Rigidbody2D>();
         
         //aleksa
         if (Input.GetKeyDown(KeyCode.Space))
@@ -55,7 +57,7 @@ public class PlayerDash : MonoBehaviour
     private void AttemptToDash()
     {
         isDashing = true;
-        this.gameObject.GetComponent<DamageableCharacter>().Invincible = true;
+        damageableCharacter.Invincible = true;
         dashTimeLeft = dashDuration;
         lastDash = Time.time;
 

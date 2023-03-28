@@ -8,9 +8,9 @@ public class PlayerHpOrb : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HpOrb"))
         {
-            if(this.gameObject.GetComponent<DamageableCharacter>()._health != this.gameObject.GetComponent<DamageableCharacter>().maxHp)
+            if(this.gameObject.GetComponent<DamageableCharacter>().Health != this.gameObject.GetComponent<DamageableCharacter>().maxHp)
             {
-                this.gameObject.GetComponent<DamageableCharacter>()._health = this.gameObject.GetComponent<DamageableCharacter>()._health + collision.gameObject.GetComponent<HpOrb>().hpGain;
+                this.gameObject.GetComponent<DamageableCharacter>().Health = this.gameObject.GetComponent<DamageableCharacter>().Health + collision.gameObject.GetComponent<HpOrb>().hpGain;
                 Destroy(collision.gameObject);
             }         
         }

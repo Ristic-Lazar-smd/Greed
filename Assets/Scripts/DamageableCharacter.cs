@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DamageableCharacter : MonoBehaviour
 {
     //<-----NE DIRAJ KOMENTARISAN KOD POTREBAN MI JE KASNIJE----->//
 
-    public GameObject ui;
+    //public GameObject ui;
     public GameObject hpBar;
     Animator animator;
     Rigidbody2D rb;
@@ -72,7 +73,7 @@ public class DamageableCharacter : MonoBehaviour
             flash= _flash;
         }
 
-        ui.GetComponent<UiHpPlayer>().UiChangeHp((int)Health);
+        //ui.GetComponent<UiHpPlayer>().UiChangeHp((int)Health);
 
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -98,12 +99,14 @@ public class DamageableCharacter : MonoBehaviour
         if (!Invincible)
         {
             Health -= damage;
-            ui.GetComponent<UiHpPlayer>().UiChangeHp((int)Health);
+            //ui.GetComponent<UiHpPlayer>().UiChangeHp((int)Health);
 
             if (canTurnInvincible)
             {
                 Invincible = true;
             }
+
+            if (Health <= 0) SceneManager.LoadScene("DeathScene");
         }
     }
     public void OnHit(float damage, Vector2 knockback)
@@ -146,6 +149,7 @@ public class DamageableCharacter : MonoBehaviour
 
     void UiChangeHpPlayer(float hp)
     {
+
 
     }
 
