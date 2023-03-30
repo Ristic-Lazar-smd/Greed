@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+    PlayerDash playerDash;
     public string customName;
 
     private State mainStateType;
@@ -37,7 +38,7 @@ public class StateMachine : MonoBehaviour
         {
             nextState = _newState;
             //ovo zaustavlja dash nakog sto napad canceluje dash//
-            GetComponent<PlayerDash>().isDashing=false;
+            playerDash.isDashing=false;
         }
     }
 
@@ -60,29 +61,14 @@ public class StateMachine : MonoBehaviour
 
     private void Awake()
     {
+        playerDash = GetComponent<PlayerDash>();
         if (mainStateType == null)
         {
-            if (customName == "Combat")
-            {
+            //if (customName == "Combat")
+            //{
                 mainStateType = new IdleCombatState();
-            }
+           // }
         }
-
-
-
         SetNextStateToMain();
-
     }
-
-
-    //private void OnValidate()
-    //{
-    //    if (mainStateType == null)
-    //    {
-    //        if (customName == "Combat")
-    //        {
-    //            mainStateType = new IdleCombatState();
-    //        }
-    //    }
-    //}
 }

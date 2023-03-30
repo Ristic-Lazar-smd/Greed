@@ -46,12 +46,6 @@ public class GameManager : MonoBehaviour
             }
             countdown = spawntime;
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1)){
-            gameObject.GetComponent<SpawnEnemy>().spawnInterval[0]=10;
-            gameObject.GetComponent<SpawnEnemy>().spawnInterval[1]=1;
-            gameObject.GetComponent<SpawnEnemy>().spawnInterval[2]=1;
-            gameObject.GetComponent<SpawnEnemy>().StartNewEnumRotation();
-        }
         //Enemy spawn on timer END//
 
         //Play/Pause manager START//

@@ -28,15 +28,11 @@ public class PlayerDash : MonoBehaviour
 
     void Update()
     {
-        //body = GetComponent<Rigidbody2D>();
-        
-        //aleksa
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerAnimator.CrossFade("test",0,0);
-
             if (Time.time >= (lastDash + dashCooldown))
             {
+                playerAnimator.CrossFade("test",0,0);
                 AttemptToDash();
             }
         }

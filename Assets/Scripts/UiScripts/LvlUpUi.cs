@@ -8,7 +8,6 @@ public class LvlUpUi : MonoBehaviour
     
     void Start()
     {
-
         this.gameObject.SetActive(true);
     }
 

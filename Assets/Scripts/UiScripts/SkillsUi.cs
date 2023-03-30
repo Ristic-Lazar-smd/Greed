@@ -21,6 +21,11 @@ public class SkillsUi : MonoBehaviour
     public Sprite pressedQUiImage;
     Sprite notPressedQUiImage;
 
+    public WeaponState weaponSwitch;
+
+    public Sprite[] weaponImageList;
+    int imageTracker=0;
+
     void Start()
     {
         notPressedSpaceUiImage = spaceUi.sprite;
@@ -52,8 +57,12 @@ public class SkillsUi : MonoBehaviour
         //Q CLICK//
         if (Input.GetKeyDown(KeyCode.Q)){
             qUi.sprite = pressedQUiImage;
+            weaponSwitch.SwitchWeaponState();
+            //menjam weapon icon//ovo M O R A M da optimizujem wtf je ovaj spaghetti code bato //
+            leftClickUi.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = weaponImageList[imageTracker%2];
+            imageTracker++;
         }else if (Input.GetKeyUp(KeyCode.Q)){
-                qUi.sprite = notPressedQUiImage;
+                qUi.sprite = notPressedQUiImage;     
         }
 
     }
