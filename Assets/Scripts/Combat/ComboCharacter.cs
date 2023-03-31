@@ -24,8 +24,9 @@ public class ComboCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (animator.GetFloat("AttackWindow.Open") == 0f && Input.GetMouseButtonDown(0) && meleeStateMachine.CurrentState.GetType() == typeof(IdleCombatState) && !playerDash.isDashing)
+        if (animator.GetFloat("AttackWindow.Open") == 0f && Input.GetMouseButtonDown(0) && meleeStateMachine.CurrentState.GetType() == typeof(IdleCombatState) && !playerDash.boolDashComboFix)
         {
+            //ovo nije problem
             meleeStateMachine.SetNextState(new GroundEntryState());
         }
     }

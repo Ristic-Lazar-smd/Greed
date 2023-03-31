@@ -12,7 +12,7 @@ public class PlayerExp : MonoBehaviour
     Slider slider;
 
     public float xpMultiplier = 1;
-    public int XP = 0;
+    public float XP = 0;
     public int[] xpThresholds;
     public int lvl = 0;
 
@@ -21,7 +21,8 @@ public class PlayerExp : MonoBehaviour
         lvlUpUi.SetActive(false);
         slider = xpBar.GetComponent<Slider>();
     }
-    void Start(){
+    void Start()
+    {
         slider.maxValue = xpThresholds[lvl];
         slider.value = XP;
     }
@@ -29,27 +30,29 @@ public class PlayerExp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("XP"))
         {
-            XP = XP + collision.gameObject.GetComponent<XP>().xpGain;
+            XP = XP + collision.gameObject.GetComponent<XP>().xpGain * xpMultiplier;
             Destroy(collision.gameObject);
             slider.value = XP * xpMultiplier;
 
-            if(XP >= xpThresholds[lvl]){
+            if (XP >= xpThresholds[lvl])
+            {
                 slider.value = 0;
                 XP = 0;
                 gameManager.PauseGame();
                 lvl++;
                 lvlUpUi.SetActive(true);
-                gameManager.canBeUnPaused=false;
+                gameManager.canBeUnPaused = false;
                 slider.maxValue = xpThresholds[lvl];
                 slider.value = XP;
 
 
-                switch(lvl){
-                    case 1:{hpXpMaskAnimator.CrossFade("xplvl1",0,0);}return;
-                    case 2:{hpXpMaskAnimator.CrossFade("xplvl2",0,0);}return;
-                    case 3:{hpXpMaskAnimator.CrossFade("xplvl3",0,0);}return;
-                    case 4:{hpXpMaskAnimator.CrossFade("xplvl4",0,0);}return;
-                    case 5:{hpXpMaskAnimator.CrossFade("xplvl5",0,0);}return;
+                switch (lvl)
+                {
+                    case 1: { hpXpMaskAnimator.CrossFade("xplvl1", 0, 0); } return;
+                    case 2: { hpXpMaskAnimator.CrossFade("xplvl2", 0, 0); } return;
+                    case 3: { hpXpMaskAnimator.CrossFade("xplvl3", 0, 0); } return;
+                    case 4: { hpXpMaskAnimator.CrossFade("xplvl4", 0, 0); } return;
+                    case 5: { hpXpMaskAnimator.CrossFade("xplvl5", 0, 0); } return;
 
 
                 }

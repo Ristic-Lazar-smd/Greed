@@ -9,6 +9,7 @@ public class SpawnEnemy : MonoBehaviour
     public float[] spawnInterval;
     public bool stopEnumRotation;
     private GameObject player;
+    [SerializeField]private PlayerExp playerLvl;
     private Vector3 spawnPosition;
 
     [SerializeField] private float noSpawnZoneAroundPlayer;
@@ -17,6 +18,7 @@ public class SpawnEnemy : MonoBehaviour
 
     void Awake(){
         player = GetComponent<GameManager>().player;
+        playerLvl = player.GetComponent<PlayerExp>();
     }
     void Start(){
         
@@ -50,7 +52,45 @@ public class SpawnEnemy : MonoBehaviour
 
 
 
-
+    private void Update()
+    {
+        switch(playerLvl.lvl)
+        {
+            case 1:
+                {
+                    spawnInterval[0] = 0.7f;
+                    spawnInterval[1] = 10f;
+                    spawnInterval[2] = 8f;
+                }
+                break;
+            case 2:
+                {
+                    spawnInterval[0] = 0.5f;
+                    spawnInterval[1] = 8f;
+                    spawnInterval[2] = 6f;
+                }
+                break;
+            case 3:
+                {
+                    spawnInterval[0] = 0.3f;
+                    spawnInterval[1] = 6f;
+                    spawnInterval[2] = 4f;
+                }
+                break;
+            case 4:
+                {
+                    spawnInterval[0] = 0.2f;
+                    spawnInterval[1] = 4f;
+                    spawnInterval[2] = 2f;
+                }
+                break;
+            case 5:
+                {
+                    spawnInterval[1] = 3f;
+                }
+                break;
+        }
+    }
 
 
 

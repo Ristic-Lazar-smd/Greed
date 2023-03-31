@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc2ba14fa52ebd4b8453d49efa9abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 20
+  enemyHP: 15
   canBeKnockedBack: 1
-  knockBackSpeed: 25
+  knockBackSpeed: 50
 --- !u!114 &-5990849065696913511
 MonoBehaviour:
   m_ObjectHideFlags: 0

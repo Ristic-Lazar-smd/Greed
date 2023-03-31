@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerDash : MonoBehaviour
     Animator playerAnimator;
     StateMachine meleeStateMachine;
     DamageableCharacter damageableCharacter;
+    public Image dashImage;
 
     public bool isDashing;
     public float dashDuration;
@@ -18,6 +20,11 @@ public class PlayerDash : MonoBehaviour
     private float lastImageXposition;
     private float lastImageYposition;
     private float lastDash = -100f;
+
+
+    //pre sam koristio isDashing da kontrolis koja skripta moze da cita levi klik i to je izazivalo probleme zato sto moram da stavim isDashing na false da bih zaustavio animaciju, to ujedno pusti sve skripte da citaju input i zbog toga je bilo problema. Zato umesto isDashing sam uveo novi bool boolDashComboFix koji se setuje isto kad i isDashing ali njega ne gasim kad i isDashing.
+    public bool boolDashComboFix;
+    float dashTimer;
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -28,14 +35,36 @@ public class PlayerDash : MonoBehaviour
 
     void Update()
     {
+        dashTimer -= Time.deltaTime;
+        if (dashTimer <= 0){
+            boolDashComboFix = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Time.time >= (lastDash + dashCooldown))
             {
+                dashTimer = dashDuration;
                 playerAnimator.CrossFade("test",0,0);
                 AttemptToDash();
             }
         }
+
+
+        if (isDashing)
+        {
+            var tempColor = dashImage.color;
+            tempColor.a = 0f;
+            dashImage.color = tempColor;
+        }
+        else if(Time.time >= (lastDash + dashCooldown))
+        {
+            var tempColor = dashImage.color;
+            tempColor.a = 1f;
+            dashImage.color = tempColor;
+        }
+
+
 
 
         //ovo omogucava animation cancel iz dasha u bilo koj napad//
@@ -53,6 +82,7 @@ public class PlayerDash : MonoBehaviour
 
     private void AttemptToDash()
     {
+        boolDashComboFix = true;
         isDashing = true;
         damageableCharacter.Invincible = true;
         dashTimeLeft = dashDuration;
@@ -77,6 +107,7 @@ public class PlayerDash : MonoBehaviour
             }
             if (dashTimeLeft <= 0){
                 isDashing = false;
+                boolDashComboFix = false;
             }
         }
     }

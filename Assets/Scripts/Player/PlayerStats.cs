@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats instance;
 
+    
     float _xpMultiplier;
     float _runSpeed;
     float _stepSpeed;

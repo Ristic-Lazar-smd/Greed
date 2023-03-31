@@ -40,7 +40,14 @@ public class WeaponState : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.E) && autoShoot.enabled)
+        {
+            autoShoot.enabled = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && !autoShoot.enabled)
+        {
+            autoShoot.enabled = true;
+        }
     }
 
     public void SwitchWeaponState(){

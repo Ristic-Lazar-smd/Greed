@@ -22,6 +22,8 @@ public class MeleeBaseState : State
     // The Hit Effect to Spawn on the afflicted Enemy
     private GameObject HitEffectPrefab;
 
+    PlayerDash playerDash;
+
     // Input buffer Timer
     private float AttackPressedTimer = 0;
 
@@ -50,7 +52,7 @@ public class MeleeBaseState : State
             AttackPressedTimer = 0.01f;
         }*/
 
-        if (Input.GetMouseButtonDown(0) && animator.GetFloat("AttackWindow.Open") > 0f /*&& AttackPressedTimer > 0*/)
+        if (Input.GetMouseButtonDown(0) && animator.GetFloat("AttackWindow.Open") > 0f && !(GetComponent<PlayerDash>().boolDashComboFix)/*&& AttackPressedTimer > 0*/)
         {
             shouldCombo = true;
         }
