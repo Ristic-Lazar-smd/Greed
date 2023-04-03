@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc2ba14fa52ebd4b8453d49efa9abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitNumbers: {fileID: 3126743044369265346, guid: 3e8e60bd8b6d5fc44be78996a42fc68e, type: 3}
   enemyHP: 15
   canBeKnockedBack: 1
   knockBackSpeed: 50
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: d596f8a7838f0d34d95bc0ce9090f509, type: 2}
-  duration: 0.3
+  duration: 0.15
 --- !u!114 &716446273882013508
 MonoBehaviour:
   m_ObjectHideFlags: 0

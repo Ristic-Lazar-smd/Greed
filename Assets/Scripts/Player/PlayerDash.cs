@@ -9,6 +9,7 @@ public class PlayerDash : MonoBehaviour
     Animator playerAnimator;
     StateMachine meleeStateMachine;
     DamageableCharacter damageableCharacter;
+    Collider2D playerColider;
     public Image dashImage;
 
     public bool isDashing;
@@ -21,6 +22,8 @@ public class PlayerDash : MonoBehaviour
     private float lastImageYposition;
     private float lastDash = -100f;
 
+    string cacheCurentMeleeState;
+
 
     //pre sam koristio isDashing da kontrolis koja skripta moze da cita levi klik i to je izazivalo probleme zato sto moram da stavim isDashing na false da bih zaustavio animaciju, to ujedno pusti sve skripte da citaju input i zbog toga je bilo problema. Zato umesto isDashing sam uveo novi bool boolDashComboFix koji se setuje isto kad i isDashing ali njega ne gasim kad i isDashing.
     public bool boolDashComboFix;
@@ -31,6 +34,7 @@ public class PlayerDash : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         meleeStateMachine = GetComponent<StateMachine>();
         damageableCharacter = GetComponent<DamageableCharacter>();
+        playerColider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -56,12 +60,16 @@ public class PlayerDash : MonoBehaviour
             var tempColor = dashImage.color;
             tempColor.a = 0f;
             dashImage.color = tempColor;
+            playerColider.enabled = false;
+            cacheCurentMeleeState = meleeStateMachine.CurrentState.ToString();
+            meleeStateMachine.SetNextStateToMain();
         }
         else if(Time.time >= (lastDash + dashCooldown))
         {
             var tempColor = dashImage.color;
             tempColor.a = 1f;
             dashImage.color = tempColor;
+            playerColider.enabled = true;
         }
 
 
@@ -69,7 +77,7 @@ public class PlayerDash : MonoBehaviour
 
         //ovo omogucava animation cancel iz dasha u bilo koj napad//
         if(isDashing && Input.GetMouseButtonDown(0)){
-            switch(meleeStateMachine.CurrentState.ToString()){
+            switch(cacheCurentMeleeState){
                 case"IdleCombatState":{meleeStateMachine.SetNextState(new GroundEntryState());}
                 return;
                 case"GroundEntryState":{meleeStateMachine.SetNextState(new GroundComboState());}

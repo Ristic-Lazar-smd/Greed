@@ -55,10 +55,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("dirY", bodyVelocityYNormalized);
         
         //Flip sprite
-        if (bodyVelocityXNormalized<0){
+        if (bodyVelocityXNormalized < 0 && animator.GetFloat("AnimationLock") == 0){
             sr.flipX = true;
         }
-        else if (bodyVelocityXNormalized>0 /*|| Input.GetButtonDown("Fire1")*/){
+        else if (bodyVelocityXNormalized > 0){
             sr.flipX = false;
         }
 
@@ -71,13 +71,6 @@ public class PlayerMovement : MonoBehaviour
         //Move player on melee attacks, attackStep is controlled by animations
         if (attackStep){
             transform.position = Vector2.MoveTowards(transform.position, transform.position + MouseRelToPlayer(), stepSpeed * Time.deltaTime);
-        }
-
-
-
-
-        if (Input.GetMouseButton(1)){
-            PlayerStats.instance.SwordDmg = 20;
         }
     }
 

@@ -18,10 +18,9 @@ public class SpawnEnemy : MonoBehaviour
 
     void Awake(){
         player = GetComponent<GameManager>().player;
-        playerLvl = player.GetComponent<PlayerExp>();
     }
     void Start(){
-        
+        playerLvl = player.GetComponent<PlayerExp>();
     }
     public void SpawnRandom()
     {

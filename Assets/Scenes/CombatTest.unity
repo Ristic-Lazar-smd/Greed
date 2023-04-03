@@ -3411,7 +3411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: {fileID: 2009260076832972991, guid: 4a933ea673c84ec44b16c903a2f825ab, type: 3}
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.1
   canShoot: 1
 --- !u!114 &779755986
 MonoBehaviour:

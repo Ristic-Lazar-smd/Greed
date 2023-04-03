@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class EnemyDmgTaken : MonoBehaviour
 {
+    public GameObject hitNumbers;
     ColoredFlash flash;
     Transform playerTransform;
     Vector3 enemyPosRelativeToPlayer;
+
 
     public int enemyHP;
     [SerializeField]private bool canBeKnockedBack;
@@ -25,8 +29,11 @@ public class EnemyDmgTaken : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            int thisBulletDmg = collision.gameObject.GetComponent<Bullet>().bulletDmg;
             if(flash)flash.FlashOnce(Color.white);
-            enemyHP = enemyHP - collision.gameObject.GetComponent<Bullet>().bulletDmg;
+            enemyHP = enemyHP - thisBulletDmg;
+            GameObject thisHitNumbers = Instantiate(hitNumbers,transform.position,Quaternion.identity,transform);
+            thisHitNumbers.GetComponent<TextMeshPro>().SetText(thisBulletDmg.ToString());
             if(enemyHP <=0)
             {
                 this.GetComponent<XpDrop>().Drop();
