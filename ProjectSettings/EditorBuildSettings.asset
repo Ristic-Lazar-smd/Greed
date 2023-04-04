@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CombatTest.unity
     guid: f1c4fdcfc7a54d84f89bcf18f0008285
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: b637c28a7754b9b49b573065679789df
   m_configObjects: {}

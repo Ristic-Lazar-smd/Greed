@@ -76,7 +76,7 @@ public class PlayerDash : MonoBehaviour
 
 
         //ovo omogucava animation cancel iz dasha u bilo koj napad//
-        if(isDashing && Input.GetMouseButtonDown(0)){
+        if(isDashing && Input.GetMouseButtonDown(0) && WeaponState.instance.weaponStateIsMelee){
             switch(cacheCurentMeleeState){
                 case"IdleCombatState":{meleeStateMachine.SetNextState(new GroundEntryState());}
                 return;

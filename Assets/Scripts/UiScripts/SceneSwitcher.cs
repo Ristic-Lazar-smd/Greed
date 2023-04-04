@@ -20,9 +20,6 @@ public class SceneSwitcher : MonoBehaviour
             SceneManager.LoadScene("CombatTest");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha3)){
-            SceneManager.LoadScene("SampleScene");
-        }
-        if ( Input.GetKeyDown(KeyCode.Alpha4)){
             SceneManager.LoadScene("DeathScene");
         }
 

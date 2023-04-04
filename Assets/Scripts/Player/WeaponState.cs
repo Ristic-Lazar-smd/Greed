@@ -4,33 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 public class WeaponState : MonoBehaviour
 {
+    public static WeaponState instance;
+    public GameObject crossbow;
     StateMachine stateMachine;
     ComboCharacter comboCharacter;
     ManualShoot manualShoot;
     AutoShoot autoShoot;
-    bool weaponStateIsMelee;
-    /*public bool WeaponStateIsMelee {get{return _weaponStateIsMelee;}
-        set{
-            _weaponStateIsMelee = value;
-            if(_weaponStateIsMelee){
-                stateMachine.enabled=true;
-                comboCharacter.enabled=true;
-
-                manualShoot.enabled = false;
-            } else{
-                manualShoot.enabled = true;
-
-                stateMachine.enabled=false;
-                comboCharacter.enabled=false;
-            }
-        }
-    }*/
+    public bool weaponStateIsMelee;
     
     void Awake(){
         stateMachine = GetComponent<StateMachine>();
         comboCharacter = GetComponent<ComboCharacter>();
         manualShoot = GetComponent<ManualShoot>();
         autoShoot = GetComponentInChildren<AutoShoot>();
+        instance=this;
     }
     void Start()
     {
@@ -58,8 +45,10 @@ public class WeaponState : MonoBehaviour
             comboCharacter.enabled=true;
 
             manualShoot.enabled = false;
+            crossbow.SetActive(false);
         }else{
             manualShoot.enabled = true;
+            crossbow.SetActive(true);
 
             stateMachine.enabled=false;
             comboCharacter.enabled=false;
