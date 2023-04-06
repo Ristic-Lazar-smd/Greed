@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Upgrade1 : MonoBehaviour
 {
-    public GameObject player;
-
+    public void Start()
+    {
+        this.GetComponent<DamageableCharacter>().maxHp *= 2;
+        this.GetComponent<DamageableCharacter>()._health *= 2;
+    }
     public void AddUpgrade()
     {
-        player.GetComponent<DamageableCharacter>().maxHp *= 2;
-        player.GetComponent<DamageableCharacter>()._health *= 2;
+        this.AddComponent<Upgrade1>();
     }
 }

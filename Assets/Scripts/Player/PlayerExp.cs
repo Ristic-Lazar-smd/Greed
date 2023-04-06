@@ -41,6 +41,7 @@ public class PlayerExp : MonoBehaviour
                 gameManager.PauseGame();
                 lvl++;
                 lvlUpUi.SetActive(true);
+                this.GetComponent<UpgradePicker>().Pick();
                 gameManager.canBeUnPaused = false;
                 slider.maxValue = xpThresholds[lvl];
                 slider.value = XP;

@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Upgrade2 : MonoBehaviour
 {
-    public GameObject player;
-
+    public void Start()
+    {
+        this.GetComponent<PlayerExp>().xpMultiplier += 2;
+    }
     public void AddUpgrade()
     {
-        player.GetComponent<PlayerExp>().xpMultiplier += 2;
+        this.AddComponent<Upgrade2>();
     }
 }

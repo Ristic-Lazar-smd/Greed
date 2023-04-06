@@ -13,6 +13,7 @@ public class EnemyDmgTaken : MonoBehaviour
 
 
     public int enemyHP;
+    [Tooltip("Multiplies the dmg taken")]public float dmgMultiplier=1;
     [SerializeField]private bool canBeKnockedBack;
     [SerializeField]private float knockBackSpeed;
 
@@ -30,10 +31,14 @@ public class EnemyDmgTaken : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             int thisBulletDmg = collision.gameObject.GetComponent<Bullet>().bulletDmg;
+            int dmgDone = (int)(thisBulletDmg * dmgMultiplier);
             if(flash)flash.FlashOnce(Color.white);
-            enemyHP = enemyHP - thisBulletDmg;
+            enemyHP = enemyHP - dmgDone;
+
+            /*calls the dmg numbers to pop-up*/
             GameObject thisHitNumbers = Instantiate(hitNumbers,transform.position,Quaternion.identity,transform);
-            thisHitNumbers.GetComponent<TextMeshPro>().SetText(thisBulletDmg.ToString());
+            thisHitNumbers.GetComponent<TextMeshPro>().SetText(dmgDone.ToString());
+
             if(enemyHP <=0)
             {
                 this.GetComponent<XpDrop>().Drop();

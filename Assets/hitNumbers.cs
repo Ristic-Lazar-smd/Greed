@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hitNumbers : MonoBehaviour
+public class HitNumbers : MonoBehaviour
 {
     [SerializeField] float destroyTime = 3f;
     //[SerializeField]Vector3 offset = new Vector3 (0,2,0);

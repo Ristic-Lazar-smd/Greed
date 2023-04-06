@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Upgrade3 : MonoBehaviour
 {
-    public GameObject player;
-
+    public void Start()
+    {
+        this.GetComponentInChildren<ManualShoot>(true).timeBetweenShots -= 0.1f;
+    }
     public void AddUpgrade()
     {
-        player.GetComponentInChildren<ManualShoot>(true).timeBetweenShots -= 0.1f;
+        this.AddComponent<Upgrade3>();
     }
 }

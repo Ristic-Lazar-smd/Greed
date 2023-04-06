@@ -6,15 +6,19 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     UiScore uiKills;
+    Vector3 dir;
+    HitEffect hitEffect;
 
-    public Vector3 dir;
-    public float bulletSpeed = 10;
+    [Tooltip("Kolicina offseta, sto veći broj to je dalje od playera i bliže mišu")][SerializeField]float spawnOffset;
+    [SerializeField]float bulletSpeed = 10;
     public int bulletDmg;
 
 
     private void Awake()
     {
         uiKills = GameObject.Find("Score").GetComponent<UiScore>();
+        hitEffect = PlayerMovement.playerInstance.GetComponentInChildren<HitEffect>();
+
     }
 
     public void Setup(Vector3 shootDir)
@@ -22,7 +26,7 @@ public class Bullet : MonoBehaviour
         dir = shootDir;
         transform.eulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(shootDir));
         Destroy(gameObject, 2f); //brise gameobject na kome je ova skripta posle 2s
-        
+        transform.position += dir * spawnOffset;
     }
 
     void FixedUpdate()
@@ -34,9 +38,9 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //collision.GetComponent<XpDrop>().Drop();
-            //uiKills.ChangeScore(collision.gameObject.GetComponent<XpDrop>().scoreWorth);
             Destroy(this.gameObject);
+            hitEffect.OnHit(collision.gameObject);
+            //GetComponent<HitEffect>();
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
