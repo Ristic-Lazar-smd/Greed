@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reference: {fileID: 3088750274453218056}
   gluttonSpeed: 3
+  canMove: 1
 --- !u!114 &984553361983134368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +225,9 @@ MonoBehaviour:
   enemyHP: 20
   dmgMultiplier: 1
   canBeKnockedBack: 1
-  knockBackSpeed: 50
+  knockBackSpeed: 20
+  knockBackDistance: 2
+  knockedBack: 0
   nubmerOfStacks: 0
 --- !u!114 &-2272824389476224337
 MonoBehaviour:

@@ -11,6 +11,7 @@ public class GluttonMove : MonoBehaviour
 
     float bodyVelocityXNormalized;
     float bodyVelocityYNormalized;
+    public bool canMove=true;
 
     private void Awake()
     {
@@ -28,7 +29,9 @@ public class GluttonMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity= new Vector2(reference.player.transform.position.x-this.transform.position.x, reference.player.transform.position.y-this.transform.position.y).normalized * gluttonSpeed;
+        if(canMove){
+            rb.velocity= new Vector2(reference.player.transform.position.x-this.transform.position.x, reference.player.transform.position.y-this.transform.position.y).normalized * gluttonSpeed;
+        }
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)

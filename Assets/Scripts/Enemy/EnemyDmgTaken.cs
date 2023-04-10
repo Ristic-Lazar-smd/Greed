@@ -10,20 +10,30 @@ public class EnemyDmgTaken : MonoBehaviour
     ColoredFlash flash;
     Transform playerTransform;
     Vector3 enemyPosRelativeToPlayer;
+    GluttonMove gluttonMove;
 
 
     public int enemyHP;
     [Tooltip("Multiplies the dmg taken")]public float dmgMultiplier=1;
     [SerializeField]private bool canBeKnockedBack;
     [SerializeField]private float knockBackSpeed;
+    [SerializeField]private float knockBackDistance;
+    [HideInInspector]public bool knockedBack;
 
     public int nubmerOfStacks=0;
 
-    void Start(){
+    void Awake(){
         playerTransform = PlayerMovement.playerInstance.GetComponent<Transform>();
         if(TryGetComponent<ColoredFlash>(out ColoredFlash _flash)){
             flash = _flash;
         }
+        /*gluttonMove = GetComponent<GluttonMove>();*/
+    }
+    void Update(){
+        /*if(knockedBack && Vector3.Distance(transform.position,playerTransform.position)>knockBackDistance){
+            gluttonMove.canMove=true;
+            knockedBack=false;
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -87,5 +97,11 @@ public class EnemyDmgTaken : MonoBehaviour
     public void Knockback(){
         enemyPosRelativeToPlayer= new Vector3(transform.position.x - playerTransform.position.x, transform.position.y - playerTransform.position.y).normalized; 
         transform.position = Vector2.MoveTowards(transform.position, (transform.position + enemyPosRelativeToPlayer), knockBackSpeed * Time.deltaTime);
+
+        /*GetComponent<GluttonMove>().canMove=false;
+        knockedBack=true;
+        Vector3 test = (transform.position + enemyPosRelativeToPlayer);
+        GetComponent<Rigidbody2D>().AddForce(test*10f);
+        GetComponent<Rigidbody2D>().velocity= new Vector2(this.transform.position.x - playerTransform.position.x, this.transform.position.y - playerTransform.position.y).normalized * knockBackSpeed;*/
     }
 }
