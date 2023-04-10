@@ -10,7 +10,7 @@ public class HpOrb : MonoBehaviour
     public float range;
     public float speed;
     private float distance;
-    public int hpGain;
+    public int percentageOfMaxHpGained;
 
     private void Awake()
     {

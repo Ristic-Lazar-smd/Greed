@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitNumbers: {fileID: 3126743044369265346, guid: 3e8e60bd8b6d5fc44be78996a42fc68e, type: 3}
   enemyHP: 10
+  dmgMultiplier: 1
   canBeKnockedBack: 1
   knockBackSpeed: 50
 --- !u!114 &5599752073427484249

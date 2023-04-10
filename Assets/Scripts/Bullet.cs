@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
-            hitEffect.OnHit(collision.gameObject);
+            //hitEffect.OnHit(collision.gameObject);
             //GetComponent<HitEffect>();
         }
         else if (collision.gameObject.CompareTag("Wall"))

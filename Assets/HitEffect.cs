@@ -7,6 +7,7 @@ public class HitEffect : MonoBehaviour
 {
 
     public GameObject stackEffect;
+    public bool shouldStack=true;
 
     void Start()
     {
@@ -20,14 +21,29 @@ public class HitEffect : MonoBehaviour
 
     public void OnHit(GameObject target){
         //postavljam visual effect da pokazem da je procovano
+        EnemyDmgTaken thisEnemyDmgTaken = target.GetComponent<EnemyDmgTaken>();
 
         //proveri da li postoji stack na enemy, ako da povecaj stack ako ne instanciraj stack
-        GameObject thisStackEffect = Instantiate(stackEffect,target.transform.position,Quaternion.identity,target.transform);
-        thisStackEffect.GetComponent<TextMeshPro>().SetText("I");
-        thisStackEffect.GetComponent<StackEffect>().SetStack();
-
-
-        //povecavam dmgMultiplier, ali tek na 2. stack, posto ako povecam odmah ima da se primeni bonus dmg na prvi hit koji primenjuje 1. stack
-        target.GetComponent<EnemyDmgTaken>().dmgMultiplier+=0.2f;
+        switch (thisEnemyDmgTaken.nubmerOfStacks){
+            case 0:{
+                GameObject thisStackEffect = Instantiate(stackEffect,target.transform.position,Quaternion.identity,target.transform);
+                thisEnemyDmgTaken.nubmerOfStacks++;
+                thisEnemyDmgTaken.dmgMultiplier+=1f;
+                thisStackEffect.GetComponent<TextMeshPro>().SetText("I");
+                thisStackEffect.GetComponent<StackEffect>().SetStack();
+            }return;
+            case 1:{
+                thisEnemyDmgTaken.nubmerOfStacks++;
+                thisEnemyDmgTaken.dmgMultiplier+=1f;
+                target.GetComponentInChildren<TextMeshPro>().SetText("II");
+                target.GetComponentInChildren<StackEffect>().SetStack();
+            }return;
+            case 2:{
+                thisEnemyDmgTaken.nubmerOfStacks++;
+                thisEnemyDmgTaken.dmgMultiplier+=1f;
+                target.GetComponentInChildren<TextMeshPro>().SetText("III");
+                target.GetComponentInChildren<StackEffect>().SetStack();
+            }return;
+        }
     }
 }

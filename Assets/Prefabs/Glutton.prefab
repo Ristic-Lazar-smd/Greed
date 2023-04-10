@@ -40,7 +40,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3131130026856854410
 SpriteRenderer:
@@ -221,9 +221,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitNumbers: {fileID: 3126743044369265346, guid: 3e8e60bd8b6d5fc44be78996a42fc68e, type: 3}
-  enemyHP: 10
+  enemyHP: 20
+  dmgMultiplier: 1
   canBeKnockedBack: 1
   knockBackSpeed: 50
+  nubmerOfStacks: 0
 --- !u!114 &-2272824389476224337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0238ffb48978cdf438186655b8575de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpGain: 1
   reference: {fileID: 3088750274453218056}
   chanceToDrop: 2
   hpOrb: {fileID: 4675683358287158679, guid: 5e47e4527a6cc294baa38dd498d8eba2, type: 3}

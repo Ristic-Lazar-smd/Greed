@@ -7,8 +7,8 @@ public class Upgrade1 : MonoBehaviour
 {
     public void Start()
     {
-        this.GetComponent<DamageableCharacter>().maxHp *= 2;
-        this.GetComponent<DamageableCharacter>()._health *= 2;
+        this.GetComponent<DamageableCharacter>().maxHp += 5;
+        this.GetComponent<DamageableCharacter>().Health =+ 5;
     }
     public void AddUpgrade()
     {

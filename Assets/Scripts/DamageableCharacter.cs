@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class DamageableCharacter : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class DamageableCharacter : MonoBehaviour
     float invincibleTimeElapsed = 0f;
 
     public float _health = 3;
-    public int maxHp;
+    public float maxHp;
     public bool _targetable = true;
     public bool _invincible = false;
     public float Health { get { return _health; }
@@ -144,7 +145,7 @@ public class DamageableCharacter : MonoBehaviour
     private void Update()
     {
         hpBar.GetComponent<Slider>().maxValue = maxHp;
-        hpBar.GetComponent<Slider>().value = _health;
+        hpBar.GetComponent<Slider>().value = Health;
     }
 
     void UiChangeHpPlayer(float hp)

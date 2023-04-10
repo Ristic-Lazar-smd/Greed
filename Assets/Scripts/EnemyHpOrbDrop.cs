@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHpOrbDrop : MonoBehaviour
 {
-    public int hpGain;
+    //public int percentageOfMaxHpGained;
     public Reference reference;
     public int chanceToDrop;
     public GameObject hpOrb;
@@ -23,7 +23,7 @@ public class EnemyHpOrbDrop : MonoBehaviour
             hpOrb.GetComponent<SpriteRenderer>().sprite = hpOrbSprite;
             HpOrb newHpOrb = (Instantiate(hpOrb, this.transform.position + space, this.transform.rotation)).GetComponent<HpOrb>();
             newHpOrb.player = reference.player;
-            newHpOrb.hpGain = this.hpGain;
+            //newHpOrb.percentageOfMaxHpGained = this.percentageOfMaxHpGained;
             //Destroy(this.gameObject);
         }
     }

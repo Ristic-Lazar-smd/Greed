@@ -139,4 +139,4 @@ MonoBehaviour:
   player: {fileID: 0}
   range: 3
   speed: 5
-  hpGain: 1
+  percentageOfMaxHpGained: 20

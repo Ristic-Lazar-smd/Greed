@@ -32,11 +32,11 @@ public class PlayerExp : MonoBehaviour
         {
             XP = XP + collision.gameObject.GetComponent<XP>().xpGain * xpMultiplier;
             Destroy(collision.gameObject);
-            slider.value = XP * xpMultiplier;
+            slider.value = XP;
 
             if (XP >= xpThresholds[lvl])
             {
-                slider.value = 0;
+                
                 XP = 0;
                 gameManager.PauseGame();
                 lvl++;
@@ -44,7 +44,8 @@ public class PlayerExp : MonoBehaviour
                 this.GetComponent<UpgradePicker>().Pick();
                 gameManager.canBeUnPaused = false;
                 slider.maxValue = xpThresholds[lvl];
-                slider.value = XP;
+                //slider.value = XP;
+                slider.value = 0;
 
 
                 switch (lvl)

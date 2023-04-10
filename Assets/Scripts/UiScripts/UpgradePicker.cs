@@ -8,6 +8,7 @@ public class UpgradePicker : MonoBehaviour
     public List<GameObject> upgrades = new List<GameObject>();
     public GameObject canvas;
     public GameObject Manager;
+    private UpgradeButtonOnClick updateManager;
 
     private int random;
     private GameObject firstPrefab;
@@ -52,14 +53,15 @@ public class UpgradePicker : MonoBehaviour
     }
     public void SendUpgrades()
     {
+        updateManager = Manager.GetComponent<UpgradeButtonOnClick>();
 
-        Manager.GetComponent<UpgradeButtonOnClick>().firstUpgrade = first;
-        Manager.GetComponent<UpgradeButtonOnClick>().secondUpgrade = second;
-        Manager.GetComponent<UpgradeButtonOnClick>().thirdUpgrade = third;
-        Manager.GetComponent<UpgradeButtonOnClick>().first = temp1;
-        Manager.GetComponent<UpgradeButtonOnClick>().second = temp2;
-        Manager.GetComponent<UpgradeButtonOnClick>().third = temp3;
+        updateManager.firstUpgrade = first;
+        updateManager.secondUpgrade = second;
+        updateManager.thirdUpgrade = third;
+        updateManager.first = temp1;
+        updateManager.second = temp2;
+        updateManager.third = temp3;
 
-        Manager.GetComponent<UpgradeButtonOnClick>().Set();
+        updateManager.Set();
     }
 }
