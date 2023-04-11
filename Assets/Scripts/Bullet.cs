@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     [Tooltip("Kolicina offseta, sto veći broj to je dalje od playera i bliže mišu")][SerializeField]float spawnOffset;
     [SerializeField]float bulletSpeed = 10;
     public int bulletDmg;
+    [HideInInspector]public bool pierce=false;
 
 
     private void Awake()
@@ -38,9 +39,9 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(this.gameObject);
-            //hitEffect.OnHit(collision.gameObject);
-            //GetComponent<HitEffect>();
+            if (!pierce)Destroy(this.gameObject);
+            if (hitEffect.shouldStack)hitEffect.OnHit(collision.gameObject);
+
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {

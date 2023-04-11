@@ -94,9 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d6a4ff2783d1441bdde7bbe576ee77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 5
+  stackDuration: 6
   offsetUp: 0.2
-  textLeftToRightOffset: 0
+  parentEnemyDmgTaken: {fileID: 0}
 --- !u!114 &3126743044369265347
 MonoBehaviour:
   m_ObjectHideFlags: 0

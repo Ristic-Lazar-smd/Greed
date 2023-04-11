@@ -226,7 +226,7 @@ MonoBehaviour:
   dmgMultiplier: 1
   canBeKnockedBack: 1
   knockBackSpeed: 20
-  knockBackDistance: 2
+  knockBackDistance: 100
   knockedBack: 0
   nubmerOfStacks: 0
 --- !u!114 &-2272824389476224337
@@ -256,6 +256,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reference: {fileID: 3088750274453218056}
-  chanceToDrop: 2
+  chanceToDrop: 5
   hpOrb: {fileID: 4675683358287158679, guid: 5e47e4527a6cc294baa38dd498d8eba2, type: 3}
   hpOrbSprite: {fileID: 1340084498, guid: 0217b70528994d14ba8b5c67282ef8e5, type: 3}

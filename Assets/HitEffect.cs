@@ -22,7 +22,6 @@ public class HitEffect : MonoBehaviour
     public void OnHit(GameObject target){
         //postavljam visual effect da pokazem da je procovano
         EnemyDmgTaken thisEnemyDmgTaken = target.GetComponent<EnemyDmgTaken>();
-
         //proveri da li postoji stack na enemy, ako da povecaj stack ako ne instanciraj stack
         switch (thisEnemyDmgTaken.nubmerOfStacks){
             case 0:{

@@ -42,7 +42,7 @@ public class ManualShoot : MonoBehaviour
         }
     }
 
-    Vector3 GetDirection()
+    public Vector3 GetDirection()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;

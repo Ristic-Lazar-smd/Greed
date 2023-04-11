@@ -8,10 +8,10 @@ public class HitNumbers : MonoBehaviour
     //[SerializeField]Vector3 offset = new Vector3 (0,2,0);
     [SerializeField] float offsetUp = 0.2f;
     [SerializeField] float textLeftToRightOffset=0.15f;
-    void Start()
+
+    void Awake()
     {
         Destroy(gameObject, destroyTime);
-        
         transform.localPosition += new Vector3(Random.Range(-textLeftToRightOffset,textLeftToRightOffset),Random.Range(offsetUp-0.05f,offsetUp+0.05f),10);
     }
 

@@ -21,13 +21,13 @@ public class EnemyDmgTaken : MonoBehaviour
     [HideInInspector]public bool knockedBack;
 
     public int nubmerOfStacks=0;
+    public int dmgDone;
 
     void Awake(){
         playerTransform = PlayerMovement.playerInstance.GetComponent<Transform>();
         if(TryGetComponent<ColoredFlash>(out ColoredFlash _flash)){
             flash = _flash;
         }
-        /*gluttonMove = GetComponent<GluttonMove>();*/
     }
     void Update(){
         /*if(knockedBack && Vector3.Distance(transform.position,playerTransform.position)>knockBackDistance){
@@ -42,30 +42,24 @@ public class EnemyDmgTaken : MonoBehaviour
         {
             /*Enemy takes dmg*/
             int thisBulletDmg = collision.gameObject.GetComponent<Bullet>().bulletDmg;
-            int dmgDone = (int)(thisBulletDmg * dmgMultiplier);
+            dmgDone = (int)(thisBulletDmg * dmgMultiplier);
             enemyHP = enemyHP - dmgDone;
-
-            /*Set stack if possible*/
-            HitEffect hitEffect= PlayerMovement.playerInstance.GetComponentInChildren<HitEffect>(false);
-            if(hitEffect !=null && hitEffect.shouldStack)hitEffect.OnHit(this.gameObject);
-
-            /*Enemy flashes*/
-            if(flash)flash.FlashOnce(Color.white);
 
             /*calls the dmg numbers to pop-up*/
             GameObject thisHitNumbers = Instantiate(hitNumbers,transform.position,Quaternion.identity,transform);
             thisHitNumbers.GetComponent<TextMeshPro>().SetText(dmgDone.ToString());
 
-            if(enemyHP <=0)
-            {
-                OnEnemyDeath();
-            }
+            /*Set stack if possible*/
+            //ovo se radi na bulletu
+
+            /*Enemy flashes*/
+            if(flash)flash.FlashOnce(Color.white);       
         }
         if (collision.gameObject.tag == "Sword")
         {
             /*Enemy takes dmg*/
             int thisSwordDmg = collision.gameObject.GetComponent<Sword>().swordDmg;
-            int dmgDone = (int)(thisSwordDmg * dmgMultiplier);
+            dmgDone = (int)(thisSwordDmg * dmgMultiplier);
             enemyHP = enemyHP - dmgDone;
 
             /*Set stack if possible*/
@@ -79,12 +73,13 @@ public class EnemyDmgTaken : MonoBehaviour
             /*calls the dmg numbers to pop-up*/
             GameObject thisHitNumbers = Instantiate(hitNumbers,transform.position,Quaternion.identity,transform);
             thisHitNumbers.GetComponent<TextMeshPro>().SetText(dmgDone.ToString());
+            //thisHitNumbers.GetComponent<HitNumbers>().parentTransform=this.transform;
+        }
 
-            if(enemyHP <=0)
+        if(enemyHP <=0)
             {
                 OnEnemyDeath();
             }
-        }
     }
 
     void OnEnemyDeath(){
