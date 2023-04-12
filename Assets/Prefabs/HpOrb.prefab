@@ -138,5 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   range: 3
-  speed: 5
+  speed: 7
   percentageOfMaxHpGained: 20

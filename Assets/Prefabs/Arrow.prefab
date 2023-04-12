@@ -85,9 +85,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841321d80f4b83e4b872b5036cd1fa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnOffset: 1.2
+  spawnOffset: 0.8
   bulletSpeed: 20
   bulletDmg: 3
+  pierce: 0
 --- !u!114 &-1616380370564166891
 MonoBehaviour:
   m_ObjectHideFlags: 0

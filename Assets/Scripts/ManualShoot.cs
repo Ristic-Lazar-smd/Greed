@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEditor;
+using CameraShake;
 public class ManualShoot : MonoBehaviour
 {
+    [SerializeField]BounceShake.Params shakeParams;
+
     public Transform bulletType;
 
     float countdown = 0;
@@ -25,6 +28,8 @@ public class ManualShoot : MonoBehaviour
                 {
                     case 0:
                         ShootFireball();
+                        CameraShaker.Shake(new BounceShake(shakeParams));
+
                         break;  
                 }
             }

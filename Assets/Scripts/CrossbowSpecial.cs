@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CameraShake;
 
 public class CrossbowSpecial : MonoBehaviour
 {
+    
+
     public Transform bulletType;
     ManualShoot manualShoot;
 
     public bool canFireSpecial=true;
+    bool checkPassed=false;
     float timer;
     public float specialCooldown;
     bool chargeSpecial=false;
@@ -20,6 +24,10 @@ public class CrossbowSpecial : MonoBehaviour
     [Tooltip("In seconds")]public float stage1Threshold;
     [Tooltip("In seconds")]public float stage2Threshold;
     [Tooltip("In seconds")]public float stage3Threshold;
+
+    [SerializeField]PerlinShake.Params shakeParams1;
+    [SerializeField]PerlinShake.Params shakeParams2;
+    [SerializeField]PerlinShake.Params shakeParams3;
 
 
     void Awake()
@@ -42,12 +50,15 @@ public class CrossbowSpecial : MonoBehaviour
             charge += Time.deltaTime;
             if (charge>stage3Threshold){
                 chargeDamage = chargeDamageStage3;
+                CameraShaker.Shake(new PerlinShake(shakeParams3));
             }else
             if (charge>stage2Threshold){
                 chargeDamage = chargeDamageStage2;
+                CameraShaker.Shake(new PerlinShake(shakeParams2));
             }else
             if (charge>stage1Threshold){
                 chargeDamage = chargeDamageStage1;
+                CameraShaker.Shake(new PerlinShake(shakeParams1));
             }
         }
 
@@ -55,9 +66,11 @@ public class CrossbowSpecial : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && canFireSpecial){
             charge=0;
             chargeDamage = chargeDamageStage0;
-            chargeSpecial=true;
+            chargeSpecial = true;
+            checkPassed = true;
+
         }
-        if (Input.GetButtonUp("Fire2") && canFireSpecial){
+        if (Input.GetButtonUp("Fire2") && checkPassed){
             Transform tbullet = Instantiate(bulletType, transform.position, Quaternion.identity);
             Bullet bullet = tbullet.GetComponent<Bullet>();
             bullet.Setup(manualShoot.GetDirection());
@@ -65,6 +78,7 @@ public class CrossbowSpecial : MonoBehaviour
             bullet.pierce = true;
             canFireSpecial = false;
             chargeSpecial = false;
+            checkPassed = false;
         }
     }
 }
