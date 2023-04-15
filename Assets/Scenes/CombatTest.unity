@@ -2951,8 +2951,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604117638}
-  - component: {fileID: 604117639}
   - component: {fileID: 604117640}
+  - component: {fileID: 604117642}
   - component: {fileID: 604117641}
   m_Layer: 0
   m_Name: Crossbow
@@ -2977,18 +2977,6 @@ Transform:
   m_Father: {fileID: 779755978}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &604117639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604117637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9808bbe25cd8da4097a81174cff66a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &604117640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3012,26 +3000,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 604117637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5d5ae5e89cf8840add147146a80cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ef93b498e45a1d47ba68d01675b89ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: {fileID: 2009260076832972991, guid: ba039eb784545954cbc894cd626425c3, type: 3}
   canFireSpecial: 1
-  specialCooldown: 1
-  chargeDamageStage0: 3
-  chargeDamageStage1: 5
-  chargeDamageStage2: 10
-  chargeDamageStage3: 15
+  specialCooldown: 5
+  chargeDamageStage0: 5
+  chargeDamageStage1: 10
+  chargeDamageStage2: 15
+  chargeDamageStage3: 20
   stage1Threshold: 0.5
   stage2Threshold: 1
   stage3Threshold: 1.5
   shakeParams1:
     strength:
-      position: {x: 0.025, y: 0.025, z: 0.025}
+      position: {x: 0.01, y: 0.01, z: 0.01}
       eulerAngles: {x: 0, y: 0, z: 0}
     noiseModes:
-    - freq: 2
-      amplitude: 1
+    - freq: 3
+      amplitude: 0.446
     envelope:
       attack: 10
       sustain: 0
@@ -3044,11 +3032,11 @@ MonoBehaviour:
       axesMultiplier: {x: 1, y: 1, z: 1}
   shakeParams2:
     strength:
-      position: {x: 0.025, y: 0.025, z: 0.025}
+      position: {x: 0.01, y: 0.01, z: 0.01}
       eulerAngles: {x: 0, y: 0, z: 0}
     noiseModes:
-    - freq: 5
-      amplitude: 1
+    - freq: 6
+      amplitude: 0.713
     envelope:
       attack: 10
       sustain: 0
@@ -3061,11 +3049,11 @@ MonoBehaviour:
       axesMultiplier: {x: 1, y: 1, z: 1}
   shakeParams3:
     strength:
-      position: {x: 0.025, y: 0.025, z: 0.025}
+      position: {x: 0.02, y: 0.02, z: 0.02}
       eulerAngles: {x: 0, y: 0, z: 0}
     noiseModes:
-    - freq: 10
-      amplitude: 1
+    - freq: 12
+      amplitude: 0.664
     envelope:
       attack: 10
       sustain: 0
@@ -3076,6 +3064,18 @@ MonoBehaviour:
       falloffScale: 50
       falloffDegree: 1
       axesMultiplier: {x: 1, y: 1, z: 1}
+--- !u!114 &604117642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604117637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadaadf3af0c0dc47a18cd25a4f7d93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &672599353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,7 +3202,7 @@ GameObject:
   - component: {fileID: 779755986}
   - component: {fileID: 779755977}
   - component: {fileID: 779755981}
-  - component: {fileID: 779755985}
+  - component: {fileID: 779755995}
   - component: {fileID: 779755987}
   - component: {fileID: 779755989}
   - component: {fileID: 779755988}
@@ -3384,35 +3384,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0024944693, y: -0.020579308}
   m_Size: {x: 0.19287094, y: 0.37884134}
   m_Direction: 0
---- !u!114 &779755985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779755974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9892caa30aa9bd4b8d64a4379e61d78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeParams:
-    positionStrength: 0.01
-    rotationStrength: 0.01
-    axesMultiplier:
-      position: {x: 1, y: 1, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 1}
-    freq: 10
-    numBounces: 4
-    randomness: 1
-    attenuation:
-      clippingDistance: 10
-      falloffScale: 50
-      falloffDegree: 1
-      axesMultiplier: {x: 1, y: 1, z: 1}
-  bulletType: {fileID: 2009260076832972991, guid: ba039eb784545954cbc894cd626425c3, type: 3}
-  timeBetweenShots: 0.1
-  canShoot: 1
 --- !u!114 &779755986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3547,8 +3518,40 @@ MonoBehaviour:
   - {fileID: 1649235391389828441, guid: 10d1dd0168224cc46acc75bccedc14c2, type: 3}
   - {fileID: 6627786322103732188, guid: f64474717b697094da9bf885b2d2d72f, type: 3}
   - {fileID: 8018280049380117763, guid: 1d161271b7453674490ab47be2f23405, type: 3}
+  - {fileID: 8018280049380117763, guid: fffe1311848ec2342b3f73efbea6362d, type: 3}
+  - {fileID: 1649235391389828441, guid: b66960bf5d492c942a61f5323dfdc66e, type: 3}
   canvas: {fileID: 1159901137}
   Manager: {fileID: 672599353}
+--- !u!114 &779755995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779755974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1928e8a104e064689969ad6b0e33e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeParams:
+    positionStrength: 0.05
+    rotationStrength: 0.1
+    axesMultiplier:
+      position: {x: 1, y: 1, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 1}
+    freq: 25
+    numBounces: 5
+    randomness: 0.5
+    attenuation:
+      clippingDistance: 10
+      falloffScale: 50
+      falloffDegree: 1
+      axesMultiplier: {x: 1, y: 1, z: 1}
+  bulletType: {fileID: 2009260076832972991, guid: ba039eb784545954cbc894cd626425c3, type: 3}
+  canShoot: 1
+  timeBetweenShots: 0.3
+  extraShot: 0
 --- !u!1 &871519233
 GameObject:
   m_ObjectHideFlags: 0

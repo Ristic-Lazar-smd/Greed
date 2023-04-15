@@ -85,7 +85,8 @@ public class SpawnEnemy : MonoBehaviour
                 break;
             case 5:
                 {
-                    spawnInterval[1] = 3f;
+                    spawnInterval[0] = 0.1f;
+                    spawnInterval[1] = 2f;
                 }
                 break;
         }

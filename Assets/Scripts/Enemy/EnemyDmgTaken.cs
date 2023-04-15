@@ -11,6 +11,8 @@ public class EnemyDmgTaken : MonoBehaviour
     Transform playerTransform;
     Vector3 enemyPosRelativeToPlayer;
     GluttonMove gluttonMove;
+    public GameObject explosion;
+    /*[HideInInspector]*/ public bool canExplode = false;
 
 
     public int enemyHP;
@@ -75,6 +77,20 @@ public class EnemyDmgTaken : MonoBehaviour
             thisHitNumbers.GetComponent<TextMeshPro>().SetText(dmgDone.ToString());
             //thisHitNumbers.GetComponent<HitNumbers>().parentTransform=this.transform;
         }
+        if(collision.gameObject.tag == "Explosion")
+        {
+            /*Enemy takes dmg*/
+            dmgDone = explosion.GetComponent<Explosion>().explosionDmg;
+            enemyHP = enemyHP - dmgDone;
+
+            /*Flashes and gets knocked back*/
+            if (canBeKnockedBack) { Knockback(); }
+            if (flash) { flash.FlashOnce(Color.white); }
+
+            /*calls the dmg numbers to pop-up*/
+            GameObject thisHitNumbers = Instantiate(hitNumbers, transform.position, Quaternion.identity, transform);
+            thisHitNumbers.GetComponent<TextMeshPro>().SetText(dmgDone.ToString());
+        }
 
         if(enemyHP <=0)
             {
@@ -83,9 +99,13 @@ public class EnemyDmgTaken : MonoBehaviour
     }
 
     void OnEnemyDeath(){
+        if (canExplode == true)
+        {
+            Explode();
+        }
         this.GetComponent<XpDrop>().Drop();
         this.GetComponent<EnemyHpOrbDrop>().Drop();
-        UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);
+        UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);        
         Destroy(gameObject);
     }
 
@@ -98,5 +118,10 @@ public class EnemyDmgTaken : MonoBehaviour
         Vector3 test = (transform.position + enemyPosRelativeToPlayer);
         GetComponent<Rigidbody2D>().AddForce(test*10f);
         GetComponent<Rigidbody2D>().velocity= new Vector2(this.transform.position.x - playerTransform.position.x, this.transform.position.y - playerTransform.position.y).normalized * knockBackSpeed;*/
+    }
+
+    public void Explode()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
     }
 }

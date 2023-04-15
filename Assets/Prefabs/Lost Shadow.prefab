@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: -3038095536429304336}
   - component: {fileID: -5990849065696913511}
   - component: {fileID: 716446273882013508}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Lost Shadow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -241,10 +241,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitNumbers: {fileID: 3126743044369265346, guid: 3e8e60bd8b6d5fc44be78996a42fc68e, type: 3}
+  explosion: {fileID: 7476015909580981607, guid: 6d30d67e61fb32444a721f018cc4ccae, type: 3}
+  canExplode: 0
   enemyHP: 15
   dmgMultiplier: 1
   canBeKnockedBack: 1
   knockBackSpeed: 50
+  knockBackDistance: 0
+  knockedBack: 0
+  nubmerOfStacks: 0
+  dmgDone: 0
 --- !u!114 &-5990849065696913511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0238ffb48978cdf438186655b8575de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentageOfMaxHpGained: 0
   reference: {fileID: -4418369536128247561}
   chanceToDrop: 5
   hpOrb: {fileID: 4675683358287158679, guid: 5e47e4527a6cc294baa38dd498d8eba2, type: 3}

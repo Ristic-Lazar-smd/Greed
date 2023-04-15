@@ -16,7 +16,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Physics2D.IgnoreLayerCollision(6, 6, true); //Enemy ignores Enemy
+        //3 enemy layers, ignoruju jedni druge ali ne ignoruju sami sebe
+        Physics2D.IgnoreLayerCollision(9, 10, true); 
+        Physics2D.IgnoreLayerCollision(9, 11, true);
+        Physics2D.IgnoreLayerCollision(10, 11, true); 
         
         if (!stopSpawn)
         {

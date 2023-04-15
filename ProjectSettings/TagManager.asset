@@ -11,6 +11,7 @@ TagManager:
   - Sword
   - Bullet
   - HpOrb
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -18,12 +19,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
+  - 
   - EchoSearch
   - Drops
-  - 
-  - 
-  - 
+  - Enemy1
+  - Enemy2
+  - Enemy3
   - 
   - 
   - 

@@ -16,7 +16,7 @@ public class UpgradeButtonOnClick : MonoBehaviour
      public int first;
      public int second;
      public int third;
-    
+
 
     public void Set()
     {
@@ -53,6 +53,22 @@ public class UpgradeButtonOnClick : MonoBehaviour
                 {
                     Debug.Log("AS!");
                     player.AddComponent<Upgrade3>();
+                    this.GetComponent<GameManager>().ResumeGame();
+                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                }
+                break;
+            case 3:
+                {
+                    Debug.Log("EXTRA SHOT");
+                    player.AddComponent<CbExtraShot>();
+                    this.GetComponent<GameManager>().ResumeGame();
+                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                }
+                break;
+            case 4:
+                {
+                    Debug.Log("EXPLOSION");
+                    player.AddComponent<ExplosionUpgrade>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
                 }
