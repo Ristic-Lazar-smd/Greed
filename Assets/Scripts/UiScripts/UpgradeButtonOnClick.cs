@@ -36,14 +36,12 @@ public class UpgradeButtonOnClick : MonoBehaviour
         {
             case 0:
                 {
-                    Debug.Log("HP!");
                     player.AddComponent<Upgrade1>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
                 }break;
             case 1:
                 {
-                    Debug.Log("XP!");
                     player.AddComponent<Upgrade2>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
@@ -51,7 +49,6 @@ public class UpgradeButtonOnClick : MonoBehaviour
                 break;
             case 2:
                 {
-                    Debug.Log("AS!");
                     player.AddComponent<Upgrade3>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
@@ -59,7 +56,6 @@ public class UpgradeButtonOnClick : MonoBehaviour
                 break;
             case 3:
                 {
-                    Debug.Log("EXTRA SHOT");
                     player.AddComponent<CbExtraShot>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
@@ -67,7 +63,6 @@ public class UpgradeButtonOnClick : MonoBehaviour
                 break;
             case 4:
                 {
-                    Debug.Log("EXPLOSION");
                     player.AddComponent<ExplosionUpgrade>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();

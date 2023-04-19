@@ -10,6 +10,7 @@ public class WeaponState : MonoBehaviour
     ComboCharacter comboCharacter;
     ManualShoot manualShoot;
     AutoShoot autoShoot;
+    [HideInInspector]public Animator animator;
     public bool weaponStateIsMelee;
     
     void Awake(){
@@ -17,6 +18,7 @@ public class WeaponState : MonoBehaviour
         comboCharacter = GetComponent<ComboCharacter>();
         manualShoot = GetComponent<ManualShoot>();
         autoShoot = GetComponentInChildren<AutoShoot>();
+        animator = GetComponent<Animator>();
         instance=this;
     }
     void Start()

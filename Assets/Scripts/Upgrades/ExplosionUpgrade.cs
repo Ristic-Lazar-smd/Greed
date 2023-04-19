@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class ExplosionUpgrade : MonoBehaviour
 {
-    private GameObject[] allEnemies;
+    private GameObject[] allEnemyPrefabs;
+    private ListOfEnemies listOfEnemies;
     // Start is called before the first frame update
     void Start()
     {
-        allEnemies = this.GetComponent<PlayerExp>().gameManager.GetComponent<SpawnEnemy>().enemyPrefabs;
-        foreach(GameObject enemy in allEnemies)
+        listOfEnemies = GameManager.instance.GetComponent<ListOfEnemies>();
+        allEnemyPrefabs = this.GetComponent<PlayerExp>().gameManager.GetComponent<SpawnEnemy>().enemyPrefabs;
+        foreach(GameObject enemy in allEnemyPrefabs)
+        {
+            enemy.GetComponent<EnemyDmgTaken>().canExplode = true;
+        }
+        foreach(GameObject enemy in listOfEnemies.enemies)
         {
             enemy.GetComponent<EnemyDmgTaken>().canExplode = true;
         }

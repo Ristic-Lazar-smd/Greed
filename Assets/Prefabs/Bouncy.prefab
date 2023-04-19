@@ -229,6 +229,8 @@ MonoBehaviour:
   knockBackSpeed: 50
   knockBackDistance: 0
   knockedBack: 0
+  hitStunDuration: 0.5
+  canMove: 0
   nubmerOfStacks: 0
   dmgDone: 0
 --- !u!114 &5599752073427484249

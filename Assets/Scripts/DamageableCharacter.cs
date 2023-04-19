@@ -19,6 +19,9 @@ public class DamageableCharacter : MonoBehaviour
     public bool isPlayer = true;
     public bool canTurnInvincible = false;
     public bool disableSimulation = false;
+    
+    public float knockedBackTime = 0.25f;
+    float knockedBackTimeElapsed = 0f;
     public float invincibilityTime = 0.25f;
     
     //bool invincible = false;
@@ -29,6 +32,15 @@ public class DamageableCharacter : MonoBehaviour
     public float maxHp;
     public bool _targetable = true;
     public bool _invincible = false;
+    public bool _knockedBack = false;
+    public bool KnockedBack{get{return _knockedBack;}
+        set{
+            _knockedBack=value;
+            if(_knockedBack){
+            knockedBackTimeElapsed=0f;
+            }
+        }
+    }
     public float Health { get { return _health; }
         set
         {
@@ -41,7 +53,6 @@ public class DamageableCharacter : MonoBehaviour
             }           
         } 
     }
-
     public bool Targetable { get { return _targetable; }
         set
         {
@@ -54,7 +65,6 @@ public class DamageableCharacter : MonoBehaviour
             phyCollider.enabled = false;
         }
     }
-
     public bool Invincible { get { return _invincible; }
         set
         {
@@ -82,7 +92,28 @@ public class DamageableCharacter : MonoBehaviour
 
         //animator.SetBool("isAlive", true);
     }
+    private void Update()
+    {
+        hpBar.GetComponent<Slider>().maxValue = maxHp;
+        hpBar.GetComponent<Slider>().value = Health;
+    }
+    public void FixedUpdate()
+    {
+        if (Invincible)
+        {
+            invincibleTimeElapsed += Time.deltaTime;
+            if(invincibleTimeElapsed > invincibilityTime)
+            {
+                Invincible = false;
+            }
+        }
+        if(KnockedBack){
+            knockedBackTimeElapsed +=Time.deltaTime;
+            if(knockedBackTimeElapsed > knockedBackTime) KnockedBack=false;
+        }
+    }
  
+
     public void OnHit(float damage)
     {
         if (!Invincible)
@@ -95,20 +126,19 @@ public class DamageableCharacter : MonoBehaviour
             }
         }
     }
-    public void OnPlayerHit(float damage)
+    public void OnPlayerHit(float damage, Vector2 knockback)
     {
         if (!Invincible)
         {
             Health -= damage;
-            //ui.GetComponent<UiHpPlayer>().UiChangeHp((int)Health);
-
-            if (canTurnInvincible)
-            {
-                Invincible = true;
-            }
-
+            if (canTurnInvincible)Invincible = true;
             if (Health <= 0) SceneManager.LoadScene("DeathScene");
+            OnKnockback(knockback);
         }
+    }
+    public void OnKnockback(Vector2 knockback){
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+        KnockedBack=true;
     }
     public void OnHit(float damage, Vector2 knockback)
     {
@@ -123,36 +153,11 @@ public class DamageableCharacter : MonoBehaviour
             }
         }
     }
-
     public void OnObjectDestroyed()
     {
         Destroy(gameObject);
     }
-
-    public void FixedUpdate()
-    {
-        if (Invincible)
-        {
-
-            invincibleTimeElapsed += Time.deltaTime;
-            if(invincibleTimeElapsed > invincibilityTime)
-            {
-                Invincible = false;
-            }
-        }
-    }
-
-    private void Update()
-    {
-        hpBar.GetComponent<Slider>().maxValue = maxHp;
-        hpBar.GetComponent<Slider>().value = Health;
-    }
-
     void UiChangeHpPlayer(float hp)
     {
-
-
     }
-
-
 }

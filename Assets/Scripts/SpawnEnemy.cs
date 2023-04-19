@@ -5,19 +5,30 @@ using UnityEngine.UI;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    public static SpawnEnemy instance;
+
     public GameObject[] enemyPrefabs;
     public float[] spawnInterval;
     public bool stopEnumRotation;
     private GameObject player;
     [SerializeField]private PlayerExp playerLvl;
     private Vector3 spawnPosition;
+    private ListOfEnemies listOfEnemies;
 
     [SerializeField] private float noSpawnZoneAroundPlayer;
     private float randomXposition, randomYposition;
     private int whatToSpawn;
 
     void Awake(){
+        instance= this;
+
         player = GetComponent<GameManager>().player;
+        foreach(GameObject enemy in enemyPrefabs)
+        {
+            enemy.GetComponent<EnemyDmgTaken>().canExplode = false;
+        }
+        listOfEnemies = this.GetComponent<ListOfEnemies>();
+
     }
     void Start(){
         playerLvl = player.GetComponent<PlayerExp>();
@@ -39,6 +50,7 @@ public class SpawnEnemy : MonoBehaviour
         Reference enemy = (Instantiate(enemyPrefabs, spawnPosition, Quaternion.identity)).GetComponent<Reference>();
         enemy.player = player; //Passing GameObject "Player" to newly instanced Prefab  
         StartCoroutine(spawnEnemy(interval,enemyPrefabs));
+        listOfEnemies.enemies.Add(enemy.gameObject);
     }
 
     private void GenerateRandomPos(){

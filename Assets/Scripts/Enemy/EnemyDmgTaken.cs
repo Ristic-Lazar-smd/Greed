@@ -7,35 +7,62 @@ using TMPro;
 public class EnemyDmgTaken : MonoBehaviour
 {
     public GameObject hitNumbers;
+    public GameObject explosion;
     ColoredFlash flash;
     Transform playerTransform;
+    Rigidbody2D rb;
+    ListOfEnemies listOfEnemies;
     Vector3 enemyPosRelativeToPlayer;
-    GluttonMove gluttonMove;
-    public GameObject explosion;
+
+
     /*[HideInInspector]*/ public bool canExplode = false;
-
-
     public int enemyHP;
     [Tooltip("Multiplies the dmg taken")]public float dmgMultiplier=1;
     [SerializeField]private bool canBeKnockedBack;
     [SerializeField]private float knockBackSpeed;
     [SerializeField]private float knockBackDistance;
     [HideInInspector]public bool knockedBack;
+    public float hitStunDuration;
+    float hitStunTimer;
+    [HideInInspector]public bool canMove;
 
     public int nubmerOfStacks=0;
     public int dmgDone;
 
+
+
+    bool _hitStun=false;
+    [HideInInspector]public bool hitStun{get{return _hitStun;}
+        set{
+            _hitStun=value;
+            if (_hitStun){canMove=false;}
+            else if (!_hitStun) {canMove=true;}
+        }
+    }
+
     void Awake(){
-        playerTransform = PlayerMovement.playerInstance.GetComponent<Transform>();
         if(TryGetComponent<ColoredFlash>(out ColoredFlash _flash)){
             flash = _flash;
         }
+
+        playerTransform = PlayerMovement.playerInstance.GetComponent<Transform>();
+        listOfEnemies = GameManager.instance.GetComponent<ListOfEnemies>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+    void Start(){
+        canMove = true;
     }
     void Update(){
         /*if(knockedBack && Vector3.Distance(transform.position,playerTransform.position)>knockBackDistance){
             gluttonMove.canMove=true;
             knockedBack=false;
         }*/
+
+        if(hitStun){
+            if(hitStunTimer>0) hitStunTimer-=Time.deltaTime;
+            else hitStun=false;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -69,6 +96,7 @@ public class EnemyDmgTaken : MonoBehaviour
             if(hitEffect !=null && hitEffect.shouldStack)hitEffect.OnHit(this.gameObject);
 
             /*Flashes and gets knocked back*/
+            HitStun();
             if(canBeKnockedBack){Knockback();}
             if(flash){flash.FlashOnce(Color.white);}
 
@@ -84,6 +112,7 @@ public class EnemyDmgTaken : MonoBehaviour
             enemyHP = enemyHP - dmgDone;
 
             /*Flashes and gets knocked back*/
+            HitStun();
             if (canBeKnockedBack) { Knockback(); }
             if (flash) { flash.FlashOnce(Color.white); }
 
@@ -105,7 +134,8 @@ public class EnemyDmgTaken : MonoBehaviour
         }
         this.GetComponent<XpDrop>().Drop();
         this.GetComponent<EnemyHpOrbDrop>().Drop();
-        UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);        
+        UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);
+        listOfEnemies.enemies.Remove(this.gameObject);
         Destroy(gameObject);
     }
 
@@ -119,6 +149,12 @@ public class EnemyDmgTaken : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(test*10f);
         GetComponent<Rigidbody2D>().velocity= new Vector2(this.transform.position.x - playerTransform.position.x, this.transform.position.y - playerTransform.position.y).normalized * knockBackSpeed;*/
     }
+    public void HitStun(){
+        rb.velocity=Vector2.zero;
+        hitStunTimer = hitStunDuration;
+        hitStun=true;
+    }
+
 
     public void Explode()
     {

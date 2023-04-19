@@ -93,6 +93,7 @@ public class PlayerDash : MonoBehaviour
         boolDashComboFix = true;
         isDashing = true;
         damageableCharacter.Invincible = true;
+        damageableCharacter.KnockedBack=false; //you can dash out of hitstun
         dashTimeLeft = dashDuration;
         lastDash = Time.time;
 

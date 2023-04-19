@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(damageableCharacter.KnockedBack)return;
         if (animator.GetFloat("AnimationLock")!=0){
             body.velocity = Vector2.zero;
             sr.flipX = false;
@@ -94,15 +95,14 @@ public class PlayerMovement : MonoBehaviour
             //aleksa
             playerDash.CheckDash();
         }
-
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && gameObject.tag!="Sword")
         {
-            damageableCharacter.OnPlayerHit(collision.gameObject.GetComponent<Damage>().damage);
+            Vector2 test = new Vector2(transform.position.x - collision.transform.position.x, transform.position.y-collision.transform.position.y).normalized * 10;
+            damageableCharacter.OnPlayerHit(collision.gameObject.GetComponent<Damage>().damage,test);
         }
     }
 }

@@ -7,16 +7,17 @@ public class GluttonMove : MonoBehaviour
     public Reference reference;
     private Rigidbody2D rb;
     private Animator animator;
+    private EnemyDmgTaken enemyDmgTaken;
     public float gluttonSpeed = 3f;
 
     float bodyVelocityXNormalized;
     float bodyVelocityYNormalized;
-    public bool canMove=true;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        enemyDmgTaken = GetComponent<EnemyDmgTaken>();
     }
     
     private void Update(){
@@ -29,7 +30,7 @@ public class GluttonMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(canMove){
+        if(enemyDmgTaken.canMove){
             rb.velocity= new Vector2(reference.player.transform.position.x-this.transform.position.x, reference.player.transform.position.y-this.transform.position.y).normalized * gluttonSpeed;
         }
     }
