@@ -89,6 +89,7 @@ MonoBehaviour:
   bulletSpeed: 20
   bulletDmg: 3
   pierce: 0
+  bounce: 1
 --- !u!114 &-1616380370564166891
 MonoBehaviour:
   m_ObjectHideFlags: 0

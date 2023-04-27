@@ -56,6 +56,8 @@ public class ManualShoot : MonoBehaviour
         }
     }
 
+
+ 
     public Vector3 GetDirection()
     {
         Vector3 mousePos = Input.mousePosition;

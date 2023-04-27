@@ -59,12 +59,14 @@ public class SkillsUi : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)){
             qUi.sprite = pressedQUiImage;
 
-            if (weaponSwitch.animator.GetFloat("AnimationLock")==0 && !crossbowSpecial.chargeSpecial){
+           // if (weaponSwitch.animator.GetFloat("AnimationLock")==0 && !crossbowSpecial.chargeSpecial){
                 weaponSwitch.SwitchWeaponState();
                 //menjam weapon icon//ovo M O R A M da optimizujem wtf je ovaj spaghetti code bato //
-                leftClickUi.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = weaponImageList[imageTracker%2];
-                imageTracker++;
-            }
+                if(weaponSwitch.CanSwitch()){
+                    leftClickUi.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = weaponImageList[imageTracker%2];
+                    imageTracker++;
+                }
+            //}
 
         }else if (Input.GetKeyUp(KeyCode.Q)){
                 qUi.sprite = notPressedQUiImage;     

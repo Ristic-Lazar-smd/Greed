@@ -17,7 +17,13 @@ public class UpgradeButtonOnClick : MonoBehaviour
      public int second;
      public int third;
 
+    private ListOfXpOrbs listOfXpOrbs;
 
+
+    private void Awake()
+    {
+        listOfXpOrbs = GetComponent<ListOfXpOrbs>();
+    }
     public void Set()
     {
 
@@ -39,12 +45,23 @@ public class UpgradeButtonOnClick : MonoBehaviour
                     player.AddComponent<Upgrade1>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                }break;
+                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+                    {
+                        orb.GetComponent<XP>().canBePickedUp = true;
+                        orb.GetComponent<CircleCollider2D>().enabled = true;
+                    }
+                }
+                break;
             case 1:
                 {
                     player.AddComponent<Upgrade2>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+                    {
+                        orb.GetComponent<XP>().canBePickedUp = true;
+                        orb.GetComponent<CircleCollider2D>().enabled = true;
+                    }
                 }
                 break;
             case 2:
@@ -52,6 +69,11 @@ public class UpgradeButtonOnClick : MonoBehaviour
                     player.AddComponent<Upgrade3>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+                    {
+                        orb.GetComponent<XP>().canBePickedUp = true;
+                        orb.GetComponent<CircleCollider2D>().enabled = true;
+                    }
                 }
                 break;
             case 3:
@@ -59,6 +81,11 @@ public class UpgradeButtonOnClick : MonoBehaviour
                     player.AddComponent<CbExtraShot>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+                    {
+                        orb.GetComponent<XP>().canBePickedUp = true;
+                        orb.GetComponent<CircleCollider2D>().enabled = true;
+                    }
                 }
                 break;
             case 4:
@@ -66,6 +93,23 @@ public class UpgradeButtonOnClick : MonoBehaviour
                     player.AddComponent<ExplosionUpgrade>();
                     this.GetComponent<GameManager>().ResumeGame();
                     lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+                    {
+                        orb.GetComponent<XP>().canBePickedUp = true;
+                        orb.GetComponent<CircleCollider2D>().enabled = true;
+                    }
+                }
+                break;
+            case 5:
+                {
+                    player.AddComponent<ArrowWallBounce>();
+                    this.GetComponent<GameManager>().ResumeGame();
+                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+                    {
+                        orb.GetComponent<XP>().canBePickedUp = true;
+                        orb.GetComponent<CircleCollider2D>().enabled = true;
+                    }
                 }
                 break;
         }

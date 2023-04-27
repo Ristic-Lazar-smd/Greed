@@ -141,6 +141,7 @@ MonoBehaviour:
   range: 3
   speed: 7
   xpGain: 200
+  canBePickedUp: 1
 --- !u!95 &8477836466971121601
 Animator:
   serializedVersion: 4

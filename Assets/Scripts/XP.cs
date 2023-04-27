@@ -12,6 +12,7 @@ public class XP : MonoBehaviour
     public float speed;
     private float distance;
     public int xpGain;
+    public bool canBePickedUp = true;
 
     private void Awake()
     {
@@ -26,14 +27,14 @@ public class XP : MonoBehaviour
         distance = Vector3.Distance(transform.position, player.transform.position);
     }
     void FixedUpdate(){
-        if (distance <= range)
+        if ((distance <= range) && (canBePickedUp==true))
         {
             thisRigidBody.drag = 0;
             thisRigidBody.velocity=new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y).normalized * speed;
         }
         else if(distance > range)
         {
-            thisRigidBody.drag = 4;
+            thisRigidBody.drag = 10;
         }
     }
 }

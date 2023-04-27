@@ -10,6 +10,8 @@ public class WeaponState : MonoBehaviour
     ComboCharacter comboCharacter;
     ManualShoot manualShoot;
     AutoShoot autoShoot;
+    CrossbowSpecial crossbowSpecial;
+    SwordSpecial swordSpecial;
     [HideInInspector]public Animator animator;
     public bool weaponStateIsMelee;
     
@@ -19,6 +21,8 @@ public class WeaponState : MonoBehaviour
         manualShoot = GetComponent<ManualShoot>();
         autoShoot = GetComponentInChildren<AutoShoot>();
         animator = GetComponent<Animator>();
+        crossbowSpecial = GetComponentInChildren<CrossbowSpecial>();
+        swordSpecial = GetComponentInChildren<SwordSpecial>();
         instance=this;
     }
     void Start()
@@ -39,9 +43,16 @@ public class WeaponState : MonoBehaviour
         }
     }
 
-    public void SwitchWeaponState(){
-        weaponStateIsMelee = !weaponStateIsMelee;
+    public bool CanSwitch(){
+        if (animator.GetFloat("AnimationLock")!=0 || crossbowSpecial.chargeSpecial || swordSpecial.isSpinning) return false;
 
+        else return true;
+    }
+
+    public void SwitchWeaponState(){
+        if(!CanSwitch()) return;
+
+        weaponStateIsMelee = !weaponStateIsMelee;
         if (weaponStateIsMelee){
             stateMachine.enabled=true;
             comboCharacter.enabled=true;

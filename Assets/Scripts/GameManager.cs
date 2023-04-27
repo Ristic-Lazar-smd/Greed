@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
+    public GameObject arrows;
+    public GameObject xpOrb;
     public static GameManager instance;
+    private ListOfXpOrbs listOfXpOrbs;
 
     [SerializeField] bool stopSpawn = true;
     public bool gameIsPaused = false;
@@ -35,6 +38,10 @@ public class GameManager : MonoBehaviour
         }
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFrameRate;
+
+        listOfXpOrbs = GetComponent<ListOfXpOrbs>();
+
+        ResetOnStart();
     }
 
     void Update()
@@ -77,5 +84,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gameIsPaused = false;
         player.GetComponent<ManualShoot>().canShoot=true;
+    }
+
+    public void ResetOnStart()
+    {
+        arrows.GetComponent<Bullet>().bounce = false;
+        xpOrb.GetComponent<XP>().canBePickedUp = true;
+        xpOrb.GetComponent<CircleCollider2D>().enabled = true;       
     }
 }

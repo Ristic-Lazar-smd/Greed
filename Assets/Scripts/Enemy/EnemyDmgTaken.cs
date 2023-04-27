@@ -136,7 +136,13 @@ public class EnemyDmgTaken : MonoBehaviour
         this.GetComponent<EnemyHpOrbDrop>().Drop();
         UiScore.Instance.ChangeScore(this.GetComponent<XpDrop>().scoreWorth);
         listOfEnemies.enemies.Remove(this.gameObject);
-        Destroy(gameObject);
+
+        Vector3 deathPos = this.gameObject.transform.position;
+        Destroy(this.gameObject);
+        GameObject thisHitNumbers = Instantiate(hitNumbers, deathPos, Quaternion.identity);
+        thisHitNumbers.GetComponent<TextMeshPro>().SetText(dmgDone.ToString());
+
+        //Destroy(gameObject);
     }
 
     public void Knockback(){
