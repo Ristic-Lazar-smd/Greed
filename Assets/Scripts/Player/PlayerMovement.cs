@@ -55,15 +55,15 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("dirY", bodyVelocityYNormalized);
         
         //Flip sprite
-        if (bodyVelocityXNormalized < 0 && animator.GetFloat("AnimationLock") == 0){
+        /*if (bodyVelocityXNormalized < 0 && animator.GetFloat("AnimationLock") == 0){
             sr.flipX = true;
         }
         else if (bodyVelocityXNormalized > 0){
             sr.flipX = false;
-        }
+        }*/
 
         //saljem animatoru ovo na klik kako bi znao kada da flipujem anim//
-        if (Input.GetMouseButton(0)){
+        if (Input.GetMouseButtonDown(0)){
         animator.SetFloat("MouseX", MouseRelToPlayer().x);
         animator.SetFloat("MouseY", MouseRelToPlayer().y);
         }
@@ -79,7 +79,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-        return trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
+        trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
+        Debug.Log(trueMousePos);    
+        return trueMousePos;
     }
 
     private void FixedUpdate()

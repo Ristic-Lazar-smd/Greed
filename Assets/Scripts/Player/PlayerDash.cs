@@ -49,7 +49,7 @@ public class PlayerDash : MonoBehaviour
             if (Time.time >= (lastDash + dashCooldown))
             {
                 dashTimer = dashDuration;
-                playerAnimator.CrossFade("test",0,0);
+                //playerAnimator.CrossFade("test",0,0);
                 AttemptToDash();
             }
         }
@@ -90,6 +90,7 @@ public class PlayerDash : MonoBehaviour
 
     private void AttemptToDash()
     {
+        playerAnimator.SetTrigger("Dash");
         boolDashComboFix = true;
         isDashing = true;
         damageableCharacter.Invincible = true;

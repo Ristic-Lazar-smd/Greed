@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrossbowMain : MonoBehaviour
 {
     SpriteRenderer sr;
-    float offset = 2f;
+    [Tooltip("Spawn lokacija strele u relaciji od playera")]public float offset = 2f;
     void Awake()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
