@@ -106,7 +106,7 @@ public class PlayerDash : MonoBehaviour
     {
         if(isDashing){
             if (dashTimeLeft > 0){
-                body.velocity = new Vector2(body.velocity.x * dashSpeed, body.velocity.y * dashSpeed);
+                body.linearVelocity = new Vector2(body.linearVelocity.x * dashSpeed, body.linearVelocity.y * dashSpeed);
                 dashTimeLeft -= Time.deltaTime;
                 if ((Mathf.Abs(transform.position.x - lastImageXposition) > distanceBetweenImages) || (Mathf.Abs(transform.position.y - lastImageYposition) > distanceBetweenImages))
                 {

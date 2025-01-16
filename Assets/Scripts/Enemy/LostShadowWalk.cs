@@ -71,7 +71,7 @@ public class LostShadowWalk : MonoBehaviour
                 normalCollider.enabled = true;
                 attackCollider.enabled = false;
                 StartCoroutine(WaitForFunction());
-                rb.velocity = new Vector2(0, 0);
+                rb.linearVelocity = new Vector2(0, 0);
             }
         }
     }
@@ -80,11 +80,11 @@ public class LostShadowWalk : MonoBehaviour
     {
         if (!attack && canwalk == true)
         {
-            rb.velocity = new Vector2(reference.player.transform.position.x - this.transform.position.x, reference.player.transform.position.y - this.transform.position.y).normalized * shadowSpeed;
+            rb.linearVelocity = new Vector2(reference.player.transform.position.x - this.transform.position.x, reference.player.transform.position.y - this.transform.position.y).normalized * shadowSpeed;
         }
         else if (attack && canwalk == false)
         {
-            rb.velocity = chargeDirection * attackSpeed;
+            rb.linearVelocity = chargeDirection * attackSpeed;
         }
     }
 

@@ -58,7 +58,7 @@ public class SpawnEnemy : MonoBehaviour
             randomXposition = Random.Range(-8f, 8.20f);
             randomYposition = Random.Range(-4.40f, 4.10f);
             spawnPosition = new Vector3(randomXposition, randomYposition, 0f);
-        }while (Vector3.Distance(spawnPosition, player.transform.position) < noSpawnZoneAroundPlayer );
+        } while (Vector3.Distance(spawnPosition, player.transform.position) < noSpawnZoneAroundPlayer );
     }
 
 

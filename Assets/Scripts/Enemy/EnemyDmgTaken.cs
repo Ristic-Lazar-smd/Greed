@@ -156,7 +156,7 @@ public class EnemyDmgTaken : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity= new Vector2(this.transform.position.x - playerTransform.position.x, this.transform.position.y - playerTransform.position.y).normalized * knockBackSpeed;*/
     }
     public void HitStun(){
-        rb.velocity=Vector2.zero;
+        rb.linearVelocity=Vector2.zero;
         hitStunTimer = hitStunDuration;
         hitStun=true;
     }

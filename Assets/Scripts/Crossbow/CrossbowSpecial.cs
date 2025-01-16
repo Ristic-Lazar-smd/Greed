@@ -33,8 +33,8 @@ public class CrossbowSpecial : MonoBehaviour
     public GameObject chargeBar;
     public Slider chargeSlider;
     public Image chargeBarImage;
-    private Color chargeColor;
-    public Image crossbowSpecialImage;
+    [SerializeField] private Color chargeColor;
+    public Image crossbowSpecialImage; //slika crossbow-a u ui
 
 
     void Awake()
@@ -42,12 +42,16 @@ public class CrossbowSpecial : MonoBehaviour
         chargeSlider = chargeBar.GetComponent<Slider>();
         manualShoot = transform.parent.gameObject.GetComponent<ManualShoot>();
         chargeBar.SetActive(false); 
-        
+        /*Inicijalizuje boju charge bara, resava bug gde charge bar ne dobije nikad boju kada player brzo pukne desni klik prilikom prvog pucanja, uvek stavi da bude iste boje kao stage 1*/
+        chargeColor = chargeBarImage.color;
+        chargeColor.g = 255;
+        chargeBarImage.color = chargeColor;
     }
     void Start(){
         timer = specialCooldown;
-    }
 
+
+    }
     void Update()
     {
         //special fire cooldown
@@ -58,10 +62,22 @@ public class CrossbowSpecial : MonoBehaviour
             {
                 canFireSpecial = true;
                 timer = specialCooldown;
+
                 var tempColor = crossbowSpecialImage.color;
                 tempColor.a = 1f;
                 crossbowSpecialImage.color = tempColor;
             }
+        }
+
+        if (Input.GetButtonDown("Fire2") && canFireSpecial)
+        {
+            chargeBar.SetActive(true);
+            charge = 0;
+            chargeSlider.value = charge;
+            chargeDamage = chargeDamageStage0;
+            chargeSpecial = true;
+            checkPassed = true;
+            manualShoot.canShoot = false;
         }
 
         if (chargeSpecial)
@@ -74,6 +90,7 @@ public class CrossbowSpecial : MonoBehaviour
             {
                 chargeDamage = chargeDamageStage3;
                 CameraShaker.Shake(new PerlinShake(shakeParams3));
+
                 chargeColor = chargeBarImage.color;
                 chargeColor.g = 0;
                 chargeBarImage.color = chargeColor;
@@ -92,21 +109,9 @@ public class CrossbowSpecial : MonoBehaviour
             }
         }
 
-
-        if (Input.GetButtonDown("Fire2") && canFireSpecial)
-        {
-            charge = 0;
-            chargeSlider.value = charge;
-            chargeDamage = chargeDamageStage0;
-            chargeSpecial = true;
-            checkPassed = true;
-            manualShoot.canShoot = false;
-
-
-
-        }
         if (Input.GetButtonUp("Fire2") && checkPassed)
         {
+            chargeBar.SetActive(true);
             Transform tbullet = Instantiate(bulletType, transform.position, Quaternion.identity);
             Bullet bullet = tbullet.GetComponent<Bullet>();
             bullet.Setup(manualShoot.GetDirection());
@@ -123,6 +128,7 @@ public class CrossbowSpecial : MonoBehaviour
             chargeColor.g = 255;
             chargeBarImage.color = chargeColor;
             chargeBar.SetActive(false);
+
             var tempColor = crossbowSpecialImage.color;
             tempColor.a = 0f;
             crossbowSpecialImage.color = tempColor;

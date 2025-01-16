@@ -29,12 +29,12 @@ public class XP : MonoBehaviour
     void FixedUpdate(){
         if ((distance <= range) && (canBePickedUp==true))
         {
-            thisRigidBody.drag = 0;
-            thisRigidBody.velocity=new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y).normalized * speed;
+            thisRigidBody.linearDamping = 0;
+            thisRigidBody.linearVelocity=new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y).normalized * speed;
         }
         else if(distance > range)
         {
-            thisRigidBody.drag = 10;
+            thisRigidBody.linearDamping = 10;
         }
     }
 }

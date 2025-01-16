@@ -21,8 +21,8 @@ public class GluttonMove : MonoBehaviour
     }
     
     private void Update(){
-        bodyVelocityXNormalized = rb.velocity.normalized.x;
-        bodyVelocityYNormalized = rb.velocity.normalized.y;
+        bodyVelocityXNormalized = rb.linearVelocity.normalized.x;
+        bodyVelocityYNormalized = rb.linearVelocity.normalized.y;
 
         animator.SetFloat("dirX", bodyVelocityXNormalized);
         animator.SetFloat("dirY", bodyVelocityYNormalized);
@@ -31,7 +31,7 @@ public class GluttonMove : MonoBehaviour
     private void FixedUpdate()
     {
         if(enemyDmgTaken.canMove){
-            rb.velocity= new Vector2(reference.player.transform.position.x-this.transform.position.x, reference.player.transform.position.y-this.transform.position.y).normalized * gluttonSpeed;
+            rb.linearVelocity= new Vector2(reference.player.transform.position.x-this.transform.position.x, reference.player.transform.position.y-this.transform.position.y).normalized * gluttonSpeed;
         }
     }
 

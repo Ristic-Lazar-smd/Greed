@@ -20,28 +20,28 @@ public class bouncy_script : MonoBehaviour
         int rangeY = UnityEngine.Random.Range(0, 2);
         int x = numbers[rangeX];
         int y = numbers[rangeY];
-        thisBody.velocity = new Vector2(x * brzina, y * brzina);
-        thisBody.velocity = Vector2.ClampMagnitude(thisBody.velocity, brzina);
+        thisBody.linearVelocity = new Vector2(x * brzina, y * brzina);
+        thisBody.linearVelocity = Vector2.ClampMagnitude(thisBody.linearVelocity, brzina);
         animator.SetFloat("dirX", x);
         animator.SetFloat("dirY", y);
     }
 
     private void OnCollisionEnter2D(Collision2D target)
     {
-        animator.SetFloat("dirX", thisBody.velocity.normalized.x);
-        animator.SetFloat("dirY", thisBody.velocity.normalized.y);
-        if (thisBody.velocity.x>0 && thisBody.velocity.y > 0){
-            thisBody.velocity = new Vector2(1 * brzina, 1 * brzina);
+        animator.SetFloat("dirX", thisBody.linearVelocity.normalized.x);
+        animator.SetFloat("dirY", thisBody.linearVelocity.normalized.y);
+        if (thisBody.linearVelocity.x>0 && thisBody.linearVelocity.y > 0){
+            thisBody.linearVelocity = new Vector2(1 * brzina, 1 * brzina);
         }
-        if (thisBody.velocity.x>0 && thisBody.velocity.y < 0){
-            thisBody.velocity = new Vector2(1 * brzina, -1 * brzina);
+        if (thisBody.linearVelocity.x>0 && thisBody.linearVelocity.y < 0){
+            thisBody.linearVelocity = new Vector2(1 * brzina, -1 * brzina);
         }
-        if (thisBody.velocity.x<0 && thisBody.velocity.y > 0){
-            thisBody.velocity = new Vector2(-1 * brzina, 1 * brzina);
+        if (thisBody.linearVelocity.x<0 && thisBody.linearVelocity.y > 0){
+            thisBody.linearVelocity = new Vector2(-1 * brzina, 1 * brzina);
         }
-        if (thisBody.velocity.x<0 && thisBody.velocity.y < 0){
-            thisBody.velocity = new Vector2(-1 * brzina, -1 * brzina);
+        if (thisBody.linearVelocity.x<0 && thisBody.linearVelocity.y < 0){
+            thisBody.linearVelocity = new Vector2(-1 * brzina, -1 * brzina);
         }
-        thisBody.velocity = Vector2.ClampMagnitude(thisBody.velocity, brzina);
+        thisBody.linearVelocity = Vector2.ClampMagnitude(thisBody.linearVelocity, brzina);
     }
 }

@@ -41,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        bodyVelocityXNormalized = body.velocity.normalized.x;
-        bodyVelocityYNormalized = body.velocity.normalized.y;
+        bodyVelocityXNormalized = body.linearVelocity.normalized.x;
+        bodyVelocityYNormalized = body.linearVelocity.normalized.y;
 
         // Position clamp
         Vector3 clampedPosition = transform.position;
@@ -88,11 +88,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(damageableCharacter.KnockedBack)return;
         if (animator.GetFloat("AnimationLock")!=0){
-            body.velocity = Vector2.zero;
+            body.linearVelocity = Vector2.zero;
             sr.flipX = false;
         }
         else{
-            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
+            body.linearVelocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
 
             //aleksa
             playerDash.CheckDash();
