@@ -17,6 +17,7 @@ public class GroundComboState : MeleeBaseState
     public override void OnUpdate()
     {
         base.OnUpdate();
+        Debug.Log("2");
 
         if (fixedtime >= duration)
         {

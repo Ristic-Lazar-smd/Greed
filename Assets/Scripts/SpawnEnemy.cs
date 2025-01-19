@@ -33,11 +33,10 @@ public class SpawnEnemy : MonoBehaviour
     void Start(){
         playerLvl = player.GetComponent<PlayerExp>();
     }
-    public void SpawnRandom()
-    {
+    public void SpawnRandom(){
         StartNewEnumRotation();
     }
-     public void StartNewEnumRotation(){
+    public void StartNewEnumRotation(){
         StopAllCoroutines();
         for(int i = 0; i<enemyPrefabs.Length; i++){
             //StopCoroutine(spawnEnemy(spawnInterval[i],enemyPrefabs[i]));
@@ -63,17 +62,14 @@ public class SpawnEnemy : MonoBehaviour
 
 
 
-    private void Update()
-    {
-        switch(playerLvl.lvl)
-        {
-            case 1:
-                {
+    private void Update(){
+        switch(playerLvl.lvl){
+            case 1:{
                     spawnInterval[0] = 0.7f;
                     spawnInterval[1] = 10f;
                     spawnInterval[2] = 8f;
-                }
-                break;
+            }
+            break;
             case 2:
                 {
                     spawnInterval[0] = 0.5f;

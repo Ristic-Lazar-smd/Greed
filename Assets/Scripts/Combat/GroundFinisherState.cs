@@ -16,6 +16,7 @@ public class GroundFinisherState : MeleeBaseState
 
     public override void OnUpdate()
     {
+        Debug.Log("3");
         base.OnUpdate();
 
         if (fixedtime >= duration)

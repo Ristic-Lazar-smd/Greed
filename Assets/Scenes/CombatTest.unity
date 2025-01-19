@@ -3269,7 +3269,7 @@ MonoBehaviour:
   player: {fileID: 779755974}
   arrows: {fileID: 2932098003492276832, guid: ba039eb784545954cbc894cd626425c3, type: 3}
   xpOrb: {fileID: 8812798900237616816, guid: 6b851af00f84e5246b8343737064e3f8, type: 3}
-  stopSpawn: 0
+  stopSpawn: 1
   gameIsPaused: 0
   canBeUnPaused: 1
   targetFrameRate: 144
@@ -5038,7 +5038,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

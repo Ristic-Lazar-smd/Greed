@@ -17,6 +17,7 @@ public class GroundEntryState : MeleeBaseState
     public override void OnUpdate()
     {
         base.OnUpdate();
+        Debug.Log("1");
 
         if (fixedtime >= duration)
         {

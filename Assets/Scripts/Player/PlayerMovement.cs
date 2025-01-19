@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
-        Debug.Log(trueMousePos);    
+        //Debug.Log(trueMousePos);    
         return trueMousePos;
     }
 
