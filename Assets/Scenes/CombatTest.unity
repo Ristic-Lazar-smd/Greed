@@ -3269,7 +3269,7 @@ MonoBehaviour:
   player: {fileID: 779755974}
   arrows: {fileID: 2932098003492276832, guid: ba039eb784545954cbc894cd626425c3, type: 3}
   xpOrb: {fileID: 8812798900237616816, guid: 6b851af00f84e5246b8343737064e3f8, type: 3}
-  stopSpawn: 1
+  stopSpawn: 0
   gameIsPaused: 0
   canBeUnPaused: 1
   targetFrameRate: 144
@@ -3476,7 +3476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
-  stepSpeed: 7
+  stepSpeed: 3
   bodyVelocityXNormalized: 0
   bodyVelocityYNormalized: 0
   attackStep: 0
@@ -6798,8 +6798,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.002287507}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.54, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 779755978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

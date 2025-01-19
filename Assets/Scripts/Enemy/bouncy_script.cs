@@ -11,6 +11,11 @@ public class bouncy_script : MonoBehaviour
     public float brzina = 3;
     int[] numbers = new int[] { -1, 1 };
 
+    [SerializeField] private float countdown = 3;
+    [SerializeField] private float shootTimer = 3;
+    
+    [SerializeField] private GameObject projectile;
+
     void Awake(){
         animator.GetComponent<Animator>();
     }
@@ -43,5 +48,19 @@ public class bouncy_script : MonoBehaviour
             thisBody.linearVelocity = new Vector2(-1 * brzina, -1 * brzina);
         }
         thisBody.linearVelocity = Vector2.ClampMagnitude(thisBody.linearVelocity, brzina);
+    }
+
+    private void Update() {
+        //timer
+       countdown -= Time.deltaTime;
+        if (countdown <= 0){
+            ShootProjectile();
+            countdown = shootTimer;
+        } 
+    }
+        //pošalji ih u 4 direkcije
+        //instanciraj 4 kugle
+    private void ShootProjectile(){
+       // Rigidbody projectile = Instantiate(projectile, transform.position, Quaternion.identity);
     }
 }

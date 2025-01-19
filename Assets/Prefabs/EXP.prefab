@@ -125,7 +125,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8812798900237616816}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   range: 3
   speed: 7
   xpGain: 200
-  canBePickedUp: 1
+  canBePickedUp: 0
 --- !u!95 &8477836466971121601
 Animator:
   serializedVersion: 7
