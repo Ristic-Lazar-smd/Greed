@@ -3248,9 +3248,9 @@ MonoBehaviour:
   - {fileID: 7643543339553044535, guid: 14bc5c4dc6c84dc46aee77afff258e0a, type: 3}
   - {fileID: 923440787912342300, guid: 57ade24d198ca984089eb2860b9b6519, type: 3}
   spawnInterval:
-  - 3
-  - 15
-  - 10
+  - 2
+  - 12
+  - 8
   stopEnumRotation: 0
   playerLvl: {fileID: 0}
   noSpawnZoneAroundPlayer: 4.5

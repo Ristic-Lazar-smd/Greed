@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class bouncy_script : MonoBehaviour
@@ -11,10 +12,19 @@ public class bouncy_script : MonoBehaviour
     public float brzina = 3;
     int[] numbers = new int[] { -1, 1 };
 
+    public List<Vector2> vector2List = new List<Vector2>
+    {
+        new Vector2(-1,0),
+        new Vector2(0,1),
+        new Vector2(1,0),
+        new Vector2(0,-1)
+    };
+
     [SerializeField] private float countdown = 3;
     [SerializeField] private float shootTimer = 3;
     
-    [SerializeField] private GameObject projectile;
+    [SerializeField] public GameObject projectile;
+    [SerializeField] private float fireballSpeed;
 
     void Awake(){
         animator.GetComponent<Animator>();
@@ -51,16 +61,17 @@ public class bouncy_script : MonoBehaviour
     }
 
     private void Update() {
-        //timer
-       countdown -= Time.deltaTime;
+        countdown -= Time.deltaTime;
         if (countdown <= 0){
             ShootProjectile();
             countdown = shootTimer;
         } 
     }
-        //pošalji ih u 4 direkcije
-        //instanciraj 4 kugle
     private void ShootProjectile(){
-       // Rigidbody projectile = Instantiate(projectile, transform.position, Quaternion.identity);
+        for (int i=0; i<4; i++){
+            FireballMove projectileRef = (Instantiate(projectile, transform.position, Quaternion.identity)).GetComponent<FireballMove>();
+            projectileRef.fireballSpeed = fireballSpeed;
+            projectileRef.dir = vector2List[i];
+        }
     }
 }

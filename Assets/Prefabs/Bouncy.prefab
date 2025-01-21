@@ -209,9 +209,15 @@ MonoBehaviour:
   thisBody: {fileID: 923440787912342303}
   animator: {fileID: 6295626347878908556}
   brzina: 5
-  countdown: 3
-  shootTimer: 3
+  vector2List:
+  - {x: -1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 0}
+  - {x: 0, y: -1}
+  countdown: 2
+  shootTimer: 2
   projectile: {fileID: 5933596234139749970, guid: e05ebd30afbff734280e9aa7b4394b73, type: 3}
+  fireballSpeed: 5
 --- !u!114 &1239844176145119618
 MonoBehaviour:
   m_ObjectHideFlags: 0

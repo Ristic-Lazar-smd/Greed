@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 10, true); 
         Physics2D.IgnoreLayerCollision(9, 11, true);
         Physics2D.IgnoreLayerCollision(10, 11, true); 
+        Physics2D.IgnoreLayerCollision(10, 12, true); 
         
         if (!stopSpawn)
         {
