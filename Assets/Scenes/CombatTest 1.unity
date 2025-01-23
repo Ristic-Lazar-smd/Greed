@@ -2950,7 +2950,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &492175172
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   meleeAnimator: {fileID: 492175172}
   trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
-  stepSpeed: 10
+  stepSpeed: 50
   bodyVelocityXNormalized: 0
   bodyVelocityYNormalized: 0
   attackStep: 0
@@ -3928,12 +3928,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - {fileID: 1649235391389828441, guid: 10d1dd0168224cc46acc75bccedc14c2, type: 3}
-  - {fileID: 6627786322103732188, guid: f64474717b697094da9bf885b2d2d72f, type: 3}
-  - {fileID: 8018280049380117763, guid: 1d161271b7453674490ab47be2f23405, type: 3}
-  - {fileID: 8018280049380117763, guid: fffe1311848ec2342b3f73efbea6362d, type: 3}
+  - {fileID: 1721587492544361527, guid: 52cb9ef3cbf8b264a951f094d3daa4c7, type: 3}
+  - {fileID: 1840532108210234103, guid: 766663ba45ddc6b45844e1b64ab27b70, type: 3}
+  - {fileID: 7975158107343612544, guid: 30b0854aa3985d64ba85337d40b1d7f9, type: 3}
+  - {fileID: 8402750862690188487, guid: 0130ccbca7bd8a34aa7d1214eec2f97d, type: 3}
   - {fileID: 1649235391389828441, guid: b66960bf5d492c942a61f5323dfdc66e, type: 3}
-  - {fileID: 6627786322103732188, guid: d8bd906eda4b7fb439e37438629d1e2b, type: 3}
+  - {fileID: 197747041811126047, guid: 4e8b3036a5602134f9dd46ec00e98758, type: 3}
   canvas: {fileID: 1159901137}
   Manager: {fileID: 672599353}
 --- !u!114 &779755995
@@ -5988,8 +5988,8 @@ MonoBehaviour:
 
     ------------'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6035,7 +6035,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
