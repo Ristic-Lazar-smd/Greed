@@ -6,7 +6,7 @@ public class ComboCharacter : MonoBehaviour
 {
 
     private StateMachine meleeStateMachine;
-    private Animator animator;
+    [SerializeField] public Animator animator;
 
     PlayerDash playerDash;
 
@@ -16,8 +16,9 @@ public class ComboCharacter : MonoBehaviour
     void Start()
     {
         meleeStateMachine = GetComponent<StateMachine>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         playerDash = GetComponent<PlayerDash>();
+        
     }
 
     void Update()
