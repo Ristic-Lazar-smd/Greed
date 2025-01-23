@@ -98,11 +98,15 @@ public class SpawnEnemy : MonoBehaviour
                 }
                 break;
         }
+        if (Input.GetKeyDown(KeyCode.F1)){SpawnExactEnemy(0);}
+        if (Input.GetKeyDown(KeyCode.F2)){SpawnExactEnemy(1);}
+        if (Input.GetKeyDown(KeyCode.F2)){SpawnExactEnemy(3);}
     }
 
 
 
     private void SpawnExactEnemy(int enemyToSpawn){
+        GenerateRandomPos();
         Reference enemy = (Instantiate(enemyPrefabs[enemyToSpawn], spawnPosition, Quaternion.identity)).GetComponent<Reference>();
         enemy.player = player; //Passing GameObject "Player" to newly instanced Prefab
     }

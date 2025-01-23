@@ -10,7 +10,6 @@ public class Sword : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     void Update()
