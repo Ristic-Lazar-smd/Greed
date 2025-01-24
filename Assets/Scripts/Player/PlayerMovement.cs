@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public static PlayerMovement playerInstance;
     DamageableCharacter damageableCharacter;
     Rigidbody2D body;
@@ -92,8 +91,9 @@ public class PlayerMovement : MonoBehaviour
             body.linearVelocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
 
             //aleksa
-            playerDash.CheckDash();
+            
         }
+        playerDash.CheckDash();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

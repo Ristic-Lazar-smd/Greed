@@ -3686,7 +3686,7 @@ MonoBehaviour:
   meleeAnimator: {fileID: 492175172}
   trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
-  stepSpeed: 50
+  stepSpeed: 35
   bodyVelocityXNormalized: 0
   bodyVelocityYNormalized: 0
   attackStep: 0

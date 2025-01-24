@@ -91,7 +91,6 @@ public class PlayerDash : MonoBehaviour
 
     private void AttemptToDash()
     {
-        meleeAnimator.SetFloat("AnimationLock",0);
         playerAnimator.SetTrigger("Dash");
         boolDashComboFix = true;
         isDashing = true;
