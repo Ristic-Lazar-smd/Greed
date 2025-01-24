@@ -3928,12 +3928,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - {fileID: 1721587492544361527, guid: 52cb9ef3cbf8b264a951f094d3daa4c7, type: 3}
-  - {fileID: 1840532108210234103, guid: 766663ba45ddc6b45844e1b64ab27b70, type: 3}
-  - {fileID: 7975158107343612544, guid: 30b0854aa3985d64ba85337d40b1d7f9, type: 3}
   - {fileID: 8402750862690188487, guid: 0130ccbca7bd8a34aa7d1214eec2f97d, type: 3}
-  - {fileID: 1649235391389828441, guid: b66960bf5d492c942a61f5323dfdc66e, type: 3}
+  - {fileID: 1840532108210234103, guid: 766663ba45ddc6b45844e1b64ab27b70, type: 3}
   - {fileID: 197747041811126047, guid: 4e8b3036a5602134f9dd46ec00e98758, type: 3}
+  - {fileID: 7975158107343612544, guid: 30b0854aa3985d64ba85337d40b1d7f9, type: 3}
+  - {fileID: 7975158107343612544, guid: 08ac8ca38baee2440a8ca11f9bca6ba5, type: 3}
   canvas: {fileID: 1159901137}
   Manager: {fileID: 672599353}
 --- !u!114 &779755995
@@ -3966,6 +3965,7 @@ MonoBehaviour:
   canShoot: 1
   timeBetweenShots: 0.3
   extraShot: 0
+  numberOfShots: 0
 --- !u!1 &871519233
 GameObject:
   m_ObjectHideFlags: 0

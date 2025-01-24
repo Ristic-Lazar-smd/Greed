@@ -15,6 +15,7 @@ public class ManualShoot : MonoBehaviour
 
     [Tooltip("Time between shots, aka rate of fire")]public float timeBetweenShots = 0.5f;
     [HideInInspector]public bool extraShot = false;
+    [HideInInspector] public int numberOfShots = 0;
     
     int[] eW = new int[] { 0 };
 
@@ -75,10 +76,13 @@ public class ManualShoot : MonoBehaviour
     }
 
     IEnumerator ExampleCoroutine()
-    {    
-        yield return new WaitForSeconds(0.15f);
-        ShootFireball();
-        CameraShaker.Shake(new BounceShake(shakeParams));
+    {
+        for (int i = 0; i < numberOfShots; i++)
+        {
+            yield return new WaitForSeconds(0.15f);
+            ShootFireball();
+            CameraShaker.Shake(new BounceShake(shakeParams));
+        }
     }
 
 }

@@ -32,86 +32,100 @@ public class UpgradeButtonOnClick : MonoBehaviour
         thirdUpgrade.GetComponent<Button>().onClick.AddListener(delegate { TaskOnClick(third); });
     }
 
-    void TaskOnClick(int i)
+    void TaskOnClick(int chosenUpgrade)
     {
-        Destroy(firstUpgrade);
+        //chosenUpgrade.GetComponent<UpgradeBase>().AddUpgrade();
+        this.GetComponent<GameManager>().ResumeGame();
+        lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+            {
+                orb.GetComponent<XP>().canBePickedUp = true;
+                orb.GetComponent<CircleCollider2D>().enabled = true;
+            }
+            Destroy(firstUpgrade);
         Destroy(secondUpgrade);
         Destroy(thirdUpgrade);
 
-        switch(i)
-        {
-            case 0:
-                {
-                    player.AddComponent<Upgrade1>();
-                    this.GetComponent<GameManager>().ResumeGame();
-                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
-                    {
-                        orb.GetComponent<XP>().canBePickedUp = true;
-                        orb.GetComponent<CircleCollider2D>().enabled = true;
-                    }
-                }
-                break;
-            case 1:
-                {
-                    player.AddComponent<Upgrade2>();
-                    this.GetComponent<GameManager>().ResumeGame();
-                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
-                    {
-                        orb.GetComponent<XP>().canBePickedUp = true;
-                        orb.GetComponent<CircleCollider2D>().enabled = true;
-                    }
-                }
-                break;
-            case 2:
-                {
-                    player.AddComponent<Upgrade3>();
-                    this.GetComponent<GameManager>().ResumeGame();
-                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
-                    {
-                        orb.GetComponent<XP>().canBePickedUp = true;
-                        orb.GetComponent<CircleCollider2D>().enabled = true;
-                    }
-                }
-                break;
-            case 3:
-                {
-                    player.AddComponent<CbExtraShot>();
-                    this.GetComponent<GameManager>().ResumeGame();
-                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
-                    {
-                        orb.GetComponent<XP>().canBePickedUp = true;
-                        orb.GetComponent<CircleCollider2D>().enabled = true;
-                    }
-                }
-                break;
-            case 4:
-                {
-                    player.AddComponent<ExplosionUpgrade>();
-                    this.GetComponent<GameManager>().ResumeGame();
-                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
-                    {
-                        orb.GetComponent<XP>().canBePickedUp = true;
-                        orb.GetComponent<CircleCollider2D>().enabled = true;
-                    }
-                }
-                break;
-            case 5:
-                {
-                    player.AddComponent<ArrowWallBounce>();
-                    this.GetComponent<GameManager>().ResumeGame();
-                    lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
-                    foreach (GameObject orb in listOfXpOrbs.xpOrbs)
-                    {
-                        orb.GetComponent<XP>().canBePickedUp = true;
-                        orb.GetComponent<CircleCollider2D>().enabled = true;
-                    }
-                }
-                break;
-        }
+
+
+
+
+        //---------------------------STARI KOD - SLOM AL OSTAVI GA----------------------------
+
+        //switch(i)
+        //{
+        //    case 0:
+        //        {
+        //            player.AddComponent<Upgrade1>();
+        //            this.GetComponent<GameManager>().ResumeGame();
+        //            lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        //            foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+        //            {
+        //                orb.GetComponent<XP>().canBePickedUp = true;
+        //                orb.GetComponent<CircleCollider2D>().enabled = true;
+        //            }
+        //        }
+        //        break;
+        //    case 1:
+        //        {
+        //            player.AddComponent<Upgrade2>();
+        //            this.GetComponent<GameManager>().ResumeGame();
+        //            lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        //            foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+        //            {
+        //                orb.GetComponent<XP>().canBePickedUp = true;
+        //                orb.GetComponent<CircleCollider2D>().enabled = true;
+        //            }
+        //        }
+        //        break;
+        //    case 2:
+        //        {
+        //            player.AddComponent<Upgrade3>();
+        //            this.GetComponent<GameManager>().ResumeGame();
+        //            lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        //            foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+        //            {
+        //                orb.GetComponent<XP>().canBePickedUp = true;
+        //                orb.GetComponent<CircleCollider2D>().enabled = true;
+        //            }
+        //        }
+        //        break;
+        //    case 3:
+        //        {
+        //            player.AddComponent<CbExtraShot>();
+        //            this.GetComponent<GameManager>().ResumeGame();
+        //            lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        //            foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+        //            {
+        //                orb.GetComponent<XP>().canBePickedUp = true;
+        //                orb.GetComponent<CircleCollider2D>().enabled = true;
+        //            }
+        //        }
+        //        break;
+        //    case 4:
+        //        {
+        //            player.AddComponent<ExplosionUpgrade>();
+        //            this.GetComponent<GameManager>().ResumeGame();
+        //            lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        //            foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+        //            {
+        //                orb.GetComponent<XP>().canBePickedUp = true;
+        //                orb.GetComponent<CircleCollider2D>().enabled = true;
+        //            }
+        //        }
+        //        break;
+        //    case 5:
+        //        {
+        //            player.AddComponent<ArrowWallBounce>();
+        //            this.GetComponent<GameManager>().ResumeGame();
+        //            lvlup.GetComponent<LvlUpUi>().HideLvlUpUi();
+        //            foreach (GameObject orb in listOfXpOrbs.xpOrbs)
+        //            {
+        //                orb.GetComponent<XP>().canBePickedUp = true;
+        //                orb.GetComponent<CircleCollider2D>().enabled = true;
+        //            }
+        //        }
+        //        break;
+        //}
     }
 }

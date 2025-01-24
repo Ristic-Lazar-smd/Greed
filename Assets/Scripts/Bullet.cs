@@ -68,7 +68,7 @@ public class Bullet : MonoBehaviour
                 dir = reflectDir;
                 transform.position=pointOfContact; // zato sto vrh strele udari u zid a strela se rotira oko centra mase pa se odbija pod pogresnim uglom
                 transform.eulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(dir));
-                bounce=false;
+                bounce = false;
             }
         }
     }

@@ -88,6 +88,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -5711480636165501673}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: XpUpgrade, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647921893907142263, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2879261298949444681, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
       propertyPath: m_Name
       value: XpGainedUpCard
@@ -102,22 +130,22 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2879261298949444681, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7174980562703269025}
+      addedObject: {fileID: -5711480636165501673}
   m_SourcePrefab: {fileID: 100100000, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
 --- !u!1 &7975158107343612544 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2879261298949444681, guid: cb286b5996b7b324593a3ad7ca6d1c3c, type: 3}
   m_PrefabInstance: {fileID: 5285049952326893257}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7174980562703269025
+--- !u!114 &-5711480636165501673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7975158107343612544}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fd063c7be9e90428c8752f425b57cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d6c4f156557d3c4db03906e6d9cab01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
