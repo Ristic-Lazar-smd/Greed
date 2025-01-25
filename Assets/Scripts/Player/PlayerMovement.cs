@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float bodyVelocityXNormalized;
     [HideInInspector] public float bodyVelocityYNormalized;
     [HideInInspector] public bool attackStep;
+    public bool animationLock = false;
 
 
     void Awake(){
@@ -83,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if(damageableCharacter.KnockedBack)return;
-        if (meleeAnimator.GetFloat("AnimationLock")!=0){
+        if (animationLock/*meleeAnimator.GetFloat("AnimationLock")!=0*/){
             body.linearVelocity = Vector2.zero;
             sr.flipX = false;
         }

@@ -35,6 +35,7 @@ public class MeleeBaseState : State
         collidersDamaged = new List<Collider2D>();
         hitCollider = GetComponent<ComboCharacter>().hitbox;
         //HitEffectPrefab = GetComponent<ComboCharacter>().Hiteffect;
+        Debug.Log("aktivno");
     }
 
     public override void OnUpdate()

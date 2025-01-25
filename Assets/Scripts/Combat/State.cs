@@ -12,13 +12,10 @@ public abstract class State
     {
         stateMachine = _stateMachine;
     }
-
-
     public virtual void OnUpdate()
     {
         time += Time.deltaTime;
     }
-
     public virtual void OnFixedUpdate()
     {
         fixedtime += Time.deltaTime;

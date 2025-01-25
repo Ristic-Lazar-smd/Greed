@@ -106,6 +106,7 @@ public class PlayerDash : MonoBehaviour
     public void CheckDash()
     {
         if(isDashing){
+            PlayerMovement.playerInstance.animationLock=false;
             if (dashTimeLeft > 0){
                 body.linearVelocity = new Vector2(body.linearVelocity.x * dashSpeed, body.linearVelocity.y * dashSpeed);
                 dashTimeLeft -= Time.deltaTime;
