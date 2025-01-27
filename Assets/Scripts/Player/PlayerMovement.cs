@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     DamageableCharacter damageableCharacter;
     Rigidbody2D body;
     Animator animator;
-    [SerializeField] Animator meleeAnimator;
+    //[SerializeField] Animator meleeAnimator;
     SpriteRenderer sr;
     PlayerDash playerDash;
 
@@ -60,15 +60,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("MouseX", MouseRelToPlayer().x);
         animator.SetFloat("MouseY", MouseRelToPlayer().y);
         }
-
-        //Move player on melee attacks, attackStep is controlled by animations
-        if (attackStep){
-            transform.position = Vector2.MoveTowards(transform.position, transform.position + MouseRelToPlayer(), stepSpeed * Time.deltaTime);
-        }
     }
     public void AttackStep(){
         transform.position = Vector2.MoveTowards(transform.position, transform.position + (MouseRelToPlayer()*9999), stepSpeed * Time.deltaTime);
-    
     }
 
     // temp solution for mouse poss, redudent, check ManualShoot script //
@@ -84,29 +78,18 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if(damageableCharacter.KnockedBack)return;
-        if (animationLock/*meleeAnimator.GetFloat("AnimationLock")!=0*/){
+        if (animationLock){
             body.linearVelocity = Vector2.zero;
             sr.flipX = false;
         }
         else{
             body.linearVelocity = new Vector2(horizontal * runSpeed, vertical * runSpeed).normalized*runSpeed;
-
-            //aleksa
-            
         }
         playerDash.CheckDash();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-           // Debug.Log(collision.collider.IsTouching);
-            // Log the name of this object and the other object it collided with
-            //Debug.Log($"Collision detected between {gameObject.name} and {collision.gameObject.name}");
-            // Optional: Log the collider details
-            //Collider2D otherCollider = collision.collider;
-            //Debug.Log($"Other Collider: {otherCollider.name}");
-        
         if (collision.gameObject.CompareTag("Enemy") && gameObject.tag!="Sword")
         {
             Vector2 test = new Vector2(transform.position.x - collision.transform.position.x, transform.position.y-collision.transform.position.y).normalized * 10;

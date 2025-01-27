@@ -3683,13 +3683,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fdfcc72dc421549b466fc8a35b5489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeAnimator: {fileID: 492175172}
   trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
   stepSpeed: 35
   bodyVelocityXNormalized: 0
   bodyVelocityYNormalized: 0
   attackStep: 0
+  animationLock: 0
 --- !u!4 &779755978
 Transform:
   m_ObjectHideFlags: 0
@@ -6717,6 +6717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923770817}
   - component: {fileID: 1923770819}
+  - component: {fileID: 1923770820}
   m_Layer: 0
   m_Name: MeleeFloat
   m_TagString: Sword
@@ -6732,7 +6733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923770816}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0.34}
   m_ConstrainProportionsScale: 1
@@ -6747,12 +6748,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923770816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fadaadf3af0c0dc47a18cd25a4f7d93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 1.07
+--- !u!114 &1923770820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923770816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2d7183877025744b0180d96e59c9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 2
 --- !u!1 &1935100381
 GameObject:
   m_ObjectHideFlags: 0

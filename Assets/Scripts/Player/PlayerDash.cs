@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -91,7 +92,7 @@ public class PlayerDash : MonoBehaviour
 
     private void AttemptToDash()
     {
-        playerAnimator.SetTrigger("Dash");
+        meleeAnimator.SetTrigger("Dash");
         boolDashComboFix = true;
         isDashing = true;
         damageableCharacter.Invincible = true;

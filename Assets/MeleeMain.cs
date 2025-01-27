@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrossbowMain : MonoBehaviour
+public class MeleeMain : MonoBehaviour
 {
     SpriteRenderer sr;
     [Tooltip("Spawn lokacija strele u relaciji od playera")]public float offset = 2f;
@@ -18,7 +18,9 @@ public class CrossbowMain : MonoBehaviour
         }else sr.flipY=false;
     }
     void FixedUpdate(){
+        if (!PlayerMovement.playerInstance.animationLock){
             UpdateAttackDirection();
+        }
     }
 
     public void UpdateAttackDirection(){
