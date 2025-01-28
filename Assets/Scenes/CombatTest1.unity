@@ -2897,7 +2897,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1923770817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &492175171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3570,18 +3570,19 @@ GameObject:
   - component: {fileID: 779755975}
   - component: {fileID: 779755979}
   - component: {fileID: 779755982}
-  - component: {fileID: 779755991}
-  - component: {fileID: 779755986}
   - component: {fileID: 779755977}
   - component: {fileID: 779755981}
+  - component: {fileID: 779755986}
   - component: {fileID: 779755995}
   - component: {fileID: 779755987}
-  - component: {fileID: 779755989}
-  - component: {fileID: 779755988}
   - component: {fileID: 779755990}
   - component: {fileID: 779755992}
-  - component: {fileID: 779755993}
   - component: {fileID: 779755994}
+  - component: {fileID: 779755993}
+  - component: {fileID: 779755996}
+  - component: {fileID: 779755989}
+  - component: {fileID: 779755988}
+  - component: {fileID: 779755991}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3685,10 +3686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trueMousePos: {x: 0, y: 0, z: 0}
   runSpeed: 5
-  stepSpeed: 35
   bodyVelocityXNormalized: 0
   bodyVelocityYNormalized: 0
-  attackStep: 0
   animationLock: 0
 --- !u!4 &779755978
 Transform:
@@ -3750,8 +3749,8 @@ MonoBehaviour:
   disableSimulation: 0
   knockedBackTime: 0.25
   invincibilityTime: 0.5
-  _health: 3
-  maxHp: 3
+  _health: 4
+  maxHp: 4
   _targetable: 1
   _invincible: 0
   _knockedBack: 0
@@ -3821,7 +3820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779755974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfa3fcb23935dcc498bc3008f0bdc38c, type: 3}
   m_Name: 
@@ -3867,7 +3866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93159a0145061479971eacff593332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeAnimator: {fileID: 492175172}
+  meleeFloat: {fileID: 1923770816}
   dashImage: {fileID: 296725249}
   isDashing: 0
   dashDuration: 0.2
@@ -3913,7 +3912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossbow: {fileID: 604117637}
-  animator: {fileID: 0}
+  meleeMain: {fileID: 1923770820}
   weaponStateIsMelee: 0
 --- !u!114 &779755994
 MonoBehaviour:
@@ -3966,6 +3965,20 @@ MonoBehaviour:
   timeBetweenShots: 0.3
   extraShot: 0
   numberOfShots: 0
+--- !u!114 &779755996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779755974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20ddbf7f0cb50f4d9c908f8d1ea2e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeMain: {fileID: 1923770820}
+  stepSpeed: 50
 --- !u!1 &871519233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,7 +6729,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923770817}
-  - component: {fileID: 1923770819}
   - component: {fileID: 1923770820}
   m_Layer: 0
   m_Name: MeleeFloat
@@ -6741,19 +6753,6 @@ Transform:
   - {fileID: 492175170}
   m_Father: {fileID: 779755978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1923770819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923770816}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fadaadf3af0c0dc47a18cd25a4f7d93d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 1.07
 --- !u!114 &1923770820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6766,7 +6765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2d7183877025744b0180d96e59c9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 2
+  offset: 0
 --- !u!1 &1935100381
 GameObject:
   m_ObjectHideFlags: 0

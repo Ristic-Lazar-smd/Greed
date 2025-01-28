@@ -10,7 +10,7 @@ public class GroundComboState : MeleeBaseState
 
         //Attack
         attackIndex = 2;
-        duration = 0.5f;
+        duration = 0.33f;
         animator.SetTrigger("Attack" + attackIndex);
         PlayerMovement.playerInstance.AttackStep();
         PlayerMovement.playerInstance.animationLock = true;
@@ -19,7 +19,6 @@ public class GroundComboState : MeleeBaseState
     public override void OnUpdate()
     {
         base.OnUpdate();
-        Debug.Log("2");
 
         if (fixedtime >= duration)
         {

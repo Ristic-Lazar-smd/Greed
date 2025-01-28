@@ -14,21 +14,21 @@ public class PlayerMovement : MonoBehaviour
     //[SerializeField] Animator meleeAnimator;
     SpriteRenderer sr;
     PlayerDash playerDash;
+    AttackStep attackStep;
 
 
     [HideInInspector] public Vector3 trueMousePos;
-    public float runSpeed = 20.0f;
+    public float runSpeed;
     
     [Tooltip("The distance that the player moves when doing a melee attack")]
-    public float stepSpeed;
+
     float horizontal;
     float vertical;
     [HideInInspector] public float bodyVelocityXNormalized;
     [HideInInspector] public float bodyVelocityYNormalized;
-    [HideInInspector] public bool attackStep;
-    public bool animationLock = false;
+    [HideInInspector] public bool animationLock = false;
 
-
+GameObject test;
     void Awake(){
         playerInstance = this;
         body = GetComponent<Rigidbody2D>();
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         playerDash = GetComponent<PlayerDash>();
+        attackStep = GetComponent<AttackStep>();
     }
 
     void Update()
@@ -62,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void AttackStep(){
-        transform.position = Vector2.MoveTowards(transform.position, transform.position + (MouseRelToPlayer()*9999), stepSpeed * Time.deltaTime);
+        if (attackStep)attackStep.Step();
     }
 
     // temp solution for mouse poss, redudent, check ManualShoot script //

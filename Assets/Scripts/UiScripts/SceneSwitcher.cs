@@ -17,7 +17,7 @@ public class SceneSwitcher : MonoBehaviour
             SceneManager.LoadScene("StartMenu");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha2)){
-            SceneManager.LoadScene("CombatTest");
+            SceneManager.LoadScene("CombatTest1");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha3)){
             SceneManager.LoadScene("DeathScene");

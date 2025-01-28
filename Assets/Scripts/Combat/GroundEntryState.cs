@@ -5,35 +5,28 @@ using UnityEngine;
 
 public class GroundEntryState : MeleeBaseState
 {
-    public override void OnEnter(StateMachine _stateMachine)
-    {
+    public override void OnEnter(StateMachine _stateMachine){
         
         base.OnEnter(_stateMachine);
 
         //Attack
         attackIndex = 1;
-        duration = 0.32f; //duration mora da bude framerate podeljeno sa broj frejmova
+        duration = 0.33f; //duration mora da bude framerate podeljeno sa broj frejmova
         animator.SetTrigger("Attack" + attackIndex);
-        PlayerMovement.playerInstance.AttackStep();
         PlayerMovement.playerInstance.animationLock = true;
-        
+        PlayerMovement.playerInstance.AttackStep();
     }
 
-    public override void OnUpdate()
-    {
+    public override void OnUpdate(){
         
         base.OnUpdate();
-        Debug.Log("1");
 
-        if (fixedtime >= duration)
-        {
-            if (shouldCombo)
-            {
+        if (fixedtime >= duration){
+            if (shouldCombo){
                 stateMachine.SetNextState(new GroundComboState());
                 //PlayerMovement.playerInstance.animationLock = false;
             }
-            else
-            {
+            else{
                 stateMachine.SetNextStateToMain();
                 PlayerMovement.playerInstance.animationLock = false;
             }

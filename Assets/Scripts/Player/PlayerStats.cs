@@ -40,8 +40,8 @@ public class PlayerStats : MonoBehaviour
     public float StepSpeed {get{return _stepSpeed;}
         set{
         _stepSpeed = value;
-        if (TryGetComponent(out PlayerMovement playerMovement)) {
-            playerMovement.stepSpeed=_stepSpeed;
+        if (TryGetComponent(out AttackStep attackStep)) {
+            attackStep.stepSpeed=_stepSpeed;
             }
         }
     }

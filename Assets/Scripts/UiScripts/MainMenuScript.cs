@@ -13,7 +13,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("CombatTest");   
+        SceneManager.LoadScene("CombatTest1");   
     }
 
     public void QuitGame()

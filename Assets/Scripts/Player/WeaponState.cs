@@ -5,14 +5,16 @@ using UnityEngine.UI;
 public class WeaponState : MonoBehaviour
 {
     public static WeaponState instance;
-    public GameObject crossbow;
+    [SerializeField] GameObject crossbow;
+    [SerializeField] MeleeMain meleeMain;
     StateMachine stateMachine;
     ComboCharacter comboCharacter;
     ManualShoot manualShoot;
     AutoShoot autoShoot;
     CrossbowSpecial crossbowSpecial;
     SwordSpecial swordSpecial;
-    [HideInInspector]public Animator animator;
+    [Tooltip("Pass MeleeFloat gameobject")]
+    Animator meleeAnimator;
     public bool weaponStateIsMelee;
     
     void Awake(){
@@ -20,9 +22,10 @@ public class WeaponState : MonoBehaviour
         comboCharacter = GetComponent<ComboCharacter>();
         manualShoot = GetComponent<ManualShoot>();
         autoShoot = GetComponentInChildren<AutoShoot>();
-        animator = GetComponent<Animator>();
         crossbowSpecial = GetComponentInChildren<CrossbowSpecial>();
         swordSpecial = GetComponentInChildren<SwordSpecial>();
+        meleeAnimator = meleeMain.GetComponentInChildren<Animator>();
+
         instance=this;
     }
     void Start()
@@ -41,10 +44,11 @@ public class WeaponState : MonoBehaviour
         {
             autoShoot.enabled = true;
         }
+        
     }
 
     public bool CanSwitch(){
-        if (animator.GetFloat("AnimationLock")!=0 || crossbowSpecial.chargeSpecial || swordSpecial.isSpinning) return false;
+        if (!meleeAnimator.GetCurrentAnimatorStateInfo(0).IsName("MeleeIdle") || crossbowSpecial.chargeSpecial || swordSpecial.isSpinning) return false;
 
         else return true;
     }

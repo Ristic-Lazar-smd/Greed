@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PlayerDash : MonoBehaviour
 {
     Rigidbody2D body;
-    Animator playerAnimator;
-    [SerializeField] Animator meleeAnimator;
+    [SerializeField] GameObject meleeFloat;
+    Animator meleeAnimator;
     StateMachine meleeStateMachine;
     DamageableCharacter damageableCharacter;
     Collider2D playerColider;
@@ -23,42 +23,35 @@ public class PlayerDash : MonoBehaviour
     private float lastImageXposition;
     private float lastImageYposition;
     private float lastDash = -100f;
-
     string cacheCurentMeleeState;
 
 
     //pre sam koristio isDashing da kontrolis koja skripta moze da cita levi klik i to je izazivalo probleme zato sto moram da stavim isDashing na false da bih zaustavio animaciju, to ujedno pusti sve skripte da citaju input i zbog toga je bilo problema. Zato umesto isDashing sam uveo novi bool boolDashComboFix koji se setuje isto kad i isDashing ali njega ne gasim kad i isDashing.
     public bool boolDashComboFix;
     float dashTimer;
-    void Awake()
-    {
+    void Awake(){
         body = GetComponent<Rigidbody2D>();
-        playerAnimator = GetComponent<Animator>();
         meleeStateMachine = GetComponent<StateMachine>();
         damageableCharacter = GetComponent<DamageableCharacter>();
         playerColider = GetComponent<Collider2D>();
+        meleeAnimator = meleeFloat.GetComponentInChildren<Animator>();
     }
 
-    void Update()
-    {
+    void Update(){
         dashTimer -= Time.deltaTime;
         if (dashTimer <= 0){
             boolDashComboFix = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Time.time >= (lastDash + dashCooldown))
-            {
+        if (Input.GetKeyDown(KeyCode.Space)){
+            if (Time.time >= (lastDash + dashCooldown)){
                 dashTimer = dashDuration;
-                //playerAnimator.CrossFade("test",0,0);
                 AttemptToDash();
             }
         }
 
 
-        if (isDashing)
-        {
+        if (isDashing){
             var tempColor = dashImage.color;
             tempColor.a = 0f;
             dashImage.color = tempColor;
@@ -66,8 +59,7 @@ public class PlayerDash : MonoBehaviour
             cacheCurentMeleeState = meleeStateMachine.CurrentState.ToString();
             meleeStateMachine.SetNextStateToMain();
         }
-        else if(Time.time >= (lastDash + dashCooldown))
-        {
+        else if(Time.time >= (lastDash + dashCooldown)){
             var tempColor = dashImage.color;
             tempColor.a = 1f;
             dashImage.color = tempColor;
@@ -90,13 +82,12 @@ public class PlayerDash : MonoBehaviour
         }
     }
 
-    private void AttemptToDash()
-    {
-        meleeAnimator.SetTrigger("Dash");
+    private void AttemptToDash(){
+        meleeAnimator.CrossFade("MeleeIdle",0,0);
         boolDashComboFix = true;
         isDashing = true;
         damageableCharacter.Invincible = true;
-        damageableCharacter.KnockedBack=false; //you can dash out of hitstun
+        damageableCharacter.KnockedBack = false; //you can dash out of hitstun
         dashTimeLeft = dashDuration;
         lastDash = Time.time;
 
@@ -104,15 +95,13 @@ public class PlayerDash : MonoBehaviour
         lastImageXposition = transform.position.x;
         lastImageYposition = transform.position.y;
     }
-    public void CheckDash()
-    {
+    public void CheckDash(){
         if(isDashing){
             PlayerMovement.playerInstance.animationLock=false;
             if (dashTimeLeft > 0){
                 body.linearVelocity = new Vector2(body.linearVelocity.x * dashSpeed, body.linearVelocity.y * dashSpeed);
                 dashTimeLeft -= Time.deltaTime;
-                if ((Mathf.Abs(transform.position.x - lastImageXposition) > distanceBetweenImages) || (Mathf.Abs(transform.position.y - lastImageYposition) > distanceBetweenImages))
-                {
+                if ((Mathf.Abs(transform.position.x - lastImageXposition) > distanceBetweenImages) || (Mathf.Abs(transform.position.y - lastImageYposition) > distanceBetweenImages)){
                     PoolPlayerAfterImage.Instance.GetFromPool();
                     lastImageXposition = transform.position.x;
                     lastImageYposition = transform.position.y;

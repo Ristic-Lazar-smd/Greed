@@ -100,7 +100,7 @@ public class SpawnEnemy : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F1)){SpawnExactEnemy(0);}
         if (Input.GetKeyDown(KeyCode.F2)){SpawnExactEnemy(1);}
-        if (Input.GetKeyDown(KeyCode.F2)){SpawnExactEnemy(2);}
+        if (Input.GetKeyDown(KeyCode.F3)){SpawnExactEnemy(2);}
     }
 
 

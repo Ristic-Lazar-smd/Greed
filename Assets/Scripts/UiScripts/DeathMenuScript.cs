@@ -7,6 +7,6 @@ public class DeathMenuScript : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("CombatTest");
+        SceneManager.LoadScene("CombatTest1");
     }
 }
