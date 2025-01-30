@@ -11,20 +11,20 @@ public class GroundEntryState : MeleeBaseState
 
         //Attack
         attackIndex = 1;
-        duration = 0.33f; //duration mora da bude framerate podeljeno sa broj frejmova
+        duration = 0.35f; //duration mora da bude framerate podeljeno sa broj frejmova
         animator.SetTrigger("Attack" + attackIndex);
         PlayerMovement.playerInstance.animationLock = true;
-        PlayerMovement.playerInstance.AttackStep();
+        meleeMain.UpdateAttackDirection();
+        attackStep.Step();
     }
 
     public override void OnUpdate(){
         
         base.OnUpdate();
-
+        
         if (fixedtime >= duration){
             if (shouldCombo){
                 stateMachine.SetNextState(new GroundComboState());
-                //PlayerMovement.playerInstance.animationLock = false;
             }
             else{
                 stateMachine.SetNextStateToMain();

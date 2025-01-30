@@ -6,8 +6,6 @@ using UnityEngine;
 public class MeleeMain : MonoBehaviour
 {
     SpriteRenderer sr;
-    [Tooltip("Spawn lokacija strele u relaciji od playera")]public float offset = 2f;
-    Quaternion attackAngle;
     void Awake()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
@@ -20,19 +18,19 @@ public class MeleeMain : MonoBehaviour
         }else sr.flipY=false;
 
         if (!PlayerMovement.playerInstance.animationLock){
-            transform.rotation = AttackDirection();
+            UpdateAttackDirection();
         }
-        //PlayerMovement.playerInstance.stepDirection = PlayerMovement.playerInstance.transform.InverseTransformPoint(transform.GetChild(0).position);
-       
     }
     void FixedUpdate(){
 
     }
-
+    public void UpdateAttackDirection(){
+        transform.rotation = AttackDirection();
+    }
 
     public Quaternion AttackDirection(){
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position; 
         float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; 
-        return Quaternion.Euler(0f, 0f, rotation_z + offset);
+        return Quaternion.Euler(0f, 0f, rotation_z);
     }
 }

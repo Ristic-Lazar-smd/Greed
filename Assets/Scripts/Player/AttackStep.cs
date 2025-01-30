@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class AttackStep : MonoBehaviour
 {
-    [SerializeField] public MeleeMain meleeMain;
     Vector3 stepDirection;
     public float stepSpeed;
+    Transform playerTransform;
+
+
+    void Awake()
+    {
+        playerTransform = transform.parent.transform;
+    }
 
     public void Step(){
-        stepDirection = transform.InverseTransformPoint(meleeMain.transform.GetChild(0).position);
-        transform.position +=  stepDirection * 2 * stepSpeed * Time.deltaTime;
-        Debug.Log(stepDirection);
+        //playerTransform = PlayerMovement.playerInstance.transform;
+        stepDirection = playerTransform.InverseTransformPoint(transform.GetChild(0).position);
+        playerTransform.position += stepDirection * 2 * stepSpeed * Time.deltaTime;
     }
 }

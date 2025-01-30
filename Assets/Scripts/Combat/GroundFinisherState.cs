@@ -12,8 +12,9 @@ public class GroundFinisherState : MeleeBaseState
         attackIndex = 3;
         duration = 0.38f;
         animator.SetTrigger("Attack" + attackIndex);
-        PlayerMovement.playerInstance.AttackStep();
         PlayerMovement.playerInstance.animationLock = true;
+        meleeMain.UpdateAttackDirection();
+        attackStep.Step();
     }
 
     public override void OnUpdate()

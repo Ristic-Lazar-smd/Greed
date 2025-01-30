@@ -58,12 +58,9 @@ GameObject test;
 
         //saljem animatoru ovo na klik kako bi znao kada da flipujem anim//
         if (Input.GetMouseButtonDown(0)){
-        animator.SetFloat("MouseX", MouseRelToPlayer().x);
-        animator.SetFloat("MouseY", MouseRelToPlayer().y);
+            animator.SetFloat("MouseX", MouseRelToPlayer().x);
+            animator.SetFloat("MouseY", MouseRelToPlayer().y);
         }
-    }
-    public void AttackStep(){
-        if (attackStep)attackStep.Step();
     }
 
     // temp solution for mouse poss, redudent, check ManualShoot script //

@@ -14,10 +14,10 @@ public class bouncy_script : MonoBehaviour
 
     public List<Vector2> vector2List = new List<Vector2>
     {
-        new Vector2(-1,0),
-        new Vector2(0,1),
-        new Vector2(1,0),
-        new Vector2(0,-1)
+        new Vector2(-1,1),
+        new Vector2(1,1),
+        new Vector2(1,-1),
+        new Vector2(-1,-1)
     };
 
     [SerializeField] private float countdown = 3;

@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class MeleeBaseState : State
 {
-    // How long this state should be active for before moving on
+    
     public float duration;
-    // Cached animator component
+ 
     [SerializeField] protected Animator animator;
-    // bool to check whether or not the next attack in the sequence should be played or not
+   
     protected bool shouldCombo; 
-    // The attack index in the sequence of attacks
+   
     protected int attackIndex;
 
-
-
-    // The cached hit collider component of this attack
     protected Collider2D hitCollider;
-    // Cached already struck objects of said attack to avoid overlapping attacks on same target
+    
     private List<Collider2D> collidersDamaged;
-    // The Hit Effect to Spawn on the afflicted Enemy
+    
     private GameObject HitEffectPrefab;
 
     PlayerDash playerDash;
 
+    protected MeleeMain meleeMain;
+    protected AttackStep attackStep;
+
     // Input buffer Timer
     private float AttackPressedTimer = 0;
+
+    //delay combo stuff
+    protected bool flag;
+    //adjust this to widen of shorten the window in which a player can execute the delay attack combo
+    protected float windowOfAttack = 0.12f;
 
     public override void OnEnter(StateMachine _stateMachine)
     {
         base.OnEnter(_stateMachine);
-        //animator = GetComponent<Animator>();
-        animator = GameObject.Find("WeaponSprite").GetComponent<Animator>();
+        meleeMain = GameObject.Find("MeleeFloat").GetComponent<MeleeMain>();
+        animator = meleeMain.GetComponentInChildren<Animator>();
+        attackStep = meleeMain.GetComponent<AttackStep>();
         collidersDamaged = new List<Collider2D>();
         hitCollider = GetComponent<ComboCharacter>().hitbox;
         //HitEffectPrefab = GetComponent<ComboCharacter>().Hiteffect;
-        Debug.Log("aktivno");
+
     }
 
     public override void OnUpdate()
@@ -54,8 +60,9 @@ public class MeleeBaseState : State
             AttackPressedTimer = 0.01f;
         }*/
 
-        if (Input.GetMouseButtonDown(0) && animator.GetFloat("AttackWindow.Open") > 0f && !(GetComponent<PlayerDash>().boolDashComboFix)/*&& AttackPressedTimer > 0*/)
+        if (Input.GetMouseButtonDown(0) /*&& animator.GetFloat("AttackWindow.Open") > 0f*/ && !(GetComponent<PlayerDash>().boolDashComboFix)/*&& AttackPressedTimer > 0*/)
         {
+
             shouldCombo = true;
         }
     }

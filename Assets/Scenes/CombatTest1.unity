@@ -3579,7 +3579,6 @@ GameObject:
   - component: {fileID: 779755992}
   - component: {fileID: 779755994}
   - component: {fileID: 779755993}
-  - component: {fileID: 779755996}
   - component: {fileID: 779755989}
   - component: {fileID: 779755988}
   - component: {fileID: 779755991}
@@ -3965,20 +3964,6 @@ MonoBehaviour:
   timeBetweenShots: 0.3
   extraShot: 0
   numberOfShots: 0
---- !u!114 &779755996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779755974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a20ddbf7f0cb50f4d9c908f8d1ea2e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meleeMain: {fileID: 1923770820}
-  stepSpeed: 50
 --- !u!1 &871519233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6730,6 +6715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923770817}
   - component: {fileID: 1923770820}
+  - component: {fileID: 1923770821}
   m_Layer: 0
   m_Name: MeleeFloat
   m_TagString: Sword
@@ -6765,7 +6751,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2d7183877025744b0180d96e59c9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0
+--- !u!114 &1923770821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923770816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20ddbf7f0cb50f4d9c908f8d1ea2e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepSpeed: 50
 --- !u!1 &1935100381
 GameObject:
   m_ObjectHideFlags: 0
