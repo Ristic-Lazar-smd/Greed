@@ -46,9 +46,10 @@ public class GroundComboState : MeleeBaseState
         if (!flag && fixedtime >= duration-windowOfAttack && fixedtime <= duration ){
 
             if (Input.GetMouseButtonDown(0)){
-                Debug.Log("delayCombo");
-                stateMachine.SetNextStateToMain();
-                PlayerMovement.playerInstance.animationLock = false;
+                stateMachine.SetNextState(new GroundDelayState());
+                //ebug.Log("delayCombo");
+                //stateMachine.SetNextStateToMain();
+                //PlayerMovement.playerInstance.animationLock = false;
             }
         }
     }
