@@ -1,0 +1,1057 @@
+fileFormatVersion: 2
+guid: 78d84fab5bb68e24e9da5105cb6345a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 240267681225006689
+    second: the_glutton(charge-attack)_0
+  - first:
+      213: 598946862685924783
+    second: the_glutton(charge-attack)_1
+  - first:
+      213: 5435727565930934545
+    second: the_glutton(charge-attack)_2
+  - first:
+      213: 1939956178321284169
+    second: the_glutton(charge-attack)_3
+  - first:
+      213: -4508481718277776415
+    second: the_glutton(charge-attack)_4
+  - first:
+      213: 3634292175930172052
+    second: the_glutton(charge-attack)_5
+  - first:
+      213: -9055020710463501843
+    second: the_glutton(charge-attack)_6
+  - first:
+      213: 8464655379837579222
+    second: the_glutton(charge-attack)_7
+  - first:
+      213: -9141279002443178826
+    second: the_glutton(charge-attack)_8
+  - first:
+      213: 7678508534539417464
+    second: the_glutton(charge-attack)_9
+  - first:
+      213: 818722151895234114
+    second: the_glutton(charge-attack)_10
+  - first:
+      213: -6762997843881201141
+    second: the_glutton(charge-attack)_11
+  - first:
+      213: 7347938890671391217
+    second: the_glutton(charge-attack)_12
+  - first:
+      213: -8213203823594840688
+    second: the_glutton(charge-attack)_13
+  - first:
+      213: 8830524689711207943
+    second: the_glutton(charge-attack)_14
+  - first:
+      213: 2358904418123933227
+    second: the_glutton(charge-attack)_15
+  - first:
+      213: 6602914280400143935
+    second: the_glutton(charge-attack)_16
+  - first:
+      213: 8139413851557597148
+    second: the_glutton(charge-attack)_17
+  - first:
+      213: -5103930169188100436
+    second: the_glutton(charge-attack)_18
+  - first:
+      213: -2401701913945276800
+    second: the_glutton(charge-attack)_19
+  - first:
+      213: 5528399803007888554
+    second: the_glutton(charge-attack)_20
+  - first:
+      213: 4544619947764497925
+    second: the_glutton(charge-attack)_21
+  - first:
+      213: 7399894650137911938
+    second: the_glutton(charge-attack)_22
+  - first:
+      213: 7873139792385106456
+    second: the_glutton(charge-attack)_23
+  - first:
+      213: 3294236032750180289
+    second: the_glutton(charge-attack)_24
+  - first:
+      213: -6734414227561199616
+    second: the_glutton(charge-attack)_25
+  - first:
+      213: 801338593602515003
+    second: the_glutton(charge-attack)_26
+  - first:
+      213: -2837026132703938470
+    second: the_glutton(charge-attack)_27
+  - first:
+      213: -8590620602856000757
+    second: the_glutton(charge-attack)_28
+  - first:
+      213: 8737054075742211752
+    second: the_glutton(charge-attack)_29
+  - first:
+      213: 3346122901011176298
+    second: the_glutton(charge-attack)_30
+  - first:
+      213: 8923620680702656470
+    second: the_glutton(charge-attack)_31
+  - first:
+      213: -2264612699508341915
+    second: the_glutton(charge-attack)_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc13aa0e27a32180800000000000000
+      internalID: -9141279002443178826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877f60664da8f8a60800000000000000
+      internalID: 7678508534539417464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2467579957fac5b00800000000000000
+      internalID: 818722151895234114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_11
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 264
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b027abafa410522a0800000000000000
+      internalID: -6762997843881201141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7dd5ad73a77bd20800000000000000
+      internalID: 3294236032750180289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008c0e3c0fd8a82a0800000000000000
+      internalID: -6734414227561199616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b303d78843dee1b00800000000000000
+      internalID: 801338593602515003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 88
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a587ea573cbd0a8d0800000000000000
+      internalID: -2837026132703938470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8583115d6bd97004a8a534c8106ef89a
+      internalID: 240267681225006689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226f8f71d43a45f4d9630a1c7ae55e4f
+      internalID: 598946862685924783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87e636f0ddcb904aa36473627a83eb4
+      internalID: 5435727565930934545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 352
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45d16bfd89680148845323ecd2aa4d9
+      internalID: 1939956178321284169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234d1af5cb0bc7f479dc0a2cf3c8d64e
+      internalID: -4508481718277776415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8df782bf2697df4ca01fbfc83ecc2ce
+      internalID: 3634292175930172052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1b8cb2b42a41c4d8fa218d708aca75
+      internalID: -9055020710463501843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 308
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84a6951697292d49be51b60fb7380ff
+      internalID: 8464655379837579222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1472c66d6217c7e408cb4d8bf78a7bc6
+      internalID: 7347938890671391217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c24289ff90a344c8e371cad81a0902
+      internalID: -8213203823594840688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418b4182aeb3b40409c2af9cb6acec5b
+      internalID: 8830524689711207943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 220
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045e8c2cf0d95fa4e84d46fa04b3ce59
+      internalID: 2358904418123933227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d196cca42cf93e04db3cc43377b1f0cf
+      internalID: 6602914280400143935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397c65d9622792846a2489be508df687
+      internalID: 8139413851557597148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807e617537571824fb3730a12ed9d9e5
+      internalID: -5103930169188100436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_19
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 176
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f584d5b51224af947bb0d7c35e2941cc
+      internalID: -2401701913945276800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09e9fa5e7ffce845a9daa58e81e4c5a
+      internalID: 5528399803007888554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98c9d30ec5bbd049bf04beb42926f73
+      internalID: 4544619947764497925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073b4cd76ae02934ebc0da581bdc82e8
+      internalID: 7399894650137911938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_23
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 132
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7a902708b9a494dbaa08066d632c2e
+      internalID: 7873139792385106456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a8cef4e9f2c8e4fbce8ef0576a7bcb
+      internalID: -8590620602856000757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_29
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918a96f557b60a84bbc5cae4ea10567a
+      internalID: 8737054075742211752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_30
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc9342dce60b704498c4d7a51bb2b1b
+      internalID: 3346122901011176298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_31
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 44
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efce0df5630c784d976e60d5f0d3198
+      internalID: 8923620680702656470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e896bb1f61917b04b979c2cfb9628fc3
+      internalID: -2264612699508341915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_33
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e67e1e108558a4b83fc9b39ebb7a87
+      internalID: -811907295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_34
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da620e0d9011bde429472fe50ccc9860
+      internalID: -363039445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_glutton(charge-attack)_35
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dda0393e770c6d429714eb2d3b143d0
+      internalID: 202823071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e2a354474d548e742b4a549fb0fb46fd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      the_glutton(charge-attack)_0: 240267681225006689
+      the_glutton(charge-attack)_1: 598946862685924783
+      the_glutton(charge-attack)_10: 818722151895234114
+      the_glutton(charge-attack)_11: -6762997843881201141
+      the_glutton(charge-attack)_12: 7347938890671391217
+      the_glutton(charge-attack)_13: -8213203823594840688
+      the_glutton(charge-attack)_14: 8830524689711207943
+      the_glutton(charge-attack)_15: 2358904418123933227
+      the_glutton(charge-attack)_16: 6602914280400143935
+      the_glutton(charge-attack)_17: 8139413851557597148
+      the_glutton(charge-attack)_18: -5103930169188100436
+      the_glutton(charge-attack)_19: -2401701913945276800
+      the_glutton(charge-attack)_2: 5435727565930934545
+      the_glutton(charge-attack)_20: 5528399803007888554
+      the_glutton(charge-attack)_21: 4544619947764497925
+      the_glutton(charge-attack)_22: 7399894650137911938
+      the_glutton(charge-attack)_23: 7873139792385106456
+      the_glutton(charge-attack)_24: 3294236032750180289
+      the_glutton(charge-attack)_25: -6734414227561199616
+      the_glutton(charge-attack)_26: 801338593602515003
+      the_glutton(charge-attack)_27: -2837026132703938470
+      the_glutton(charge-attack)_28: -8590620602856000757
+      the_glutton(charge-attack)_29: 8737054075742211752
+      the_glutton(charge-attack)_3: 1939956178321284169
+      the_glutton(charge-attack)_30: 3346122901011176298
+      the_glutton(charge-attack)_31: 8923620680702656470
+      the_glutton(charge-attack)_32: -2264612699508341915
+      the_glutton(charge-attack)_33: -811907295
+      the_glutton(charge-attack)_34: -363039445
+      the_glutton(charge-attack)_35: 202823071
+      the_glutton(charge-attack)_4: -4508481718277776415
+      the_glutton(charge-attack)_5: 3634292175930172052
+      the_glutton(charge-attack)_6: -9055020710463501843
+      the_glutton(charge-attack)_7: 8464655379837579222
+      the_glutton(charge-attack)_8: -9141279002443178826
+      the_glutton(charge-attack)_9: 7678508534539417464
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
