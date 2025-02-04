@@ -33,6 +33,14 @@ public class GluttonMove : MonoBehaviour
         if(enemyDmgTaken.canMove){
             rb.linearVelocity= new Vector2(reference.player.transform.position.x-this.transform.position.x, reference.player.transform.position.y-this.transform.position.y).normalized * gluttonSpeed;
         }
+        if((reference.player.transform.position.x - this.transform.position.x) <= 5.0f || (reference.player.transform.position.y - this.transform.position.y) <= 5.0f)
+        {
+            gluttonSpeed = 0f;
+        }
+        else
+        {
+            gluttonSpeed = 3f;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
