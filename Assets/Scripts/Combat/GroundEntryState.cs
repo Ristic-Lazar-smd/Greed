@@ -11,11 +11,12 @@ public class GroundEntryState : MeleeBaseState
 
         //Attack
         attackIndex = 1;
-        duration = 0.35f; //duration mora da bude framerate podeljeno sa broj frejmova
-        animator.SetTrigger("Attack" + attackIndex);
+        duration = 0.64f; //duration mora da bude framerate podeljeno sa broj frejmova
+        weaponAnimator.SetTrigger("Attack" + attackIndex);
+        playerAnimator.SetTrigger("Attack" + attackIndex);
         PlayerMovement.playerInstance.animationLock = true;
         meleeMain.UpdateAttackDirection();
-        attackStep.Step();
+        //attackStep.Step();
     }
 
     public override void OnUpdate(){

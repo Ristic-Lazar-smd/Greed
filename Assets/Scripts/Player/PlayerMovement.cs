@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -10,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement playerInstance;
     DamageableCharacter damageableCharacter;
     Rigidbody2D body;
-    Animator animator;
+    Animator playerAnimator;
     //[SerializeField] Animator meleeAnimator;
     SpriteRenderer sr;
     PlayerDash playerDash;
@@ -28,12 +29,14 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float bodyVelocityYNormalized;
     [HideInInspector] public bool animationLock = false;
 
+    float lastDirection;
+    AnimatorStateInfo playerAnimatorStateInfo;
 GameObject test;
     void Awake(){
         playerInstance = this;
         body = GetComponent<Rigidbody2D>();
         damageableCharacter = GetComponent<DamageableCharacter>();
-        animator = GetComponent<Animator>();
+        playerAnimator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         playerDash = GetComponent<PlayerDash>();
         attackStep = GetComponent<AttackStep>();
@@ -53,25 +56,30 @@ GameObject test;
         transform.position = clampedPosition;
        
         //Animation
-        animator.SetFloat("dirX", bodyVelocityXNormalized);
-        animator.SetFloat("dirY", bodyVelocityYNormalized);
+        playerAnimator.SetFloat("dirX", bodyVelocityXNormalized);
+        playerAnimator.SetFloat("dirY", bodyVelocityYNormalized);
 
         //saljem animatoru ovo na klik kako bi znao kada da flipujem anim//
         if (Input.GetMouseButtonDown(0)){
-            animator.SetFloat("MouseX", MouseRelToPlayer().x);
-            animator.SetFloat("MouseY", MouseRelToPlayer().y);
+            playerAnimator.SetFloat("MouseX", MouseRelToPlayer().x);
+            playerAnimator.SetFloat("MouseY", MouseRelToPlayer().y);
         }
+
+
+        //Animation flip
+        if(bodyVelocityXNormalized!=0) {lastDirection=bodyVelocityXNormalized;}
+        if(lastDirection<0){
+            playerAnimatorStateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
+            if(playerAnimatorStateInfo.IsName("Walk Tree") && bodyVelocityXNormalized<=0){
+
+                sr.flipX=true;
+                
+            } else {sr.flipX=false;}
+        } else {sr.flipX=false;}
+ 
+
     }
 
-    // temp solution for mouse poss, redudent, check ManualShoot script //
-    public Vector3 MouseRelToPlayer(){
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.nearClipPlane;
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-        trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
-        //Debug.Log(trueMousePos);    
-        return trueMousePos;
-    }
 
     private void FixedUpdate()
     {
@@ -93,5 +101,18 @@ GameObject test;
             Vector2 test = new Vector2(transform.position.x - collision.transform.position.x, transform.position.y-collision.transform.position.y).normalized * 10;
             damageableCharacter.OnPlayerHit(collision.gameObject.GetComponent<Damage>().damage,test);
         }
+    }
+
+
+
+
+    // temp solution for mouse poss, redudent, check ManualShoot script //
+    public Vector3 MouseRelToPlayer(){
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        trueMousePos = new Vector3((worldPosition - gameObject.transform.position).x, (worldPosition - gameObject.transform.position).y).normalized;
+        //Debug.Log(trueMousePos);    
+        return trueMousePos;
     }
 }

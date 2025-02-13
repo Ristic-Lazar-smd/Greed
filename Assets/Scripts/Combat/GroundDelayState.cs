@@ -11,7 +11,7 @@ public class GroundDelayState : MeleeBaseState
         //Attack
         attackIndex = 4;
         duration = 0.58f;
-        animator.SetTrigger("Attack" + attackIndex);
+        weaponAnimator.SetTrigger("Attack" + attackIndex);
         PlayerMovement.playerInstance.animationLock = true;
         meleeMain.UpdateAttackDirection();
         attackStep.Step();

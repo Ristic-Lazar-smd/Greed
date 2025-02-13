@@ -8,7 +8,8 @@ public class PlayerDash : MonoBehaviour
 {
     Rigidbody2D body;
     [SerializeField] GameObject meleeFloat;
-    Animator meleeAnimator;
+    Animator weaponAnimator;
+    Animator playerAnimator;
     StateMachine meleeStateMachine;
     DamageableCharacter damageableCharacter;
     Collider2D playerColider;
@@ -34,7 +35,8 @@ public class PlayerDash : MonoBehaviour
         meleeStateMachine = GetComponent<StateMachine>();
         damageableCharacter = GetComponent<DamageableCharacter>();
         playerColider = GetComponent<Collider2D>();
-        meleeAnimator = meleeFloat.GetComponentInChildren<Animator>();
+        weaponAnimator = meleeFloat.GetComponentInChildren<Animator>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update(){
@@ -83,7 +85,8 @@ public class PlayerDash : MonoBehaviour
     }
 
     private void AttemptToDash(){
-        meleeAnimator.CrossFade("MeleeIdle",0,0);
+        weaponAnimator.CrossFade("MeleeIdle",0,0);
+        playerAnimator.SetTrigger("Dash");
         boolDashComboFix = true;
         isDashing = true;
         damageableCharacter.Invincible = true;

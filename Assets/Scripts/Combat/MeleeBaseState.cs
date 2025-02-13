@@ -7,7 +7,9 @@ public class MeleeBaseState : State
     
     public float duration;
  
-    [SerializeField] protected Animator animator;
+    protected Animator weaponAnimator;
+    protected Animator playerAnimator;
+
    
     protected bool shouldCombo; 
    
@@ -36,7 +38,9 @@ public class MeleeBaseState : State
     {
         base.OnEnter(_stateMachine);
         meleeMain = GameObject.Find("MeleeFloat").GetComponent<MeleeMain>();
-        animator = meleeMain.GetComponentInChildren<Animator>();
+        weaponAnimator = meleeMain.GetComponentInChildren<Animator>();
+        playerAnimator = PlayerMovement.playerInstance.GetComponent<Animator>();
+        
         attackStep = meleeMain.GetComponent<AttackStep>();
         collidersDamaged = new List<Collider2D>();
         hitCollider = GetComponent<ComboCharacter>().hitbox;
@@ -49,7 +53,7 @@ public class MeleeBaseState : State
         base.OnUpdate();
         AttackPressedTimer -= Time.deltaTime;
 
-        if (animator.GetFloat("Weapon.Active") > 0f)
+        if (weaponAnimator.GetFloat("Weapon.Active") > 0f)
         {
             Attack();
         }
