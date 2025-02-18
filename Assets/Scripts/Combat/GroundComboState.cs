@@ -14,10 +14,9 @@ public class GroundComboState : MeleeBaseState
 
         //Attack
         attackIndex = 2;
-        duration = 0.84f;
+        duration = 0.40f;
         weaponAnimator.SetTrigger("Attack" + attackIndex);
         playerAnimator.SetTrigger("Attack" + attackIndex);
-        PlayerMovement.playerInstance.animationLock = true;
         meleeMain.UpdateAttackDirection();
         //attackStep.Step();
     }
@@ -35,12 +34,11 @@ public class GroundComboState : MeleeBaseState
             else
             {
                 stateMachine.SetNextStateToMain();
-                PlayerMovement.playerInstance.animationLock = false;
             }
         }
 
-        //attack delay combo
-        if(fixedtime<duration-windowOfAttack && Input.GetMouseButtonDown(0)){
+        //attack delay combo, implementirano, samo cekam animaciju, 
+        /*if(fixedtime<duration-windowOfAttack && Input.GetMouseButtonDown(0)){
             flag = true;
         }    
         if (!flag && fixedtime >= duration-windowOfAttack && fixedtime <= duration ){
@@ -49,8 +47,7 @@ public class GroundComboState : MeleeBaseState
                 stateMachine.SetNextState(new GroundDelayState());
                 //ebug.Log("delayCombo");
                 //stateMachine.SetNextStateToMain();
-                //PlayerMovement.playerInstance.animationLock = false;
             }
-        }
+        }*/
     }
 }

@@ -11,10 +11,10 @@ public class GroundEntryState : MeleeBaseState
 
         //Attack
         attackIndex = 1;
-        duration = 0.64f; //duration mora da bude framerate podeljeno sa broj frejmova
+        duration = 0.65f; //duration mora da bude framerate podeljeno sa broj frejmova
         weaponAnimator.SetTrigger("Attack" + attackIndex);
         playerAnimator.SetTrigger("Attack" + attackIndex);
-        PlayerMovement.playerInstance.animationLock = true;
+        //PlayerMovement.playerInstance.animationLock = true;
         meleeMain.UpdateAttackDirection();
         //attackStep.Step();
     }
@@ -29,7 +29,7 @@ public class GroundEntryState : MeleeBaseState
             }
             else{
                 stateMachine.SetNextStateToMain();
-                PlayerMovement.playerInstance.animationLock = false;
+                //PlayerMovement.playerInstance.animationLock = false;
             }
         }
     }

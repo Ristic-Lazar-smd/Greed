@@ -61,8 +61,16 @@ GameObject test;
 
         //saljem animatoru ovo na klik kako bi znao kada da flipujem anim//
         if (Input.GetMouseButtonDown(0)){
+            sr.flipX=false;
             playerAnimator.SetFloat("MouseX", MouseRelToPlayer().x);
             playerAnimator.SetFloat("MouseY", MouseRelToPlayer().y);
+            if (playerAnimator.GetFloat("MouseX")<0){
+                sr.flipX=true;
+                lastDirection=-1;
+                } 
+            
+            else {sr.flipX=false;
+            lastDirection=1;}
         }
 
 
@@ -70,13 +78,19 @@ GameObject test;
         if(bodyVelocityXNormalized!=0) {lastDirection=bodyVelocityXNormalized;}
         if(lastDirection<0){
             playerAnimatorStateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
-            if(playerAnimatorStateInfo.IsName("Walk Tree") && bodyVelocityXNormalized<=0){
+            /*if(playerAnimatorStateInfo.IsName("Walk Tree") && bodyVelocityXNormalized<=0){
 
                 sr.flipX=true;
                 
-            } else {sr.flipX=false;}
+            }*/
+            sr.flipX=true;
         } else {sr.flipX=false;}
- 
+
+    
+
+        //Animation lock
+        if(playerAnimator.GetFloat("AnimationLock")!=0) animationLock=true;
+        else animationLock=false;
 
     }
 
