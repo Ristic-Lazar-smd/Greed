@@ -10,6 +10,7 @@ public class AttackMobTest : MonoBehaviour
     private EnemyDmgTaken enemyDmgTaken;
     public float gluttonSpeed = 3f;
     public float chaseDistanceThreshold;
+    public Animator swipe;
 
     float bodyVelocityXNormalized;
     float bodyVelocityYNormalized;
@@ -42,6 +43,7 @@ public class AttackMobTest : MonoBehaviour
         if (distance < chaseDistanceThreshold)
         {
             gluttonSpeed = 0f;
+            swipe.SetTrigger("Attack1");
         }
         else
         {

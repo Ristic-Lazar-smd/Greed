@@ -103,11 +103,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Vector2 test = new Vector2(transform.position.x - collision.transform.position.x, transform.position.y - collision.transform.position.y).normalized * 10;
+            damageableCharacter.OnPlayerHit(collision.gameObject.GetComponent<Damage>().damage, test);
+        }
+    }
 
 
 
-    // temp solution for mouse poss, redudent, check ManualShoot script //
-    public Vector3 MouseRelToPlayer(){
+
+            // temp solution for mouse poss, redudent, check ManualShoot script //
+            public Vector3 MouseRelToPlayer(){
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
