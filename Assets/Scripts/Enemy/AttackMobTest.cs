@@ -38,7 +38,7 @@ public class AttackMobTest : MonoBehaviour
         }
 
         distance = Vector2.Distance(reference.player.transform.position, transform.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         if (distance < chaseDistanceThreshold)
         {
             gluttonSpeed = 0f;
@@ -51,22 +51,27 @@ public class AttackMobTest : MonoBehaviour
 
     public IEnumerator Attack()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //    {
-    //        if (other.gameObject.CompareTag("Player"))
-    //        {
-    //            gluttonSpeed = 0f;
-    //        }
-    //    }
 
-    //    private void OnTriggerExit2D(Collider2D other)
-    //    {
-    //        if (other.gameObject.CompareTag("Player"))
-    //        {
-    //            gluttonSpeed = 3f;
-    //        }
-    //    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            //enemyDmgTaken.canMove = false;
+            //gluttonSpeed = 0f;
+            Debug.Log("uso");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            //enemyDmgTaken.canMove = true;
+            //gluttonSpeed = 3f;
+            Debug.Log("izaso");
+        }
+    }
 }
