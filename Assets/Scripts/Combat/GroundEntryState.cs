@@ -11,7 +11,7 @@ public class GroundEntryState : MeleeBaseState
 
         //Attack
         attackIndex = 1;
-        duration = 0.65f; //duration mora da bude framerate podeljeno sa broj frejmova
+        duration = 0.57f; //duration mora da bude framerate podeljeno sa broj frejmova minus 0.01
         weaponAnimator.SetTrigger("Attack" + attackIndex);
         playerAnimator.SetTrigger("Attack" + attackIndex);
         //PlayerMovement.playerInstance.animationLock = true;

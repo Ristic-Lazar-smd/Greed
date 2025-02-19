@@ -28,8 +28,10 @@ public class GroundComboState : MeleeBaseState
         {
             if (shouldCombo)
             {
-                stateMachine.SetNextState(new GroundFinisherState());
+                //stateMachine.SetNextState(new GroundFinisherState());
                 shouldCombo = false;
+                //privremeno dok ne ubacim 3. hit u combo
+                stateMachine.SetNextStateToMain();
             }
             else
             {

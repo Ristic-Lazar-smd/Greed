@@ -6,23 +6,16 @@ public class MeleeBaseState : State
 {
     
     public float duration;
- 
     protected Animator weaponAnimator;
     protected Animator playerAnimator;
 
-   
     protected bool shouldCombo; 
-   
     protected int attackIndex;
-
     protected Collider2D hitCollider;
-    
     private List<Collider2D> collidersDamaged;
-    
     private GameObject HitEffectPrefab;
 
     PlayerDash playerDash;
-
     protected MeleeMain meleeMain;
     protected AttackStep attackStep;
 
@@ -53,8 +46,7 @@ public class MeleeBaseState : State
         base.OnUpdate();
         AttackPressedTimer -= Time.deltaTime;
 
-        if (weaponAnimator.GetFloat("Weapon.Active") > 0f)
-        {
+        if (weaponAnimator.GetFloat("Weapon.Active") > 0f){
             Attack();
         }
 
@@ -64,34 +56,26 @@ public class MeleeBaseState : State
             AttackPressedTimer = 0.01f;
         }*/
 
-        if (Input.GetMouseButtonDown(0) /*&& animator.GetFloat("AttackWindow.Open") > 0f*/ && !(GetComponent<PlayerDash>().boolDashComboFix)/*&& AttackPressedTimer > 0*/)
-        {
-
+        if (Input.GetMouseButtonDown(0) /*&& animator.GetFloat("AttackWindow.Open") > 0f*/ && !(GetComponent<PlayerDash>().boolDashComboFix)/*&& AttackPressedTimer > 0*/){
             shouldCombo = true;
         }
     }
 
-    public override void OnExit()
-    {
+    public override void OnExit(){
         base.OnExit();
     }
 
-    protected void Attack()
-    {
+    protected void Attack(){
         Collider2D[] collidersToDamage = new Collider2D[10];
         ContactFilter2D filter = new ContactFilter2D();
         filter.useTriggers = true;
         int colliderCount = Physics2D.OverlapCollider(hitCollider, filter, collidersToDamage);
-        for (int i = 0; i < colliderCount; i++)
-        {
-
-            if (!collidersDamaged.Contains(collidersToDamage[i]))
-            {
+        for (int i = 0; i < colliderCount; i++){
+            if (!collidersDamaged.Contains(collidersToDamage[i])){
                 TeamComponent hitTeamComponent = collidersToDamage[i].GetComponentInChildren<TeamComponent>();
 
                 // Only check colliders with a valid Team Componnent attached
-                if (hitTeamComponent && hitTeamComponent.teamIndex == TeamIndex.Enemy)
-                {
+                if (hitTeamComponent && hitTeamComponent.teamIndex == TeamIndex.Enemy){
                     GameObject.Instantiate(HitEffectPrefab, collidersToDamage[i].transform);
                     Debug.Log("Enemy Has Taken:" + attackIndex + "Damage");
                     collidersDamaged.Add(collidersToDamage[i]);
