@@ -14,7 +14,6 @@ public class GroundEntryState : MeleeBaseState
         duration = 0.57f; //duration mora da bude framerate podeljeno sa broj frejmova minus 0.01
         weaponAnimator.SetTrigger("Attack" + attackIndex);
         playerAnimator.SetTrigger("Attack" + attackIndex);
-        //PlayerMovement.playerInstance.animationLock = true;
         meleeMain.UpdateAttackDirection();
         //attackStep.Step();
     }
@@ -29,7 +28,6 @@ public class GroundEntryState : MeleeBaseState
             }
             else{
                 stateMachine.SetNextStateToMain();
-                //PlayerMovement.playerInstance.animationLock = false;
             }
         }
     }
