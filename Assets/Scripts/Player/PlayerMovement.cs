@@ -103,14 +103,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //sa ovim player prima damage kad mačem pipne enemya
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && gameObject.tag!="Sword")
         {
             Vector2 test = new Vector2(transform.position.x - collision.transform.position.x, transform.position.y - collision.transform.position.y).normalized * 10;
             damageableCharacter.OnPlayerHit(collision.gameObject.GetComponent<Damage>().damage, test);
         }
-    }
+    }*/
 
 
 
